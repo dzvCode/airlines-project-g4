@@ -329,7 +329,7 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel lblPassword;
     private javax.swing.JPanel lblTitle;
     private javax.swing.JLabel lblUser;
-    private javax.swing.JPasswordField pfPassword;
-    private javax.swing.JTextField txtCode;
+    public javax.swing.JPasswordField pfPassword;
+    public javax.swing.JTextField txtCode;
     // End of variables declaration//GEN-END:variables
 }

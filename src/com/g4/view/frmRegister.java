@@ -412,12 +412,12 @@ public class frmRegister extends javax.swing.JFrame {
     private javax.swing.JPanel Barra_superior;
     private javax.swing.JPanel Boton;
     private javax.swing.JPanel Boton_cerrar;
-    private javax.swing.JComboBox<String> Box_destinos;
+    public javax.swing.JComboBox<String> Box_destinos;
     private javax.swing.JLabel Imagen;
-    private javax.swing.JTextField Llenado_DNI;
-    private javax.swing.JTextField Llenado_correo;
-    private javax.swing.JTextField Llenado_telefono;
-    private javax.swing.JTextField Llenar_nombre;
+    public javax.swing.JTextField Llenado_DNI;
+    public javax.swing.JTextField Llenado_correo;
+    public javax.swing.JTextField Llenado_telefono;
+    public javax.swing.JTextField Llenar_nombre;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo_DNI;
     private javax.swing.JLabel Titulo_correo;

@@ -8,6 +8,7 @@ import lombok.*;
  */
 
 @Data
+@NoArgsConstructor
 public class Admin {
     private String code;
     private String password;

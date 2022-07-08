@@ -14,7 +14,8 @@ public class App {
         frm.setVisible(true);
         frm.setLocationRelativeTo(null);
 
-        frm2.setVisible(true);
+   /*     frm2.setVisible(true);
         frm2.setLocationRelativeTo(null);
+    */
     }
 }
