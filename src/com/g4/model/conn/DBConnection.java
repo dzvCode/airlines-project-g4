@@ -14,7 +14,7 @@ public class DBConnection {
 
     private final String user = "root";
     private final String password = "";
-    private final String url = "jdbc:mysql://localhost/mystore?serverTimezone=UTC";
+    private final String url = "jdbc:mysql://localhost/myproject?serverTimezone=UTC";
     private Connection conn = null;
     public Connection createConnection() {
         try {

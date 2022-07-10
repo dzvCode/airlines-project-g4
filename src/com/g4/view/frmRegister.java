@@ -39,8 +39,8 @@ public class frmRegister extends javax.swing.JFrame {
         jSeparator4 = new javax.swing.JSeparator();
         Titulo_destino = new javax.swing.JLabel();
         Box_destinos = new javax.swing.JComboBox<>();
-        Boton = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        registerPanel = new javax.swing.JPanel();
+        btnRegister = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -210,42 +210,37 @@ public class frmRegister extends javax.swing.JFrame {
         Box_destinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         Background.add(Box_destinos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 510, 420, 40));
 
-        Boton.setBackground(new java.awt.Color(0, 22, 59));
-        Boton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Boton.addMouseListener(new java.awt.event.MouseAdapter() {
+        registerPanel.setBackground(new java.awt.Color(0, 22, 59));
+        registerPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        registerPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                BotonMouseClicked(evt);
+                registerPanelMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                BotonMouseEntered(evt);
+                registerPanelMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                BotonMouseExited(evt);
+                registerPanelMouseExited(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Registrar");
+        btnRegister.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
+        btnRegister.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnRegister.setText("Registrar");
 
-        javax.swing.GroupLayout BotonLayout = new javax.swing.GroupLayout(Boton);
-        Boton.setLayout(BotonLayout);
-        BotonLayout.setHorizontalGroup(
-            BotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotonLayout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(34, 34, 34))
+        javax.swing.GroupLayout registerPanelLayout = new javax.swing.GroupLayout(registerPanel);
+        registerPanel.setLayout(registerPanelLayout);
+        registerPanelLayout.setHorizontalGroup(
+            registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
         );
-        BotonLayout.setVerticalGroup(
-            BotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BotonLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        registerPanelLayout.setVerticalGroup(
+            registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        Background.add(Boton, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 590, -1, -1));
+        Background.add(registerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 590, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -302,13 +297,13 @@ public class frmRegister extends javax.swing.JFrame {
         X_salir.setForeground(Color.white);
     }//GEN-LAST:event_X_salirMouseExited
 
-    private void BotonMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonMouseEntered
-        Boton.setBackground(new Color(3,8,46));
-    }//GEN-LAST:event_BotonMouseEntered
+    private void registerPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerPanelMouseEntered
+        registerPanel.setBackground(new Color(3,8,46));
+    }//GEN-LAST:event_registerPanelMouseEntered
 
-    private void BotonMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonMouseExited
-        Boton.setBackground(new Color(0,22,59));
-    }//GEN-LAST:event_BotonMouseExited
+    private void registerPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerPanelMouseExited
+        registerPanel.setBackground(new Color(0,22,59));
+    }//GEN-LAST:event_registerPanelMouseExited
 
     private void Llenar_nombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Llenar_nombreMousePressed
         if(Llenar_nombre.getText().equals("Ingrese el nombre completo"))
@@ -333,10 +328,10 @@ public class frmRegister extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Llenar_nombreMousePressed
 
-    private void BotonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BotonMouseClicked
+    private void registerPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerPanelMouseClicked
         String destino=(String) Box_destinos.getSelectedItem();
         javax.swing.JOptionPane.showMessageDialog(this, "Datos del Pasajero: \nNombre: "+Llenar_nombre.getText()+"\nDNI: "+Llenado_DNI.getText()+"\nTeléfono: "+Llenado_telefono.getText()+"\nEmail: "+Llenado_correo.getText()+"\nDestino: "+destino, "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_BotonMouseClicked
+    }//GEN-LAST:event_registerPanelMouseClicked
 
     private void Llenado_DNIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Llenado_DNIMousePressed
         if(Llenado_DNI.getText().equals("Ingrese el DNI"))
@@ -410,7 +405,6 @@ public class frmRegister extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel Background;
     private javax.swing.JPanel Barra_superior;
-    private javax.swing.JPanel Boton;
     private javax.swing.JPanel Boton_cerrar;
     public javax.swing.JComboBox<String> Box_destinos;
     private javax.swing.JLabel Imagen;
@@ -425,10 +419,11 @@ public class frmRegister extends javax.swing.JFrame {
     private javax.swing.JLabel Titulo_nombre;
     private javax.swing.JLabel Tiulo_telefono;
     private javax.swing.JLabel X_salir;
-    private javax.swing.JLabel jLabel3;
+    public javax.swing.JLabel btnRegister;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
+    private javax.swing.JPanel registerPanel;
     // End of variables declaration//GEN-END:variables
 }

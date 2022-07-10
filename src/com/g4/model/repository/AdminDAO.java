@@ -16,11 +16,12 @@ public class AdminDAO extends DBConnection {
         PreparedStatement ps = null;
         ResultSet rs = null;
         Connection conn = createConnection();
-        String sql = "SELECT * FROM users WHERE code=?";
+        String sql = "SELECT * FROM admin WHERE code=? and password=?";
 
         try {
             ps = conn.prepareStatement(sql);
             ps.setString(1, admin.getCode());
+            ps.setString(2, admin.getPassword());
             rs = ps.executeQuery();
 
             if (rs.next()) {
