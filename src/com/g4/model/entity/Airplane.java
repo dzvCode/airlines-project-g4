@@ -13,5 +13,5 @@ public class Airplane {
     private String name;
     private String origin;
     private String destination;
-    private List<> seats;
+    //private List<> seats;
 }

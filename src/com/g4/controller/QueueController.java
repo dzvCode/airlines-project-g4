@@ -15,7 +15,7 @@ public class QueueController implements ActionListener {
 
     public QueueController(frmQueue queueView) {
         this.queueView = queueView;
-        //this.queueView.
+        this.queueView.setTitle("Cola de clientes");
     }
         
     public void init() {
