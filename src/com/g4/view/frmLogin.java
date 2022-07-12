@@ -1,14 +1,8 @@
 package com.g4.view;
 
-import java.awt.Color;
-
-/**
- *
- * @author Jasmin
- */
-public class frmLogin extends javax.swing.JFrame {
-
-   int mouseX, mouseY;
+public class frmLogin extends javax.swing.JFrame {    
+    public int mouseX, mouseY;
+    
     public frmLogin() {
         initComponents();
     }
@@ -132,16 +126,6 @@ public class frmLogin extends javax.swing.JFrame {
         bgPanel.add(loginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 560, -1, -1));
 
         titlePanel.setBackground(new java.awt.Color(204, 0, 102));
-        titlePanel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                titlePanelMouseDragged(evt);
-            }
-        });
-        titlePanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                titlePanelMousePressed(evt);
-            }
-        });
 
         exitPanel.setBackground(new java.awt.Color(204, 0, 102));
 
@@ -195,19 +179,7 @@ public class frmLogin extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void titlePanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_titlePanelMousePressed
-       mouseX=evt.getX();
-       mouseY=evt.getY();
-    }//GEN-LAST:event_titlePanelMousePressed
-
-    private void titlePanelMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_titlePanelMouseDragged
-        int x = evt.getXOnScreen();
-        int y = evt.getYOnScreen();
-        this.setLocation(x - mouseX,y - mouseY);
-    }//GEN-LAST:event_titlePanelMouseDragged
-
-  
+ 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bgPanel;
     public javax.swing.JLabel btnExit;
@@ -222,9 +194,9 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel lblPassword;
     private javax.swing.JPanel lblTitle;
     private javax.swing.JLabel lblUser;
-    private javax.swing.JPanel loginPanel;
+    public javax.swing.JPanel loginPanel;
     public javax.swing.JPasswordField pfPassword;
-    private javax.swing.JPanel titlePanel;
+    public javax.swing.JPanel titlePanel;
     public javax.swing.JTextField txtCode;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,8 +1,5 @@
 package com.g4.view;
 
-import java.awt.Color;
-import javax.swing.JOptionPane;
-
 public class frmRegister extends javax.swing.JFrame {
 
     int xMouse, yMouse;
@@ -19,26 +16,26 @@ public class frmRegister extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Background = new javax.swing.JPanel();
-        Imagen = new javax.swing.JLabel();
-        Barra_superior = new javax.swing.JPanel();
-        Boton_cerrar = new javax.swing.JPanel();
-        X_salir = new javax.swing.JLabel();
-        Titulo = new javax.swing.JLabel();
-        Titulo_nombre = new javax.swing.JLabel();
-        Llenar_nombre = new javax.swing.JTextField();
+        bgPanel = new javax.swing.JPanel();
+        iconImage = new javax.swing.JLabel();
+        titlePanel = new javax.swing.JPanel();
+        exitPanel = new javax.swing.JPanel();
+        btnExit = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
+        lblName = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        Titulo_DNI = new javax.swing.JLabel();
-        Llenado_DNI = new javax.swing.JTextField();
+        lblDni = new javax.swing.JLabel();
+        txtDni = new javax.swing.JTextField();
         jSeparator2 = new javax.swing.JSeparator();
-        Tiulo_telefono = new javax.swing.JLabel();
-        Llenado_telefono = new javax.swing.JTextField();
+        lblPhone = new javax.swing.JLabel();
+        txtPhone = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
-        Titulo_correo = new javax.swing.JLabel();
-        Llenado_correo = new javax.swing.JTextField();
+        lblEmail = new javax.swing.JLabel();
+        txtEmail = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
-        Titulo_destino = new javax.swing.JLabel();
-        Box_destinos = new javax.swing.JComboBox<>();
+        lblDestination = new javax.swing.JLabel();
+        boxDestination = new javax.swing.JComboBox<>();
         registerPanel = new javax.swing.JPanel();
         btnRegister = new javax.swing.JLabel();
 
@@ -47,182 +44,118 @@ public class frmRegister extends javax.swing.JFrame {
         setUndecorated(true);
         setResizable(false);
 
-        Background.setBackground(new java.awt.Color(255, 255, 255));
-        Background.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        bgPanel.setBackground(new java.awt.Color(255, 255, 255));
+        bgPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        Imagen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/mujer_aeropuerto.jpg"))); // NOI18N
-        Background.add(Imagen, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 320, 630));
+        iconImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/mujer_aeropuerto.jpg"))); // NOI18N
+        bgPanel.add(iconImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 320, 630));
 
-        Barra_superior.setBackground(new java.awt.Color(0, 22, 59));
-        Barra_superior.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                Barra_superiorMouseDragged(evt);
-            }
-        });
-        Barra_superior.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Barra_superiorMousePressed(evt);
-            }
-        });
+        titlePanel.setBackground(new java.awt.Color(0, 22, 59));
 
-        Boton_cerrar.setBackground(new java.awt.Color(63, 31, 46));
+        exitPanel.setBackground(new java.awt.Color(63, 31, 46));
 
-        X_salir.setBackground(new java.awt.Color(255, 255, 255));
-        X_salir.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        X_salir.setForeground(new java.awt.Color(255, 255, 255));
-        X_salir.setText("  X");
-        X_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        X_salir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                X_salirMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                X_salirMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                X_salirMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                X_salirMousePressed(evt);
-            }
-        });
+        btnExit.setBackground(new java.awt.Color(255, 255, 255));
+        btnExit.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(255, 255, 255));
+        btnExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnExit.setText("X");
+        btnExit.setToolTipText("");
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout Boton_cerrarLayout = new javax.swing.GroupLayout(Boton_cerrar);
-        Boton_cerrar.setLayout(Boton_cerrarLayout);
-        Boton_cerrarLayout.setHorizontalGroup(
-            Boton_cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(X_salir, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+        javax.swing.GroupLayout exitPanelLayout = new javax.swing.GroupLayout(exitPanel);
+        exitPanel.setLayout(exitPanelLayout);
+        exitPanelLayout.setHorizontalGroup(
+            exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(exitPanelLayout.createSequentialGroup()
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
-        Boton_cerrarLayout.setVerticalGroup(
-            Boton_cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(X_salir, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+        exitPanelLayout.setVerticalGroup(
+            exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(exitPanelLayout.createSequentialGroup()
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout Barra_superiorLayout = new javax.swing.GroupLayout(Barra_superior);
-        Barra_superior.setLayout(Barra_superiorLayout);
-        Barra_superiorLayout.setHorizontalGroup(
-            Barra_superiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Barra_superiorLayout.createSequentialGroup()
-                .addComponent(Boton_cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
+        titlePanel.setLayout(titlePanelLayout);
+        titlePanelLayout.setHorizontalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titlePanelLayout.createSequentialGroup()
+                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 881, Short.MAX_VALUE))
         );
-        Barra_superiorLayout.setVerticalGroup(
-            Barra_superiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Barra_superiorLayout.createSequentialGroup()
+        titlePanelLayout.setVerticalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Boton_cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        Background.add(Barra_superior, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
+        bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
-        Titulo.setBackground(new java.awt.Color(0, 0, 0));
-        Titulo.setFont(new java.awt.Font("Roboto Medium", 0, 36)); // NOI18N
-        Titulo.setText("REGISTRO");
-        Background.add(Titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+        lblTitle.setBackground(new java.awt.Color(0, 0, 0));
+        lblTitle.setFont(new java.awt.Font("Roboto Medium", 0, 36)); // NOI18N
+        lblTitle.setText("REGISTRO");
+        bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
 
-        Titulo_nombre.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Titulo_nombre.setText("Nombre Completo");
-        Background.add(Titulo_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 124, -1, -1));
+        lblName.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        lblName.setText("Nombre Completo");
+        bgPanel.add(lblName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 124, -1, -1));
 
-        Llenar_nombre.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        Llenar_nombre.setForeground(new java.awt.Color(204, 204, 204));
-        Llenar_nombre.setText("Ingrese el nombre completo");
-        Llenar_nombre.setBorder(null);
-        Llenar_nombre.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Llenar_nombreMousePressed(evt);
-            }
-        });
-        Background.add(Llenar_nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 144, 420, 40));
-        Background.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 184, 420, 10));
+        txtName.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        txtName.setForeground(new java.awt.Color(204, 204, 204));
+        txtName.setText("Ingrese el nombre completo");
+        txtName.setBorder(null);
+        bgPanel.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 144, 420, 40));
+        bgPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 184, 420, 10));
 
-        Titulo_DNI.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Titulo_DNI.setText("DNI");
-        Background.add(Titulo_DNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 204, -1, -1));
+        lblDni.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        lblDni.setText("DNI");
+        bgPanel.add(lblDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 204, -1, -1));
 
-        Llenado_DNI.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        Llenado_DNI.setForeground(new java.awt.Color(204, 204, 204));
-        Llenado_DNI.setText("Ingrese el DNI");
-        Llenado_DNI.setBorder(null);
-        Llenado_DNI.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Llenado_DNIMousePressed(evt);
-            }
-        });
-        Llenado_DNI.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Llenado_DNIActionPerformed(evt);
-            }
-        });
-        Background.add(Llenado_DNI, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 236, 420, 40));
-        Background.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 276, 420, 10));
+        txtDni.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        txtDni.setForeground(new java.awt.Color(204, 204, 204));
+        txtDni.setText("Ingrese el DNI");
+        txtDni.setBorder(null);
+        bgPanel.add(txtDni, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 236, 420, 40));
+        bgPanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 276, 420, 10));
 
-        Tiulo_telefono.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Tiulo_telefono.setText("Teléfono");
-        Background.add(Tiulo_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 296, -1, -1));
+        lblPhone.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        lblPhone.setText("Teléfono");
+        bgPanel.add(lblPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 296, -1, -1));
 
-        Llenado_telefono.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        Llenado_telefono.setForeground(new java.awt.Color(204, 204, 204));
-        Llenado_telefono.setText("Ingrese el numero telefonico");
-        Llenado_telefono.setBorder(null);
-        Llenado_telefono.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Llenado_telefonoMousePressed(evt);
-            }
-        });
-        Llenado_telefono.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Llenado_telefonoActionPerformed(evt);
-            }
-        });
-        Background.add(Llenado_telefono, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 328, 420, 40));
-        Background.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 368, 420, 10));
+        txtPhone.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        txtPhone.setForeground(new java.awt.Color(204, 204, 204));
+        txtPhone.setText("Ingrese el numero telefonico");
+        txtPhone.setBorder(null);
+        bgPanel.add(txtPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 328, 420, 40));
+        bgPanel.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 368, 420, 10));
 
-        Titulo_correo.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Titulo_correo.setText("Correo eléctrónico");
-        Background.add(Titulo_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 398, -1, -1));
+        lblEmail.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        lblEmail.setText("Correo eléctrónico");
+        bgPanel.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 398, -1, -1));
 
-        Llenado_correo.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        Llenado_correo.setForeground(new java.awt.Color(204, 204, 204));
-        Llenado_correo.setText("Ingrese el correo electronico");
-        Llenado_correo.setBorder(null);
-        Llenado_correo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Llenado_correoMousePressed(evt);
-            }
-        });
-        Llenado_correo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Llenado_correoActionPerformed(evt);
-            }
-        });
-        Background.add(Llenado_correo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 418, 420, 40));
-        Background.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 458, 420, 10));
+        txtEmail.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        txtEmail.setForeground(new java.awt.Color(204, 204, 204));
+        txtEmail.setText("Ingrese el correo electronico");
+        txtEmail.setBorder(null);
+        bgPanel.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 418, 420, 40));
+        bgPanel.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 458, 420, 10));
 
-        Titulo_destino.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Titulo_destino.setText("Destino");
-        Background.add(Titulo_destino, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 478, -1, -1));
+        lblDestination.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        lblDestination.setText("Destino");
+        bgPanel.add(lblDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 478, -1, -1));
 
-        Box_destinos.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        Box_destinos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Destino", "Tarapoto", "Puno", "Cusco", "Iquitos", "Tumbes", "Jequetepeque", "Ica", "Arequipa", "Huancayo", "Trujillo", "Chiclayo", "Piura" }));
-        Box_destinos.setToolTipText("");
-        Box_destinos.setBorder(null);
-        Box_destinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        Background.add(Box_destinos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 510, 420, 40));
+        boxDestination.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
+        boxDestination.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Destino", "Tarapoto", "Puno", "Cusco", "Iquitos", "Tumbes", "Jequetepeque", "Ica", "Arequipa", "Huancayo", "Trujillo", "Chiclayo", "Piura" }));
+        boxDestination.setToolTipText("");
+        boxDestination.setBorder(null);
+        boxDestination.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bgPanel.add(boxDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 510, 420, 40));
 
         registerPanel.setBackground(new java.awt.Color(0, 22, 59));
         registerPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        registerPanel.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                registerPanelMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                registerPanelMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                registerPanelMouseExited(evt);
-            }
-        });
 
         btnRegister.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
         btnRegister.setForeground(new java.awt.Color(255, 255, 255));
@@ -240,190 +173,44 @@ public class frmRegister extends javax.swing.JFrame {
             .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        Background.add(registerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 590, -1, -1));
+        bgPanel.add(registerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 590, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bgPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(Background, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bgPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Llenado_DNIActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Llenado_DNIActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Llenado_DNIActionPerformed
-
-    private void Llenado_telefonoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Llenado_telefonoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Llenado_telefonoActionPerformed
-
-    private void Llenado_correoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Llenado_correoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Llenado_correoActionPerformed
-
-    private void Barra_superiorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Barra_superiorMousePressed
-        xMouse=evt.getX();
-        yMouse=evt.getY();
-    }//GEN-LAST:event_Barra_superiorMousePressed
-
-    private void Barra_superiorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Barra_superiorMouseDragged
-        int x=evt.getXOnScreen();
-        int y=evt.getYOnScreen();
-        this.setLocation(x - xMouse, y - yMouse);
-    }//GEN-LAST:event_Barra_superiorMouseDragged
-
-    private void X_salirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_X_salirMousePressed
-
-    private void X_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMouseClicked
-        System.exit(0);
-    }//GEN-LAST:event_X_salirMouseClicked
-
-    private void X_salirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMouseEntered
-        Boton_cerrar.setBackground(Color.red);
-        X_salir.setForeground(Color.white);
-    }//GEN-LAST:event_X_salirMouseEntered
-
-    private void X_salirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMouseExited
-        Boton_cerrar.setBackground(new Color(63,31,46));
-        X_salir.setForeground(Color.white);
-    }//GEN-LAST:event_X_salirMouseExited
-
-    private void registerPanelMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerPanelMouseEntered
-        registerPanel.setBackground(new Color(3,8,46));
-    }//GEN-LAST:event_registerPanelMouseEntered
-
-    private void registerPanelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerPanelMouseExited
-        registerPanel.setBackground(new Color(0,22,59));
-    }//GEN-LAST:event_registerPanelMouseExited
-
-    private void Llenar_nombreMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Llenar_nombreMousePressed
-        if(Llenar_nombre.getText().equals("Ingrese el nombre completo"))
-        {
-            Llenar_nombre.setText("");
-            Llenar_nombre.setForeground(Color.black);
-        }
-        if(Llenado_DNI.getText().isEmpty())
-        {
-            Llenado_DNI.setText("Ingrese el DNI");
-            Llenado_DNI.setForeground(Color.gray);
-        }
-        if(Llenado_telefono.getText().isEmpty())
-        {
-            Llenado_telefono.setText("Ingrese el numero telefonico");
-           Llenado_telefono.setForeground(Color.gray);
-        }
-        if(Llenado_correo.getText().isEmpty())
-        {
-            Llenado_correo.setText("Ingrese el correo electronico");
-            Llenado_correo.setForeground(Color.gray);
-        }
-    }//GEN-LAST:event_Llenar_nombreMousePressed
-
-    private void registerPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_registerPanelMouseClicked
-        String destino=(String) Box_destinos.getSelectedItem();
-        javax.swing.JOptionPane.showMessageDialog(this, "Datos del Pasajero: \nNombre: "+Llenar_nombre.getText()+"\nDNI: "+Llenado_DNI.getText()+"\nTeléfono: "+Llenado_telefono.getText()+"\nEmail: "+Llenado_correo.getText()+"\nDestino: "+destino, "REGISTRO", JOptionPane.INFORMATION_MESSAGE);
-    }//GEN-LAST:event_registerPanelMouseClicked
-
-    private void Llenado_DNIMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Llenado_DNIMousePressed
-        if(Llenado_DNI.getText().equals("Ingrese el DNI"))
-        {
-            Llenado_DNI.setText("");
-            Llenado_DNI.setForeground(Color.black);
-        }
-        if(Llenar_nombre.getText().isEmpty())
-        {
-            Llenar_nombre.setText("Ingrese el nombre completo");
-            Llenar_nombre.setForeground(Color.gray);
-        }
-        if(Llenado_telefono.getText().isEmpty())
-        {
-            Llenado_telefono.setText("Ingrese el numero telefonico");
-           Llenado_telefono.setForeground(Color.gray);
-        }
-        if(Llenado_correo.getText().isEmpty())
-        {
-            Llenado_correo.setText("Ingrese el correo electronico");
-            Llenado_correo.setForeground(Color.gray);
-        }
-    }//GEN-LAST:event_Llenado_DNIMousePressed
-
-    private void Llenado_telefonoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Llenado_telefonoMousePressed
-        if(Llenado_telefono.getText().equals("Ingrese el numero telefonico"))
-        {
-           Llenado_telefono.setText("");
-           Llenado_telefono.setForeground(Color.black);
-        }
-        if(Llenar_nombre.getText().isEmpty())
-        {
-            Llenar_nombre.setText("Ingrese el nombre completo");
-            Llenar_nombre.setForeground(Color.gray);
-        }
-        if(Llenado_DNI.getText().isEmpty())
-        {
-            Llenado_DNI.setText("Ingrese el DNI");
-            Llenado_DNI.setForeground(Color.gray);
-        }
-        if(Llenado_correo.getText().isEmpty())
-        {
-            Llenado_correo.setText("Ingrese el correo electronico");
-            Llenado_correo.setForeground(Color.gray);
-        }
-    }//GEN-LAST:event_Llenado_telefonoMousePressed
-
-    private void Llenado_correoMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Llenado_correoMousePressed
-        if(Llenado_correo.getText().equals("Ingrese el correo electronico"))
-        {
-            Llenado_correo.setText("");
-           Llenado_correo.setForeground(Color.black);
-        }
-        if(Llenar_nombre.getText().isEmpty())
-        {
-            Llenar_nombre.setText("Ingrese el nombre completo");
-            Llenar_nombre.setForeground(Color.gray);
-        }
-        if(Llenado_DNI.getText().isEmpty())
-        {
-            Llenado_DNI.setText("Ingrese el DNI");
-            Llenado_DNI.setForeground(Color.gray);
-        }
-        if(Llenado_telefono.getText().isEmpty())
-        {
-            Llenado_telefono.setText("Ingrese el numero telefonico");
-           Llenado_telefono.setForeground(Color.gray);
-        }
-    }//GEN-LAST:event_Llenado_correoMousePressed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Background;
-    private javax.swing.JPanel Barra_superior;
-    private javax.swing.JPanel Boton_cerrar;
-    public javax.swing.JComboBox<String> Box_destinos;
-    private javax.swing.JLabel Imagen;
-    public javax.swing.JTextField Llenado_DNI;
-    public javax.swing.JTextField Llenado_correo;
-    public javax.swing.JTextField Llenado_telefono;
-    public javax.swing.JTextField Llenar_nombre;
-    private javax.swing.JLabel Titulo;
-    private javax.swing.JLabel Titulo_DNI;
-    private javax.swing.JLabel Titulo_correo;
-    private javax.swing.JLabel Titulo_destino;
-    private javax.swing.JLabel Titulo_nombre;
-    private javax.swing.JLabel Tiulo_telefono;
-    private javax.swing.JLabel X_salir;
+    private javax.swing.JPanel bgPanel;
+    public javax.swing.JComboBox<String> boxDestination;
+    public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnRegister;
+    public javax.swing.JPanel exitPanel;
+    private javax.swing.JLabel iconImage;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JPanel registerPanel;
+    private javax.swing.JLabel lblDestination;
+    private javax.swing.JLabel lblDni;
+    private javax.swing.JLabel lblEmail;
+    private javax.swing.JLabel lblName;
+    private javax.swing.JLabel lblPhone;
+    private javax.swing.JLabel lblTitle;
+    public javax.swing.JPanel registerPanel;
+    public javax.swing.JPanel titlePanel;
+    public javax.swing.JTextField txtDni;
+    public javax.swing.JTextField txtEmail;
+    public javax.swing.JTextField txtName;
+    public javax.swing.JTextField txtPhone;
     // End of variables declaration//GEN-END:variables
 }

@@ -12,10 +12,11 @@ import java.util.logging.Logger;
  */
 public class DBConnection {
 
-    private final String user = "root";
-    private final String password = "";
-    private final String url = "jdbc:mysql://localhost/myproject?serverTimezone=UTC";
-    private Connection conn = null;
+    private static final String user = "root";
+    private static final String password = "";
+    private static final String url = "jdbc:mysql://localhost/myproject?serverTimezone=UTC";
+    private static Connection conn = null;
+    
     public Connection createConnection() {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
