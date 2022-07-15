@@ -2,6 +2,7 @@ package com.g4.controller;
 
 import com.g4.model.entity.User;
 import com.g4.model.repository.UserDAO;
+import com.g4.view.frmQueue;
 import com.g4.view.frmRegister;
 import java.awt.Color;
 
@@ -12,11 +13,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.HashSet;
 
-
-/**
- *
- * @author diego
- */
 public class UserController implements MouseListener, MouseMotionListener {
     private User user;
     private UserDAO userC;
@@ -32,6 +28,7 @@ public class UserController implements MouseListener, MouseMotionListener {
         this.registerView.txtEmail.addMouseListener(this);
         //this.registerView.boxDestination.
         this.registerView.btnRegister.addMouseListener(this);
+        this.registerView.btnContinue.addMouseListener(this);
         this.registerView.btnExit.addMouseListener(this);
     }
 
@@ -40,6 +37,14 @@ public class UserController implements MouseListener, MouseMotionListener {
         registerView.setLocationRelativeTo(null);
     }
 
+      public void goToQueueForm() {
+        registerView.dispose();
+        frmQueue fq = new frmQueue();
+        QueueController qc = new QueueController(fq);
+        qc.init();
+        fq.setVisible(true);
+        
+    }
 
     /*
     @Override
@@ -98,8 +103,12 @@ public class UserController implements MouseListener, MouseMotionListener {
                 JOptionPane.showMessageDialog(null, "Error al guardar");
                 //limpiar();
             }
-        
         }
+        
+        if (e.getSource() == registerView.btnContinue) {
+              goToQueueForm();
+        }
+        
     }
 
     @Override
@@ -109,8 +118,77 @@ public class UserController implements MouseListener, MouseMotionListener {
                 registerView.txtName.setText("");
                 registerView.setForeground(Color.black);
             }
+            if (registerView.txtName.getText().isEmpty()) {
+                registerView.txtDni.setText("Ingrese el DNI");
+                registerView.txtDni.setForeground(Color.gray);
+            }
+            if (registerView.txtPhone.getText().isEmpty()) {
+                registerView.txtPhone.setText("Ingrese el numero telefonico");
+                registerView.txtPhone.setForeground(Color.gray);
+            }
+            if (registerView.txtEmail.getText().isEmpty()) {
+                registerView.txtEmail.setText("Ingrese el correo electronico");
+                registerView.txtEmail.setForeground(Color.gray);
+            }
+        }
+        
+        if (e.getSource() == registerView.txtDni) {
+            if (registerView.txtDni.getText().equals("Ingrese el DNI")) {
+                registerView.txtDni.setText("");
+                registerView.txtDni.setForeground(Color.black);
+            }
+            if (registerView.txtName.getText().isEmpty()) {
+                registerView.txtName.setText("Ingrese el nombre completo");
+                registerView.txtName.setForeground(Color.gray);
+            }
+            if (registerView.txtPhone.getText().isEmpty()) {
+                registerView.txtPhone.setText("Ingrese el numero telefonico");
+                registerView.txtPhone.setForeground(Color.gray);
+            }
+            if (registerView.txtEmail.getText().isEmpty()) {
+                registerView.txtEmail.setText("Ingrese el correo electronico");
+                registerView.txtEmail.setForeground(Color.gray);
+            }
+        }
+        
+        if (e.getSource() == registerView.txtPhone) {
+            if (registerView.txtPhone.getText().equals("Ingrese el numero telefonico")) {
+                registerView.txtPhone.setText("");
+                registerView.txtPhone.setForeground(Color.black);
+            }
+            if (registerView.txtName.getText().isEmpty()) {
+                registerView.txtName.setText("Ingrese el nombre completo");
+                registerView.txtName.setForeground(Color.gray);
+            }
+            if (registerView.txtDni.getText().isEmpty()) {
+                registerView.txtDni.setText("Ingrese el DNI");
+                registerView.txtDni.setForeground(Color.gray);
+            }
+            if (registerView.txtEmail.getText().isEmpty()) {
+                registerView.txtEmail.setText("Ingrese el correo electronico");
+                registerView.txtEmail.setForeground(Color.gray);
+            }
         }
        
+         if (e.getSource() == registerView.txtEmail) {
+            if (registerView.txtEmail.getText().equals("Ingrese el correo electronico")) {
+                registerView.txtEmail.setText("");
+                registerView.txtEmail.setForeground(Color.black);
+            }
+            if (registerView.txtName.getText().isEmpty()) {
+                registerView.txtName.setText("Ingrese el nombre completo");
+                registerView.txtName.setForeground(Color.gray);
+            }
+            if (registerView.txtDni.getText().isEmpty()) {
+                registerView.txtDni.setText("Ingrese el DNI");
+                registerView.txtDni.setForeground(Color.gray);
+            }
+            if (registerView.txtPhone.getText().isEmpty()) {
+                registerView.txtPhone.setText("Ingrese el numero telefonico");
+                registerView.txtPhone.setForeground(Color.gray);
+            }
+        }
+        
     }
 
     @Override

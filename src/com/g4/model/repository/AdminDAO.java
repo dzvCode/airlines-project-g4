@@ -7,10 +7,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-/**
- *
- * @author diego
- */
 public class AdminDAO extends DBConnection {
      public boolean read(Admin admin) {
         PreparedStatement ps = null;
@@ -26,6 +22,7 @@ public class AdminDAO extends DBConnection {
 
             if (rs.next()) {
                 admin.setCode(rs.getString("code"));
+                admin.setName(rs.getString("name"));
                 admin.setPassword(rs.getString("password"));
                 return true;
             }

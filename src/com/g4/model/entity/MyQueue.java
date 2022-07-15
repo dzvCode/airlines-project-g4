@@ -1,9 +1,5 @@
 package com.g4.model.entity;
 
-/**
- *
- * @author diego
- */
 public class MyQueue {
     public static int capacity = 4;
     public static int counter;

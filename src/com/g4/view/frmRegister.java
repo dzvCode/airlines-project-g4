@@ -38,6 +38,8 @@ public class frmRegister extends javax.swing.JFrame {
         boxDestination = new javax.swing.JComboBox<>();
         registerPanel = new javax.swing.JPanel();
         btnRegister = new javax.swing.JLabel();
+        continuePanel = new javax.swing.JPanel();
+        btnContinue = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -173,7 +175,28 @@ public class frmRegister extends javax.swing.JFrame {
             .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        bgPanel.add(registerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 590, -1, -1));
+        bgPanel.add(registerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, -1, -1));
+
+        continuePanel.setBackground(new java.awt.Color(0, 22, 59));
+        continuePanel.setPreferredSize(new java.awt.Dimension(143, 50));
+
+        btnContinue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        btnContinue.setForeground(new java.awt.Color(255, 255, 255));
+        btnContinue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnContinue.setText("Continuar");
+
+        javax.swing.GroupLayout continuePanelLayout = new javax.swing.GroupLayout(continuePanel);
+        continuePanel.setLayout(continuePanelLayout);
+        continuePanelLayout.setHorizontalGroup(
+            continuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnContinue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+        );
+        continuePanelLayout.setVerticalGroup(
+            continuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnContinue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        );
+
+        bgPanel.add(continuePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 580, -1, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -192,8 +215,10 @@ public class frmRegister extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bgPanel;
     public javax.swing.JComboBox<String> boxDestination;
+    public javax.swing.JLabel btnContinue;
     public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnRegister;
+    private javax.swing.JPanel continuePanel;
     public javax.swing.JPanel exitPanel;
     private javax.swing.JLabel iconImage;
     private javax.swing.JSeparator jSeparator1;
@@ -206,7 +231,7 @@ public class frmRegister extends javax.swing.JFrame {
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPhone;
     private javax.swing.JLabel lblTitle;
-    public javax.swing.JPanel registerPanel;
+    private javax.swing.JPanel registerPanel;
     public javax.swing.JPanel titlePanel;
     public javax.swing.JTextField txtDni;
     public javax.swing.JTextField txtEmail;

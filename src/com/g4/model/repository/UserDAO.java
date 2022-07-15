@@ -7,13 +7,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
-/**
- *
- * @author diego
- */
-public class UserDAO extends DBConnection {
-    public boolean register(User user) {
+public class UserDAO extends DBConnection implements CrudRepository<User> {
+
+    @Override
+    public boolean create(User user) {
         PreparedStatement ps = null;
         Connection conn = createConnection();
         String sql = "INSERT INTO users (name, dni, phone, email, destination) VALUES(?,?,?,?,?)";
@@ -39,55 +38,8 @@ public class UserDAO extends DBConnection {
         }
     }
 
-    public boolean modify(User user) {
-        PreparedStatement ps = null;
-        Connection conn = createConnection();
-        String sql = "UPDATE users SET name=?, phone=?, email=?, destination=? WHERE dni=?";
-
-        try {
-            ps = conn.prepareStatement(sql);
-            ps.setString(1, user.getName());
-            ps.setString(2, user.getPhone());
-            ps.setString(3, user.getEmail());
-            ps.setString(4, user.getDestination());
-            ps.setString(5, user.getDni());
-            ps.execute();
-            return true;
-        } catch (SQLException e) {
-            System.err.println(e);
-            return false;
-        } finally {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                System.err.println(e);
-            }
-        }
-    }
-
-    public boolean delete(User user) {
-        PreparedStatement ps = null;
-        Connection conn = createConnection();
-        String sql = "DELETE FROM users WHERE dni=?";
-
-        try {
-            ps = conn.prepareStatement(sql);
-            ps.setString(1, user.getDni());
-            ps.execute();
-            return true;
-        } catch (SQLException e) {
-            System.err.println(e);
-            return false;
-        } finally {
-            try {
-                conn.close();
-            } catch (SQLException e) {
-                System.err.println(e);
-            }
-        }
-    }
-
-    public boolean read(User user) {
+    @Override
+    public List<User> read() {
         PreparedStatement ps = null;
         ResultSet rs = null;
         Connection conn = createConnection();
@@ -109,6 +61,56 @@ public class UserDAO extends DBConnection {
             }
 
             return false;
+        } catch (SQLException e) {
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                System.err.println(e);
+            }
+        }
+    }
+
+    @Override
+    public boolean update(User user) {
+        PreparedStatement ps = null;
+        Connection conn = createConnection();
+        String sql = "UPDATE users SET name=?, phone=?, email=?, destination=? WHERE dni=?";
+
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, user.getName());
+            ps.setString(2, user.getPhone());
+            ps.setString(3, user.getEmail());
+            ps.setString(4, user.getDestination());
+            ps.setString(5, user.getDni());
+            ps.execute();
+            return true;
+        } catch (SQLException e) {
+            System.err.println(e);
+            return false;
+        } finally {
+            try {
+            conn.close();
+            } catch (SQLException e) {
+                System.err.println(e);
+            }
+        }
+    }
+
+    @Override
+    public boolean delete(User user) {
+        PreparedStatement ps = null;
+        Connection conn = createConnection();
+        String sql = "DELETE FROM users WHERE dni=?";
+
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, user.getDni());
+            ps.execute();
+            return true;
         } catch (SQLException e) {
             System.err.println(e);
             return false;

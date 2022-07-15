@@ -4,12 +4,7 @@ import com.g4.controller.LoginController;
 import com.g4.model.entity.Admin;
 import com.g4.model.repository.AdminDAO;
 import com.g4.view.frmLogin;
-import com.g4.view.frmRegister;
 
-/**
- *
- * @author diego
- */
 public class App {
     public static void main(String[] args) {
         Admin admin = new Admin();

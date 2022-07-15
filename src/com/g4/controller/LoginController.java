@@ -5,7 +5,6 @@ import com.g4.model.entity.User;
 import com.g4.model.repository.AdminDAO;
 import com.g4.model.repository.UserDAO;
 import com.g4.view.frmLogin;
-import com.g4.view.frmQueue;
 import com.g4.view.frmRegister;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -13,13 +12,8 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import javax.swing.JOptionPane;
 
-
-/**
- *
- * @author diego
- */
 public class LoginController implements MouseListener, MouseMotionListener {
-    private Admin admin;
+    public static Admin admin;
     private AdminDAO adminC;
     private frmLogin loginView;
 
@@ -39,15 +33,6 @@ public class LoginController implements MouseListener, MouseMotionListener {
         //loginView.setTitle("Login");
         loginView.setLocationRelativeTo(null);
     }
-
-    public void goToQueueForm() {
-        loginView.dispose();
-        frmQueue fq = new frmQueue();
-        QueueController qc = new QueueController(fq);
-        qc.init();
-        fq.setVisible(true);
-        
-    }
     
      public void goToRegisterForm() {
         loginView.dispose();
@@ -57,8 +42,8 @@ public class LoginController implements MouseListener, MouseMotionListener {
         UserController uc = new UserController(user, userC, fr);
         uc.init();
         fr.setVisible(true);
-    }
-
+    } 
+     
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == loginView.btnLogin) {
@@ -68,7 +53,6 @@ public class LoginController implements MouseListener, MouseMotionListener {
             boolean isValidAdmin = getAuthenticatedAdmin(code, password);
         
             if (isValidAdmin) {
-                //goToQueueForm();
                 goToRegisterForm();
             } else {
                 JOptionPane.showMessageDialog(loginView, "Código o contraseña inválido", "Intente otra vez", JOptionPane.ERROR_MESSAGE);

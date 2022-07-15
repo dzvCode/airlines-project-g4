@@ -1,14 +1,8 @@
 package com.g4.view;
 
-/**
- *
- * @author diego
- */
 public class frmQueue extends javax.swing.JFrame {
-
-    /**
-     * Creates new form frmQueue
-     */
+    public int mouseX, mouseY;
+    
     public frmQueue() {
         initComponents();
     }
@@ -22,102 +16,173 @@ public class frmQueue extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnServe = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        txtAdmin = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
+        bgPanel = new javax.swing.JPanel();
+        titlePanel = new javax.swing.JPanel();
+        btnExit = new javax.swing.JLabel();
+        queueLabel = new javax.swing.JLabel();
+        lblAdmin = new javax.swing.JLabel();
+        txtAdmin = new javax.swing.JLabel();
+        scrollClients = new javax.swing.JScrollPane();
+        tblClients = new javax.swing.JTable();
+        addPanel = new javax.swing.JPanel();
+        btnAdd = new javax.swing.JLabel();
+        servePanel = new javax.swing.JPanel();
+        btnServe = new javax.swing.JLabel();
+        img = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setUndecorated(true);
+        setResizable(false);
 
-        btnServe.setText("INICIAR");
+        bgPanel.setBackground(new java.awt.Color(255, 255, 255));
+        bgPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Administrador:");
+        titlePanel.setBackground(new java.awt.Color(0, 22, 59));
+        titlePanel.setPreferredSize(new java.awt.Dimension(100, 34));
 
-        txtAdmin.setEditable(false);
+        btnExit.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(255, 255, 255));
+        btnExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnExit.setText("X");
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
-        jLabel2.setText("INICIAR SESION");
+        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
+        titlePanel.setLayout(titlePanelLayout);
+        titlePanelLayout.setHorizontalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(titlePanelLayout.createSequentialGroup()
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        titlePanelLayout.setVerticalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnExit, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+        );
 
-        jLabel3.setText("CODIGO");
+        bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, -1));
 
-        jLabel4.setText("CONTRASEÑA");
+        queueLabel.setFont(new java.awt.Font("Roboto Medium", 0, 36)); // NOI18N
+        queueLabel.setText("COLA DE CLIENTES");
+        bgPanel.add(queueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
 
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+        lblAdmin.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
+        lblAdmin.setText("Administrador:");
+        bgPanel.add(lblAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 180, -1));
+
+        txtAdmin.setBackground(new java.awt.Color(204, 255, 204));
+        txtAdmin.setFont(new java.awt.Font("Roboto Light", 3, 18)); // NOI18N
+        txtAdmin.setText("Jeremy Smith Machare Ramirez");
+        txtAdmin.setToolTipText("");
+        bgPanel.add(txtAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 420, -1));
+
+        tblClients.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null},
+                {null, null}
+            },
+            new String [] {
+                "Ticket", "Cliente"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
             }
         });
+        tblClients.setPreferredSize(new java.awt.Dimension(200, 250));
+        tblClients.setRowHeight(30);
+        scrollClients.setViewportView(tblClients);
+        if (tblClients.getColumnModel().getColumnCount() > 0) {
+            tblClients.getColumnModel().getColumn(0).setResizable(false);
+            tblClients.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tblClients.getColumnModel().getColumn(1).setResizable(false);
+            tblClients.getColumnModel().getColumn(1).setPreferredWidth(250);
+        }
+
+        bgPanel.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 470, 230));
+
+        addPanel.setBackground(new java.awt.Color(0, 22, 59));
+        addPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        btnAdd.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnAdd.setText("Añadir");
+
+        javax.swing.GroupLayout addPanelLayout = new javax.swing.GroupLayout(addPanel);
+        addPanel.setLayout(addPanelLayout);
+        addPanelLayout.setHorizontalGroup(
+            addPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 131, Short.MAX_VALUE)
+        );
+        addPanelLayout.setVerticalGroup(
+            addPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+        );
+
+        bgPanel.add(addPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 520, -1, -1));
+
+        servePanel.setBackground(new java.awt.Color(0, 22, 59));
+        servePanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        btnServe.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
+        btnServe.setForeground(new java.awt.Color(255, 255, 255));
+        btnServe.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnServe.setText("Atender");
+
+        javax.swing.GroupLayout servePanelLayout = new javax.swing.GroupLayout(servePanel);
+        servePanel.setLayout(servePanelLayout);
+        servePanelLayout.setHorizontalGroup(
+            servePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnServe, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+        );
+        servePanelLayout.setVerticalGroup(
+            servePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnServe, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+        );
+
+        bgPanel.add(servePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, -1, -1));
+
+        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/imgcola1.png"))); // NOI18N
+        bgPanel.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(624, 28, -1, 650));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(40, 40, 40)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(57, 57, 57)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel3))
-                        .addGap(46, 46, 46)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField2)
-                            .addComponent(jTextField1)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel2))
-                        .addGap(0, 131, Short.MAX_VALUE)))
-                .addGap(98, 98, 98))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(268, 268, 268)
-                .addComponent(btnServe)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addComponent(bgPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
-                .addGap(4, 4, 4)
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(btnServe)
-                .addGap(103, 103, 103))
+            .addComponent(bgPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnServe;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    public javax.swing.JTextField txtAdmin;
+    private javax.swing.JPanel addPanel;
+    private javax.swing.JPanel bgPanel;
+    private javax.swing.JLabel btnAdd;
+    public javax.swing.JLabel btnExit;
+    private javax.swing.JLabel btnServe;
+    private javax.swing.JLabel img;
+    private javax.swing.JLabel lblAdmin;
+    private javax.swing.JLabel queueLabel;
+    public javax.swing.JScrollPane scrollClients;
+    private javax.swing.JPanel servePanel;
+    private javax.swing.JTable tblClients;
+    public javax.swing.JPanel titlePanel;
+    public javax.swing.JLabel txtAdmin;
     // End of variables declaration//GEN-END:variables
 }
