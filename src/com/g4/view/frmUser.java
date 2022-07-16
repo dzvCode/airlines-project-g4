@@ -1,9 +1,9 @@
 package com.g4.view;
 
-public class frmRegister extends javax.swing.JFrame {
+public class frmUser extends javax.swing.JFrame {
 
     int xMouse, yMouse;
-    public frmRegister() {
+    public frmUser() {
         initComponents();
     }
 
@@ -34,12 +34,10 @@ public class frmRegister extends javax.swing.JFrame {
         lblEmail = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
-        lblDestination = new javax.swing.JLabel();
-        boxDestination = new javax.swing.JComboBox<>();
-        registerPanel = new javax.swing.JPanel();
-        btnRegister = new javax.swing.JLabel();
-        continuePanel = new javax.swing.JPanel();
-        btnContinue = new javax.swing.JLabel();
+        returnPanel = new javax.swing.JPanel();
+        btnReturn = new javax.swing.JLabel();
+        savePanel = new javax.swing.JPanel();
+        btnSave = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -145,58 +143,47 @@ public class frmRegister extends javax.swing.JFrame {
         bgPanel.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 418, 420, 40));
         bgPanel.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 458, 420, 10));
 
-        lblDestination.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        lblDestination.setText("Destino");
-        bgPanel.add(lblDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 478, -1, -1));
+        returnPanel.setBackground(new java.awt.Color(0, 22, 59));
+        returnPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        boxDestination.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        boxDestination.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Destino", "Tarapoto", "Puno", "Cusco", "Iquitos", "Tumbes", "Jequetepeque", "Ica", "Arequipa", "Huancayo", "Trujillo", "Chiclayo", "Piura" }));
-        boxDestination.setToolTipText("");
-        boxDestination.setBorder(null);
-        boxDestination.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bgPanel.add(boxDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 510, 420, 40));
+        btnReturn.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
+        btnReturn.setForeground(new java.awt.Color(255, 255, 255));
+        btnReturn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnReturn.setText("Regresar");
 
-        registerPanel.setBackground(new java.awt.Color(0, 22, 59));
-        registerPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        btnRegister.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
-        btnRegister.setForeground(new java.awt.Color(255, 255, 255));
-        btnRegister.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnRegister.setText("Registrar");
-
-        javax.swing.GroupLayout registerPanelLayout = new javax.swing.GroupLayout(registerPanel);
-        registerPanel.setLayout(registerPanelLayout);
-        registerPanelLayout.setHorizontalGroup(
-            registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+        javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
+        returnPanel.setLayout(returnPanelLayout);
+        returnPanelLayout.setHorizontalGroup(
+            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnReturn, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
         );
-        registerPanelLayout.setVerticalGroup(
-            registerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        returnPanelLayout.setVerticalGroup(
+            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnReturn, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        bgPanel.add(registerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 580, -1, -1));
+        bgPanel.add(returnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, -1, -1));
 
-        continuePanel.setBackground(new java.awt.Color(0, 22, 59));
-        continuePanel.setPreferredSize(new java.awt.Dimension(143, 50));
+        savePanel.setBackground(new java.awt.Color(0, 22, 59));
+        savePanel.setPreferredSize(new java.awt.Dimension(143, 50));
 
-        btnContinue.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
-        btnContinue.setForeground(new java.awt.Color(255, 255, 255));
-        btnContinue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnContinue.setText("Continuar");
+        btnSave.setFont(new java.awt.Font("Yu Gothic UI Semibold", 0, 18)); // NOI18N
+        btnSave.setForeground(new java.awt.Color(255, 255, 255));
+        btnSave.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnSave.setText("Guardar");
 
-        javax.swing.GroupLayout continuePanelLayout = new javax.swing.GroupLayout(continuePanel);
-        continuePanel.setLayout(continuePanelLayout);
-        continuePanelLayout.setHorizontalGroup(
-            continuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnContinue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
+        javax.swing.GroupLayout savePanelLayout = new javax.swing.GroupLayout(savePanel);
+        savePanel.setLayout(savePanelLayout);
+        savePanelLayout.setHorizontalGroup(
+            savePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnSave, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
         );
-        continuePanelLayout.setVerticalGroup(
-            continuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnContinue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+        savePanelLayout.setVerticalGroup(
+            savePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnSave, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        bgPanel.add(continuePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 580, -1, 50));
+        bgPanel.add(savePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 540, -1, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -214,24 +201,22 @@ public class frmRegister extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bgPanel;
-    public javax.swing.JComboBox<String> boxDestination;
-    public javax.swing.JLabel btnContinue;
     public javax.swing.JLabel btnExit;
-    public javax.swing.JLabel btnRegister;
-    private javax.swing.JPanel continuePanel;
+    public javax.swing.JLabel btnReturn;
+    public javax.swing.JLabel btnSave;
     public javax.swing.JPanel exitPanel;
     private javax.swing.JLabel iconImage;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
-    private javax.swing.JLabel lblDestination;
     private javax.swing.JLabel lblDni;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPhone;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JPanel registerPanel;
+    private javax.swing.JPanel returnPanel;
+    private javax.swing.JPanel savePanel;
     public javax.swing.JPanel titlePanel;
     public javax.swing.JTextField txtDni;
     public javax.swing.JTextField txtEmail;

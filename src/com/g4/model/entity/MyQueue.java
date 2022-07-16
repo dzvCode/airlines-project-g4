@@ -1,28 +1,30 @@
 package com.g4.model.entity;
 
+import java.util.ArrayList;
+
 public class MyQueue {
     public static int capacity = 4;
     public static int counter;
     public static Node front, rear;
     
     static class Node {
-        int data;
+        String name;
         Node next;
 
-        public Node(int data) {
-            this.data = data;
+        public Node(String name) {
+            this.name = name;
             this.next = null;
         }
     }
 
     // Metodo para encolar un nodo
-    public static void enqueue(int data) {
+    public static void enqueue(String name) {
         if (counter > capacity) {
             System.out.println("La cola esta llena");
             return;
         }
 
-        Node newNode = new Node(data);
+        Node newNode = new Node(name);
         // Si la cola esta vacia, el nuevo nodo es front y rear
         if (front == null) {
             front = rear = newNode;
@@ -51,18 +53,20 @@ public class MyQueue {
             rear = null;
         }
     }
-
-    public static void display() {
+    
+    // Metodo para cargar los elementos de la cola en la tabla
+    public static ArrayList<Object[]> upload() {
+        ArrayList<Object[]> data = new ArrayList<>();
         if (front == null) {
-            System.out.println("Cola vacia");
-            return;
+            return data;
         }
 
         Node temp = front;
         while (temp != null) {
-            System.out.println("Ticket #" + temp.data);
+            Object[] aux = new Object[]{temp.name};
+            data.add(aux);
             temp = temp.next;
         }
-        System.out.println("Tickets generados: " + Integer.toString(counter));
+        return data;
     }
 }

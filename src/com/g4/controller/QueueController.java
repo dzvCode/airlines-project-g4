@@ -1,28 +1,46 @@
 package com.g4.controller;
 
 import com.g4.model.entity.MyQueue;
+import com.g4.model.entity.User;
+import com.g4.model.repository.UserDAO;
 import com.g4.view.frmQueue;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import com.g4.view.frmUser;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 public class QueueController implements MouseListener, MouseMotionListener {
     
-    private frmQueue queueView;
+    //public static MyQueue queue;
+    public static frmQueue queueView;
 
     public QueueController(frmQueue queueView) {
         this.queueView = queueView;
-        this.queueView.txtAdmin.setText(LoginController.admin.getName());
         this.queueView.btnExit.addMouseListener(this);
         this.queueView.titlePanel.addMouseListener(this);
         this.queueView.titlePanel.addMouseMotionListener(this);
+        this.queueView.btnAdd.addMouseListener(this);
+        this.queueView.btnServe.addMouseListener(this);
     }
         
     public void init() {
-        //queueView.setTitle("Cola");
         queueView.setLocationRelativeTo(null);
+        this.queueView.txtAdmin.setText(LoginController.admin.getName());
+    }
+    
+    public void goToUserView() {
+        queueView.dispose();
+        User user = new User();
+        UserDAO userC = new UserDAO();
+        frmUser fr = new frmUser();
+        UserController uc = new UserController(user, userC, fr);
+        uc.init();
+        fr.setVisible(true);
+    }
+    
+    public void goToDestinationView() {
+        queueView.dispose();
+        System.out.println("En GUI seleccionar destino");
     }
 
     @Override
@@ -30,6 +48,14 @@ public class QueueController implements MouseListener, MouseMotionListener {
         
        if (e.getSource() == queueView.btnExit) {
            System.exit(0);
+       }
+       
+       if (e.getSource() == queueView.btnAdd) {
+           goToUserView();
+       }
+       
+       if (e.getSource() == queueView.btnServe) {
+           goToDestinationView();
        }
         
     }

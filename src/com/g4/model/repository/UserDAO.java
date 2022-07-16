@@ -12,10 +12,11 @@ import java.util.List;
 public class UserDAO extends DBConnection implements CrudRepository<User> {
 
     @Override
-    public boolean create(User user) {
+    public boolean register(User user) {
         PreparedStatement ps = null;
         Connection conn = createConnection();
-        String sql = "INSERT INTO users (name, dni, phone, email, destination) VALUES(?,?,?,?,?)";
+        //String sql = "INSERT INTO users (name, dni, phone, email, destination) VALUES(?,?,?,?,?)";
+        String sql = "INSERT INTO users (name, dni, phone, email) VALUES(?,?,?,?)";
 
         try {
             ps = conn.prepareStatement(sql);
@@ -23,7 +24,7 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
             ps.setString(2, user.getDni());
             ps.setString(3, user.getPhone());
             ps.setString(4, user.getEmail());
-            ps.setString(5, user.getDestination());
+           // ps.setString(5, user.getDestination());
             ps.execute();
             return true;
         } catch (SQLException e) {
@@ -39,7 +40,7 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
     }
 
     @Override
-    public List<User> read() {
+    public boolean read(User user) {
         PreparedStatement ps = null;
         ResultSet rs = null;
         Connection conn = createConnection();
@@ -56,7 +57,7 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
                 user.setDni(rs.getString("dni"));
                 user.setPhone(rs.getString("phone"));
                 user.setEmail(rs.getString("email"));
-                user.setDestination(rs.getString("destiny"));
+                user.setDestination(rs.getString("destination"));
                 return true;
             }
 

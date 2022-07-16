@@ -1,10 +1,53 @@
 package com.g4.view;
 
+import com.g4.model.entity.MyQueue;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
+
 public class frmQueue extends javax.swing.JFrame {
     public int mouseX, mouseY;
+    public static DefaultTableModel modelo;
     
     public frmQueue() {
         initComponents();
+        
+        this.setResizable(false);
+       
+        modelo = new DefaultTableModel() {
+            @Override
+            //Sobreescribiendo método para que no sean editados los datos
+            public boolean isCellEditable(int row, int column) {
+                return false;
+            }
+        };
+
+        modelo.addColumn("Nombre");
+        
+        this.tblClients.setModel(modelo);
+       
+        //Método para que no se pueda editar la tabla
+        tblClients.getTableHeader().setReorderingAllowed(false);
+
+        //Método para establecer un alto a cada casilla
+        tblClients.setRowHeight(30);
+        /*
+        TableColumnModel columnModel = tblClients.getColumnModel();
+        columnModel.getColumn(0).setPreferredWidth(10);
+        columnModel.getColumn(1).setPreferredWidth(50);
+        */
+        CargaDeDatos();
+        tblClients.setRowSelectionAllowed(false);
+        tblClients.setCellSelectionEnabled(false);
+
+        //Método que ingresa la tabla al scrollPanel
+        scrollClients.setViewportView(tblClients);
+    }
+    
+    public void CargaDeDatos() {
+        for (Object[] object : MyQueue.upload()) {
+            modelo.addRow(object);
+        }
     }
 
     /**
@@ -68,19 +111,15 @@ public class frmQueue extends javax.swing.JFrame {
 
         lblAdmin.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         lblAdmin.setText("Administrador:");
-        bgPanel.add(lblAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 180, -1));
+        bgPanel.add(lblAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 120, -1));
 
         txtAdmin.setBackground(new java.awt.Color(204, 255, 204));
         txtAdmin.setFont(new java.awt.Font("Roboto Light", 3, 18)); // NOI18N
-        txtAdmin.setText("Jeremy Smith Machare Ramirez");
         txtAdmin.setToolTipText("");
-        bgPanel.add(txtAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 160, 420, -1));
+        bgPanel.add(txtAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 155, 350, 30));
 
         tblClients.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
                 {null, null},
                 {null, null},
                 {null, null},
@@ -104,7 +143,7 @@ public class frmQueue extends javax.swing.JFrame {
         scrollClients.setViewportView(tblClients);
         if (tblClients.getColumnModel().getColumnCount() > 0) {
             tblClients.getColumnModel().getColumn(0).setResizable(false);
-            tblClients.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tblClients.getColumnModel().getColumn(0).setPreferredWidth(5);
             tblClients.getColumnModel().getColumn(1).setResizable(false);
             tblClients.getColumnModel().getColumn(1).setPreferredWidth(250);
         }
@@ -173,15 +212,15 @@ public class frmQueue extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel addPanel;
     private javax.swing.JPanel bgPanel;
-    private javax.swing.JLabel btnAdd;
+    public javax.swing.JLabel btnAdd;
     public javax.swing.JLabel btnExit;
-    private javax.swing.JLabel btnServe;
+    public javax.swing.JLabel btnServe;
     private javax.swing.JLabel img;
     private javax.swing.JLabel lblAdmin;
     private javax.swing.JLabel queueLabel;
     public javax.swing.JScrollPane scrollClients;
     private javax.swing.JPanel servePanel;
-    private javax.swing.JTable tblClients;
+    public javax.swing.JTable tblClients;
     public javax.swing.JPanel titlePanel;
     public javax.swing.JLabel txtAdmin;
     // End of variables declaration//GEN-END:variables

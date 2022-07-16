@@ -1,15 +1,16 @@
 package com.g4.controller;
 
 import com.g4.model.entity.Admin;
-import com.g4.model.entity.User;
+import com.g4.model.entity.MyQueue;
 import com.g4.model.repository.AdminDAO;
-import com.g4.model.repository.UserDAO;
 import com.g4.view.frmLogin;
-import com.g4.view.frmRegister;
+import com.g4.view.frmQueue;
+
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+
 import javax.swing.JOptionPane;
 
 public class LoginController implements MouseListener, MouseMotionListener {
@@ -30,33 +31,34 @@ public class LoginController implements MouseListener, MouseMotionListener {
     }
     
     public void init() {
-        //loginView.setTitle("Login");
         loginView.setLocationRelativeTo(null);
     }
-    
-     public void goToRegisterForm() {
+         
+    public void goToQueueView() {
         loginView.dispose();
-        User user = new User();
-        UserDAO userC = new UserDAO();
-        frmRegister fr = new frmRegister();
-        UserController uc = new UserController(user, userC, fr);
-        uc.init();
-        fr.setVisible(true);
-    } 
+        frmQueue fq = new frmQueue();
+        QueueController qc = new QueueController(fq);
+        qc.init();
+        fq.setVisible(true);   
+    }
      
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == loginView.btnLogin) {
+            
+            goToQueueView();
+            /*
             String code = loginView.txtCode.getText();
             String password = String.valueOf(loginView.pfPassword.getPassword());
         
             boolean isValidAdmin = getAuthenticatedAdmin(code, password);
         
             if (isValidAdmin) {
-                goToRegisterForm();
+                goToQueueView();
             } else {
                 JOptionPane.showMessageDialog(loginView, "Código o contraseña inválido", "Intente otra vez", JOptionPane.ERROR_MESSAGE);
             }
+*/
         
         }
         if (e.getSource() == loginView.btnExit) {
@@ -113,8 +115,8 @@ public class LoginController implements MouseListener, MouseMotionListener {
     @Override
     public void mouseExited(MouseEvent e) {
         if (e.getSource() == loginView.btnExit) {
-                loginView.exitPanel.setBackground(new Color(204,0,102));
-            }
+            loginView.exitPanel.setBackground(new Color(204,0,102));
+        }
     }
 
     private boolean getAuthenticatedAdmin(String code, String password) {
