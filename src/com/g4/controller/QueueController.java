@@ -3,6 +3,7 @@ package com.g4.controller;
 import com.g4.model.entity.MyQueue;
 import com.g4.model.entity.User;
 import com.g4.model.repository.UserDAO;
+//import com.g4.view.frmDestination;
 import com.g4.view.frmQueue;
 import com.g4.view.frmUser;
 import java.awt.event.MouseEvent;
@@ -40,7 +41,10 @@ public class QueueController implements MouseListener, MouseMotionListener {
     
     public void goToDestinationView() {
         queueView.dispose();
-        System.out.println("En GUI seleccionar destino");
+       // frmDestination fd = new frmDestination();
+       // DestinationController dc = new DestinationController(fd);
+        //dc.init();
+        //fd.setVisible(true);
     }
 
     @Override

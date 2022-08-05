@@ -13,30 +13,35 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
 
     @Override
     public boolean register(User user) {
-        PreparedStatement ps = null;
-        Connection conn = createConnection();
+        //PreparedStatement ps = null;
+        //Connection conn = createConnection();
         //String sql = "INSERT INTO users (name, dni, phone, email, destination) VALUES(?,?,?,?,?)";
         String sql = "INSERT INTO users (name, dni, phone, email) VALUES(?,?,?,?)";
 
-        try {
-            ps = conn.prepareStatement(sql);
+        
+        try (Connection conn = createConnection(); PreparedStatement ps = conn.prepareStatement(sql) ) {
+            //ps = conn.prepareStatement(sql);
             ps.setString(1, user.getName());
             ps.setString(2, user.getDni());
             ps.setString(3, user.getPhone());
             ps.setString(4, user.getEmail());
            // ps.setString(5, user.getDestination());
             ps.execute();
-            return true;
+            //return true;
         } catch (SQLException e) {
             System.err.println(e);
             return false;
-        } finally {
+        } 
+        return true;
+        /*
+        finally {
             try {
                 conn.close();
             } catch (SQLException e) {
                 System.err.println(e);
             }
         }
+*/
     }
 
     @Override

@@ -12,7 +12,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 import javax.swing.JOptionPane;
-
+ 
 public class LoginController implements MouseListener, MouseMotionListener {
     public static Admin admin;
     private AdminDAO adminC;
