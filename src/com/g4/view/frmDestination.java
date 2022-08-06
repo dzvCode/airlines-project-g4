@@ -1,14 +1,7 @@
 package com.g4.view;
-
-import java.awt.Color;
-
-/**
- *
- * @author jccr_
- */
+  
 public class frmDestination extends javax.swing.JFrame {
 
-    public int xMouse, yMouse;
     public frmDestination() {
         initComponents();
     }
@@ -33,8 +26,6 @@ public class frmDestination extends javax.swing.JFrame {
         Titulo_nombre1 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         Titulo_nombre2 = new javax.swing.JLabel();
-        jSeparator3 = new javax.swing.JSeparator();
-        Titulo_nombre3 = new javax.swing.JLabel();
         Box_destinos = new javax.swing.JComboBox<>();
         Boton = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
@@ -43,6 +34,7 @@ public class frmDestination extends javax.swing.JFrame {
         Barra_superior1 = new javax.swing.JPanel();
         Boton_cerrar1 = new javax.swing.JPanel();
         X_salir1 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         Titulo.setBackground(new java.awt.Color(0, 0, 0));
         Titulo.setFont(new java.awt.Font("Roboto Medium", 0, 36)); // NOI18N
@@ -123,7 +115,7 @@ public class frmDestination extends javax.swing.JFrame {
         Titulo1.setText("DESTINOS NACIONALES");
         jPanel1.add(Titulo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/img/DestinosImg.jpg"))); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/destinationImg.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 30, 350, 630));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 470, 10));
 
@@ -131,22 +123,16 @@ public class frmDestination extends javax.swing.JFrame {
         Titulo_nombre1.setForeground(new java.awt.Color(0, 0, 0));
         Titulo_nombre1.setText("Seleccionar Destino:");
         jPanel1.add(Titulo_nombre1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
-        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 370, 470, 10));
+        jPanel1.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 400, 470, 10));
 
         Titulo_nombre2.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         Titulo_nombre2.setForeground(new java.awt.Color(0, 0, 0));
         Titulo_nombre2.setText("Fecha ida:");
-        jPanel1.add(Titulo_nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
-        jPanel1.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 470, 10));
-
-        Titulo_nombre3.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
-        Titulo_nombre3.setForeground(new java.awt.Color(0, 0, 0));
-        Titulo_nombre3.setText("Fecha vuelta:");
-        jPanel1.add(Titulo_nombre3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 450, -1, -1));
+        jPanel1.add(Titulo_nombre2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
 
         Box_destinos.setBackground(new java.awt.Color(255, 255, 255));
         Box_destinos.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        Box_destinos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Destino", "Tarapoto", "Puno", "Cusco", "Iquitos", "Tumbes", "Jequetepeque", "Ica", "Arequipa", "Jauja", "Trujillo", "Chiclayo", "Piura" }));
+        Box_destinos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Destino", "Arequipa", "Junin", "Puno", "Tacna", "Tarapoto" }));
         Box_destinos.setToolTipText("");
         Box_destinos.setBorder(null);
         Box_destinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -241,6 +227,7 @@ public class frmDestination extends javax.swing.JFrame {
         );
 
         jPanel1.add(Barra_superior1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
+        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 300, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -257,17 +244,15 @@ public class frmDestination extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void X_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMouseClicked
-        System.exit(0);
+
     }//GEN-LAST:event_X_salirMouseClicked
 
     private void X_salirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMouseEntered
-        Boton_cerrar.setBackground(Color.red);
-        X_salir.setForeground(Color.white);
+
     }//GEN-LAST:event_X_salirMouseEntered
 
     private void X_salirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMouseExited
-        Boton_cerrar.setBackground(new Color(63,31,46));
-        X_salir.setForeground(Color.white);
+
     }//GEN-LAST:event_X_salirMouseExited
 
     private void X_salirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMousePressed
@@ -275,14 +260,11 @@ public class frmDestination extends javax.swing.JFrame {
     }//GEN-LAST:event_X_salirMousePressed
 
     private void Barra_superiorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Barra_superiorMouseDragged
-        int x=evt.getXOnScreen();
-        int y=evt.getYOnScreen();
-        this.setLocation(x - xMouse, y - yMouse);
+
     }//GEN-LAST:event_Barra_superiorMouseDragged
 
     private void Barra_superiorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Barra_superiorMousePressed
-        xMouse=evt.getX();
-        yMouse=evt.getY();
+
     }//GEN-LAST:event_Barra_superiorMousePressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -297,15 +279,14 @@ public class frmDestination extends javax.swing.JFrame {
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo_nombre1;
     private javax.swing.JLabel Titulo_nombre2;
-    private javax.swing.JLabel Titulo_nombre3;
     private javax.swing.JLabel X_salir;
     private javax.swing.JLabel X_salir1;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JSeparator jSeparator3;
     // End of variables declaration//GEN-END:variables
 }

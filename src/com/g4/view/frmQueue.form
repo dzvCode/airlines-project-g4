@@ -288,7 +288,7 @@
         <Component class="javax.swing.JLabel" name="img">
           <Properties>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/com/g4/view/images/imgcola1.png"/>
+              <Image iconType="3" name="/com/g4/view/images/queueImg.png"/>
             </Property>
           </Properties>
           <Constraints>

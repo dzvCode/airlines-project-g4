@@ -3,7 +3,7 @@ package com.g4.view;
 public class frmTicket extends javax.swing.JFrame {
 
     /**
-     * Creates new form asientos
+     * Creates new form frmTicket
      */
     public frmTicket() {
         initComponents();
@@ -18,279 +18,289 @@ public class frmTicket extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        checkbox1 = new java.awt.Checkbox();
-        jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
-        fondo = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        Grafo = new javax.swing.JPanel();
+        backgroundPanel = new javax.swing.JPanel();
+        panelTitlebar = new javax.swing.JPanel();
+        btnClose = new javax.swing.JLabel();
+        graphPanel = new javax.swing.JPanel();
         lblGraph = new javax.swing.JLabel();
-        BotonRegresar = new javax.swing.JPanel();
-        Regresar = new javax.swing.JLabel();
-        PanelDatos = new javax.swing.JPanel();
-        Origen = new javax.swing.JLabel();
-        Precio = new javax.swing.JLabel();
-        Destino = new javax.swing.JLabel();
-        IngresarOrigen = new javax.swing.JPanel();
-        IngresarDestino = new javax.swing.JPanel();
-        IngresarPrecio = new javax.swing.JPanel();
-        soles = new javax.swing.JLabel();
-        BotonConfirmar = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
-        Confimar = new javax.swing.JLabel();
-
-        checkbox1.setLabel("checkbox1");
-
-        jMenu1.setText("File");
-        jMenuBar1.add(jMenu1);
-
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        returnPanel = new javax.swing.JPanel();
+        btnReturn = new javax.swing.JLabel();
+        infoPanel = new javax.swing.JPanel();
+        lblOriginTitle = new javax.swing.JLabel();
+        lblPriceTitle = new javax.swing.JLabel();
+        lblDestinationTitle = new javax.swing.JLabel();
+        originPanel = new javax.swing.JPanel();
+        lblOrigin = new javax.swing.JLabel();
+        destinationPanel = new javax.swing.JPanel();
+        lblDestinationSelected = new javax.swing.JLabel();
+        pricePanel = new javax.swing.JPanel();
+        lblSolesSymbol = new javax.swing.JLabel();
+        lblPriceSoles = new javax.swing.JLabel();
+        confirmPanel = new javax.swing.JPanel();
+        btnConfirm = new javax.swing.JLabel();
+        lblTitle = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        fondo.setBackground(new java.awt.Color(255, 255, 255));
-        fondo.setPreferredSize(new java.awt.Dimension(902, 658));
-        fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        backgroundPanel.setBackground(new java.awt.Color(255, 255, 255));
+        backgroundPanel.setPreferredSize(new java.awt.Dimension(902, 658));
+        backgroundPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(0, 0, 102));
-        jPanel1.setPreferredSize(new java.awt.Dimension(902, 40));
+        panelTitlebar.setBackground(new java.awt.Color(0, 0, 102));
+        panelTitlebar.setPreferredSize(new java.awt.Dimension(902, 40));
 
-        jLabel1.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("X");
+        btnClose.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
+        btnClose.setForeground(new java.awt.Color(255, 255, 255));
+        btnClose.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnClose.setText("X");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout panelTitlebarLayout = new javax.swing.GroupLayout(panelTitlebar);
+        panelTitlebar.setLayout(panelTitlebarLayout);
+        panelTitlebarLayout.setHorizontalGroup(
+            panelTitlebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+        panelTitlebarLayout.setVerticalGroup(
+            panelTitlebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        fondo.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        backgroundPanel.add(panelTitlebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        Grafo.setBackground(new java.awt.Color(242, 250, 250));
+        graphPanel.setBackground(new java.awt.Color(242, 250, 250));
 
-        lblGraph.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/graph.jpeg"))); // NOI18N
+        lblGraph.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/graphImg.jpeg"))); // NOI18N
 
-        javax.swing.GroupLayout GrafoLayout = new javax.swing.GroupLayout(Grafo);
-        Grafo.setLayout(GrafoLayout);
-        GrafoLayout.setHorizontalGroup(
-            GrafoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, GrafoLayout.createSequentialGroup()
+        javax.swing.GroupLayout graphPanelLayout = new javax.swing.GroupLayout(graphPanel);
+        graphPanel.setLayout(graphPanelLayout);
+        graphPanelLayout.setHorizontalGroup(
+            graphPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, graphPanelLayout.createSequentialGroup()
                 .addContainerGap(51, Short.MAX_VALUE)
                 .addComponent(lblGraph)
                 .addGap(48, 48, 48))
         );
-        GrafoLayout.setVerticalGroup(
-            GrafoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(GrafoLayout.createSequentialGroup()
+        graphPanelLayout.setVerticalGroup(
+            graphPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(graphPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblGraph)
                 .addContainerGap(13, Short.MAX_VALUE))
         );
 
-        fondo.add(Grafo, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 710, 280));
+        backgroundPanel.add(graphPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 710, 280));
 
-        BotonRegresar.setBackground(new java.awt.Color(153, 186, 186));
-        BotonRegresar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        returnPanel.setBackground(new java.awt.Color(153, 186, 186));
+        returnPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        Regresar.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        Regresar.setForeground(new java.awt.Color(255, 255, 255));
-        Regresar.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        Regresar.setText("REGRESAR");
+        btnReturn.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        btnReturn.setForeground(new java.awt.Color(255, 255, 255));
+        btnReturn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnReturn.setText("REGRESAR");
 
-        javax.swing.GroupLayout BotonRegresarLayout = new javax.swing.GroupLayout(BotonRegresar);
-        BotonRegresar.setLayout(BotonRegresarLayout);
-        BotonRegresarLayout.setHorizontalGroup(
-            BotonRegresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BotonRegresarLayout.createSequentialGroup()
+        javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
+        returnPanel.setLayout(returnPanelLayout);
+        returnPanelLayout.setHorizontalGroup(
+            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(returnPanelLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(Regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
-        BotonRegresarLayout.setVerticalGroup(
-            BotonRegresarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotonRegresarLayout.createSequentialGroup()
+        returnPanelLayout.setVerticalGroup(
+            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, returnPanelLayout.createSequentialGroup()
                 .addContainerGap(9, Short.MAX_VALUE)
-                .addComponent(Regresar, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        fondo.add(BotonRegresar, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 580, -1, -1));
+        backgroundPanel.add(returnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 580, -1, -1));
 
-        PanelDatos.setBackground(new java.awt.Color(249, 237, 243));
+        infoPanel.setBackground(new java.awt.Color(249, 237, 243));
 
-        Origen.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        Origen.setForeground(new java.awt.Color(41, 29, 124));
-        Origen.setText("Origen");
+        lblOriginTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        lblOriginTitle.setForeground(new java.awt.Color(41, 29, 124));
+        lblOriginTitle.setText("Origen");
 
-        Precio.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        Precio.setForeground(new java.awt.Color(41, 29, 124));
-        Precio.setText("Precio del boleto");
+        lblPriceTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        lblPriceTitle.setForeground(new java.awt.Color(41, 29, 124));
+        lblPriceTitle.setText("Precio del boleto");
 
-        Destino.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        Destino.setForeground(new java.awt.Color(41, 29, 124));
-        Destino.setText("Destino");
+        lblDestinationTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        lblDestinationTitle.setForeground(new java.awt.Color(41, 29, 124));
+        lblDestinationTitle.setText("Destino");
 
-        IngresarOrigen.setBackground(new java.awt.Color(255, 255, 255));
+        originPanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        javax.swing.GroupLayout IngresarOrigenLayout = new javax.swing.GroupLayout(IngresarOrigen);
-        IngresarOrigen.setLayout(IngresarOrigenLayout);
-        IngresarOrigenLayout.setHorizontalGroup(
-            IngresarOrigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
+        lblOrigin.setText("Lima");
+
+        javax.swing.GroupLayout originPanelLayout = new javax.swing.GroupLayout(originPanel);
+        originPanel.setLayout(originPanelLayout);
+        originPanelLayout.setHorizontalGroup(
+            originPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, originPanelLayout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addComponent(lblOrigin)
+                .addGap(53, 53, 53))
         );
-        IngresarOrigenLayout.setVerticalGroup(
-            IngresarOrigenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        IngresarDestino.setBackground(new java.awt.Color(255, 255, 255));
-
-        javax.swing.GroupLayout IngresarDestinoLayout = new javax.swing.GroupLayout(IngresarDestino);
-        IngresarDestino.setLayout(IngresarDestinoLayout);
-        IngresarDestinoLayout.setHorizontalGroup(
-            IngresarDestinoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 150, Short.MAX_VALUE)
-        );
-        IngresarDestinoLayout.setVerticalGroup(
-            IngresarDestinoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 34, Short.MAX_VALUE)
-        );
-
-        IngresarPrecio.setBackground(new java.awt.Color(255, 255, 255));
-
-        soles.setFont(new java.awt.Font("Roboto Light", 0, 16)); // NOI18N
-        soles.setForeground(new java.awt.Color(70, 70, 70));
-        soles.setText("S/");
-
-        javax.swing.GroupLayout IngresarPrecioLayout = new javax.swing.GroupLayout(IngresarPrecio);
-        IngresarPrecio.setLayout(IngresarPrecioLayout);
-        IngresarPrecioLayout.setHorizontalGroup(
-            IngresarPrecioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(IngresarPrecioLayout.createSequentialGroup()
+        originPanelLayout.setVerticalGroup(
+            originPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(originPanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(soles, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(107, Short.MAX_VALUE))
-        );
-        IngresarPrecioLayout.setVerticalGroup(
-            IngresarPrecioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(soles, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(lblOrigin)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout PanelDatosLayout = new javax.swing.GroupLayout(PanelDatos);
-        PanelDatos.setLayout(PanelDatosLayout);
-        PanelDatosLayout.setHorizontalGroup(
-            PanelDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(PanelDatosLayout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(Origen)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(Destino)
-                .addGap(134, 134, 134))
-            .addGroup(PanelDatosLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(IngresarOrigen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 228, Short.MAX_VALUE)
-                .addComponent(IngresarDestino, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
-            .addGroup(PanelDatosLayout.createSequentialGroup()
-                .addGap(295, 295, 295)
-                .addComponent(Precio)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelDatosLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(IngresarPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(278, 278, 278))
+        destinationPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblDestinationSelected.setText("Destino");
+
+        javax.swing.GroupLayout destinationPanelLayout = new javax.swing.GroupLayout(destinationPanel);
+        destinationPanel.setLayout(destinationPanelLayout);
+        destinationPanelLayout.setHorizontalGroup(
+            destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(destinationPanelLayout.createSequentialGroup()
+                .addGap(54, 54, 54)
+                .addComponent(lblDestinationSelected)
+                .addContainerGap(55, Short.MAX_VALUE))
         );
-        PanelDatosLayout.setVerticalGroup(
-            PanelDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelDatosLayout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
-                .addGroup(PanelDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Origen, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Destino))
+        destinationPanelLayout.setVerticalGroup(
+            destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(destinationPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDestinationSelected)
+                .addContainerGap(12, Short.MAX_VALUE))
+        );
+
+        pricePanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblSolesSymbol.setFont(new java.awt.Font("Roboto Light", 0, 16)); // NOI18N
+        lblSolesSymbol.setForeground(new java.awt.Color(70, 70, 70));
+        lblSolesSymbol.setText("S/");
+
+        lblPriceSoles.setText("100");
+
+        javax.swing.GroupLayout pricePanelLayout = new javax.swing.GroupLayout(pricePanel);
+        pricePanel.setLayout(pricePanelLayout);
+        pricePanelLayout.setHorizontalGroup(
+            pricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pricePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblSolesSymbol, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(lblPriceSoles)
+                .addContainerGap(48, Short.MAX_VALUE))
+        );
+        pricePanelLayout.setVerticalGroup(
+            pricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(lblSolesSymbol, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
+                .addComponent(lblPriceSoles))
+        );
+
+        javax.swing.GroupLayout infoPanelLayout = new javax.swing.GroupLayout(infoPanel);
+        infoPanel.setLayout(infoPanelLayout);
+        infoPanelLayout.setHorizontalGroup(
+            infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(infoPanelLayout.createSequentialGroup()
+                .addGap(132, 132, 132)
+                .addComponent(lblOriginTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblDestinationTitle)
+                .addGap(134, 134, 134))
+            .addGroup(infoPanelLayout.createSequentialGroup()
+                .addGap(80, 80, 80)
+                .addComponent(originPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
+                .addComponent(destinationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(82, 82, 82))
+            .addGroup(infoPanelLayout.createSequentialGroup()
+                .addGap(291, 291, 291)
+                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblPriceTitle))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        infoPanelLayout.setVerticalGroup(
+            infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
+                .addContainerGap(7, Short.MAX_VALUE)
+                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblOriginTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblDestinationTitle))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(PanelDatosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(IngresarDestino, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(IngresarOrigen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(destinationPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(originPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(Precio)
+                .addComponent(lblPriceTitle)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(IngresarPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(22, 22, 22))
         );
 
-        fondo.add(PanelDatos, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 690, 150));
+        backgroundPanel.add(infoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 690, 150));
 
-        BotonConfirmar.setBackground(new java.awt.Color(0, 153, 153));
-        BotonConfirmar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        confirmPanel.setBackground(new java.awt.Color(0, 153, 153));
+        confirmPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel3.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("CONFIRMAR");
+        btnConfirm.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
+        btnConfirm.setForeground(new java.awt.Color(255, 255, 255));
+        btnConfirm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnConfirm.setText("CONFIRMAR");
 
-        javax.swing.GroupLayout BotonConfirmarLayout = new javax.swing.GroupLayout(BotonConfirmar);
-        BotonConfirmar.setLayout(BotonConfirmarLayout);
-        BotonConfirmarLayout.setHorizontalGroup(
-            BotonConfirmarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BotonConfirmarLayout.createSequentialGroup()
+        javax.swing.GroupLayout confirmPanelLayout = new javax.swing.GroupLayout(confirmPanel);
+        confirmPanel.setLayout(confirmPanelLayout);
+        confirmPanelLayout.setHorizontalGroup(
+            confirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(confirmPanelLayout.createSequentialGroup()
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(18, Short.MAX_VALUE))
         );
-        BotonConfirmarLayout.setVerticalGroup(
-            BotonConfirmarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotonConfirmarLayout.createSequentialGroup()
+        confirmPanelLayout.setVerticalGroup(
+            confirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, confirmPanelLayout.createSequentialGroup()
                 .addContainerGap(9, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
-        fondo.add(BotonConfirmar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 580, -1, -1));
+        backgroundPanel.add(confirmPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 580, -1, -1));
 
-        Confimar.setFont(new java.awt.Font("Roboto Black", 0, 36)); // NOI18N
-        Confimar.setForeground(new java.awt.Color(41, 29, 124));
-        Confimar.setText("R E C O R R I D O");
-        fondo.add(Confimar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
+        lblTitle.setFont(new java.awt.Font("Roboto Black", 0, 36)); // NOI18N
+        lblTitle.setForeground(new java.awt.Color(41, 29, 124));
+        lblTitle.setText("R E C O R R I D O");
+        backgroundPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
 
-        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 660));
+        getContentPane().add(backgroundPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel BotonConfirmar;
-    private javax.swing.JPanel BotonRegresar;
-    private javax.swing.JLabel Confimar;
-    private javax.swing.JLabel Destino;
-    private javax.swing.JPanel Grafo;
-    private javax.swing.JPanel IngresarDestino;
-    private javax.swing.JPanel IngresarOrigen;
-    private javax.swing.JPanel IngresarPrecio;
-    private javax.swing.JLabel Origen;
-    private javax.swing.JPanel PanelDatos;
-    private javax.swing.JLabel Precio;
-    private javax.swing.JLabel Regresar;
-    private java.awt.Checkbox checkbox1;
-    private javax.swing.JPanel fondo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel backgroundPanel;
+    public javax.swing.JLabel btnClose;
+    public javax.swing.JLabel btnConfirm;
+    public javax.swing.JLabel btnReturn;
+    private javax.swing.JPanel confirmPanel;
+    private javax.swing.JPanel destinationPanel;
+    private javax.swing.JPanel graphPanel;
+    private javax.swing.JPanel infoPanel;
+    public javax.swing.JLabel lblDestinationSelected;
+    private javax.swing.JLabel lblDestinationTitle;
     private javax.swing.JLabel lblGraph;
-    private javax.swing.JLabel soles;
+    private javax.swing.JLabel lblOrigin;
+    private javax.swing.JLabel lblOriginTitle;
+    public javax.swing.JLabel lblPriceSoles;
+    private javax.swing.JLabel lblPriceTitle;
+    private javax.swing.JLabel lblSolesSymbol;
+    private javax.swing.JLabel lblTitle;
+    private javax.swing.JPanel originPanel;
+    public javax.swing.JPanel panelTitlebar;
+    private javax.swing.JPanel pricePanel;
+    private javax.swing.JPanel returnPanel;
     // End of variables declaration//GEN-END:variables
 }

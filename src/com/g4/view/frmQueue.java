@@ -192,7 +192,7 @@ public class frmQueue extends javax.swing.JFrame {
 
         bgPanel.add(servePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, -1, -1));
 
-        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/imgcola1.png"))); // NOI18N
+        img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/queueImg.png"))); // NOI18N
         bgPanel.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(624, 28, -1, 650));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

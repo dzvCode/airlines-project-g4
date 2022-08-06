@@ -40,7 +40,7 @@ public class QueueController implements MouseListener, MouseMotionListener {
     }
     
     public void goToDestinationView() {
-        queueView.dispose();
+        //queueView.dispose();
        // frmDestination fd = new frmDestination();
        // DestinationController dc = new DestinationController(fd);
         //dc.init();

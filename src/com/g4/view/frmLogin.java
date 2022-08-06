@@ -47,7 +47,7 @@ public class frmLogin extends javax.swing.JFrame {
         handsawnombre.setFont(new java.awt.Font("Roboto Medium", 3, 24)); // NOI18N
         handsawnombre.setForeground(new java.awt.Color(255, 255, 255));
         handsawnombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        handsawnombre.setText(" Handsaw ETS Airlines  ");
+        handsawnombre.setText("Handsaw ETS ");
 
         javax.swing.GroupLayout lblTitleLayout = new javax.swing.GroupLayout(lblTitle);
         lblTitle.setLayout(lblTitleLayout);
@@ -62,7 +62,7 @@ public class frmLogin extends javax.swing.JFrame {
 
         bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 600, -1, -1));
 
-        lblMap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/map.png"))); // NOI18N
+        lblMap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/mapImg.png"))); // NOI18N
         bgPanel.add(lblMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
 
         lblLogin.setFont(new java.awt.Font("Roboto Black", 0, 36)); // NOI18N
@@ -70,7 +70,7 @@ public class frmLogin extends javax.swing.JFrame {
         lblLogin.setText("INICIAR SESION");
         bgPanel.add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
 
-        lblUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/contacto.png"))); // NOI18N
+        lblUser.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/adminImg.png"))); // NOI18N
         bgPanel.add(lblUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, 201));
 
         lblPassword.setFont(new java.awt.Font("Roboto Medium", 1, 18)); // NOI18N

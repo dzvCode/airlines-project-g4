@@ -74,6 +74,7 @@ public class UserController implements MouseListener, MouseMotionListener {
                 //frmQueue.modelo.addRow(new Object[]{user.getName()});
             
                 MyQueue.enqueue(user.getName());
+                System.out.println(MyQueue.counter);
                 
                 goToQueueView();
             } else {

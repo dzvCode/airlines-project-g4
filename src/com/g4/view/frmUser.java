@@ -47,7 +47,7 @@ public class frmUser extends javax.swing.JFrame {
         bgPanel.setBackground(new java.awt.Color(255, 255, 255));
         bgPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        iconImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/mujer_aeropuerto.jpg"))); // NOI18N
+        iconImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/registerImg.jpg"))); // NOI18N
         bgPanel.add(iconImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, 320, 630));
 
         titlePanel.setBackground(new java.awt.Color(0, 22, 59));
