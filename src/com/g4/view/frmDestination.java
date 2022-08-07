@@ -1,9 +1,15 @@
 package com.g4.view;
   
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
+
 public class frmDestination extends javax.swing.JFrame {
 
     public frmDestination() {
         initComponents();
+        Date currentDate = new Date();
+        jDateChooser.setMinSelectableDate(currentDate);
     }
 
     /**
@@ -15,10 +21,6 @@ public class frmDestination extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Titulo = new javax.swing.JLabel();
-        Barra_superior = new javax.swing.JPanel();
-        Boton_cerrar = new javax.swing.JPanel();
-        X_salir = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         Titulo1 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -31,75 +33,10 @@ public class frmDestination extends javax.swing.JFrame {
         btnReturn = new javax.swing.JLabel();
         Boton1 = new javax.swing.JPanel();
         btnContinue = new javax.swing.JLabel();
-        Barra_superior1 = new javax.swing.JPanel();
-        Boton_cerrar1 = new javax.swing.JPanel();
-        X_salir1 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
-
-        Titulo.setBackground(new java.awt.Color(0, 0, 0));
-        Titulo.setFont(new java.awt.Font("Roboto Medium", 0, 36)); // NOI18N
-        Titulo.setForeground(new java.awt.Color(0, 0, 0));
-        Titulo.setText("REGISTRO");
-
-        Barra_superior.setBackground(new java.awt.Color(0, 22, 59));
-        Barra_superior.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
-            public void mouseDragged(java.awt.event.MouseEvent evt) {
-                Barra_superiorMouseDragged(evt);
-            }
-        });
-        Barra_superior.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                Barra_superiorMousePressed(evt);
-            }
-        });
-
-        Boton_cerrar.setBackground(new java.awt.Color(63, 31, 46));
-
-        X_salir.setBackground(new java.awt.Color(255, 255, 255));
-        X_salir.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        X_salir.setForeground(new java.awt.Color(255, 255, 255));
-        X_salir.setText("  X");
-        X_salir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        X_salir.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                X_salirMouseClicked(evt);
-            }
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                X_salirMouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                X_salirMouseExited(evt);
-            }
-            public void mousePressed(java.awt.event.MouseEvent evt) {
-                X_salirMousePressed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout Boton_cerrarLayout = new javax.swing.GroupLayout(Boton_cerrar);
-        Boton_cerrar.setLayout(Boton_cerrarLayout);
-        Boton_cerrarLayout.setHorizontalGroup(
-            Boton_cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(X_salir, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
-        );
-        Boton_cerrarLayout.setVerticalGroup(
-            Boton_cerrarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(X_salir, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout Barra_superiorLayout = new javax.swing.GroupLayout(Barra_superior);
-        Barra_superior.setLayout(Barra_superiorLayout);
-        Barra_superiorLayout.setHorizontalGroup(
-            Barra_superiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Barra_superiorLayout.createSequentialGroup()
-                .addComponent(Boton_cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 881, Short.MAX_VALUE))
-        );
-        Barra_superiorLayout.setVerticalGroup(
-            Barra_superiorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Barra_superiorLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Boton_cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jDateChooser = new com.toedter.calendar.JDateChooser();
+        Barra_superior2 = new javax.swing.JPanel();
+        Boton_cerrar2 = new javax.swing.JPanel();
+        X_salir2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -179,45 +116,45 @@ public class frmDestination extends javax.swing.JFrame {
         );
 
         jPanel1.add(Boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 580, -1, -1));
+        jPanel1.add(jDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 300, -1));
 
-        Barra_superior1.setBackground(new java.awt.Color(0, 22, 59));
+        Barra_superior2.setBackground(new java.awt.Color(0, 22, 59));
 
-        Boton_cerrar1.setBackground(new java.awt.Color(63, 31, 46));
+        Boton_cerrar2.setBackground(new java.awt.Color(63, 31, 46));
 
-        X_salir1.setBackground(new java.awt.Color(255, 255, 255));
-        X_salir1.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        X_salir1.setForeground(new java.awt.Color(255, 255, 255));
-        X_salir1.setText("  X");
-        X_salir1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        X_salir2.setBackground(new java.awt.Color(255, 255, 255));
+        X_salir2.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
+        X_salir2.setForeground(new java.awt.Color(255, 255, 255));
+        X_salir2.setText("  X");
+        X_salir2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        javax.swing.GroupLayout Boton_cerrar1Layout = new javax.swing.GroupLayout(Boton_cerrar1);
-        Boton_cerrar1.setLayout(Boton_cerrar1Layout);
-        Boton_cerrar1Layout.setHorizontalGroup(
-            Boton_cerrar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(X_salir1, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
+        javax.swing.GroupLayout Boton_cerrar2Layout = new javax.swing.GroupLayout(Boton_cerrar2);
+        Boton_cerrar2.setLayout(Boton_cerrar2Layout);
+        Boton_cerrar2Layout.setHorizontalGroup(
+            Boton_cerrar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(X_salir2, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)
         );
-        Boton_cerrar1Layout.setVerticalGroup(
-            Boton_cerrar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(X_salir1, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+        Boton_cerrar2Layout.setVerticalGroup(
+            Boton_cerrar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(X_salir2, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout Barra_superior1Layout = new javax.swing.GroupLayout(Barra_superior1);
-        Barra_superior1.setLayout(Barra_superior1Layout);
-        Barra_superior1Layout.setHorizontalGroup(
-            Barra_superior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Barra_superior1Layout.createSequentialGroup()
-                .addComponent(Boton_cerrar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout Barra_superior2Layout = new javax.swing.GroupLayout(Barra_superior2);
+        Barra_superior2.setLayout(Barra_superior2Layout);
+        Barra_superior2Layout.setHorizontalGroup(
+            Barra_superior2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(Barra_superior2Layout.createSequentialGroup()
+                .addComponent(Boton_cerrar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 881, Short.MAX_VALUE))
         );
-        Barra_superior1Layout.setVerticalGroup(
-            Barra_superior1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Barra_superior1Layout.createSequentialGroup()
+        Barra_superior2Layout.setVerticalGroup(
+            Barra_superior2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Barra_superior2Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(Boton_cerrar1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(Boton_cerrar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jPanel1.add(Barra_superior1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
-        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 300, -1));
+        jPanel1.add(Barra_superior2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -233,47 +170,19 @@ public class frmDestination extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void X_salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMouseClicked
-
-    }//GEN-LAST:event_X_salirMouseClicked
-
-    private void X_salirMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMouseEntered
-
-    }//GEN-LAST:event_X_salirMouseEntered
-
-    private void X_salirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMouseExited
-
-    }//GEN-LAST:event_X_salirMouseExited
-
-    private void X_salirMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_X_salirMousePressed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_X_salirMousePressed
-
-    private void Barra_superiorMouseDragged(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Barra_superiorMouseDragged
-
-    }//GEN-LAST:event_Barra_superiorMouseDragged
-
-    private void Barra_superiorMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Barra_superiorMousePressed
-
-    }//GEN-LAST:event_Barra_superiorMousePressed
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel Barra_superior;
-    private javax.swing.JPanel Barra_superior1;
+    private javax.swing.JPanel Barra_superior2;
     private javax.swing.JPanel Boton;
     private javax.swing.JPanel Boton1;
-    private javax.swing.JPanel Boton_cerrar;
-    private javax.swing.JPanel Boton_cerrar1;
+    private javax.swing.JPanel Boton_cerrar2;
     public javax.swing.JComboBox<String> Box_destinos;
-    private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo_nombre1;
     private javax.swing.JLabel Titulo_nombre2;
-    private javax.swing.JLabel X_salir;
-    private javax.swing.JLabel X_salir1;
+    private javax.swing.JLabel X_salir2;
     public javax.swing.JLabel btnContinue;
     public javax.swing.JLabel btnReturn;
-    public com.toedter.calendar.JDateChooser jDateChooser1;
+    public com.toedter.calendar.JDateChooser jDateChooser;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;

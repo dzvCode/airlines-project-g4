@@ -4,7 +4,7 @@ import com.g4.model.entity.MyQueue;
 import com.g4.model.entity.User;
 import com.g4.model.repository.UserDAO;
 import com.g4.view.frmQueue;
-import com.g4.view.frmUser;
+import com.g4.view.frmRegistration;
 import java.awt.Color;
 
 import javax.swing.*;
@@ -12,12 +12,12 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
-public class UserController implements MouseListener, MouseMotionListener {
+public class RegistrationController implements MouseListener, MouseMotionListener {
     private User user;
     private UserDAO userC;
-    private frmUser registerView;
+    private frmRegistration registerView;
 
-    public UserController(User user, UserDAO userC, frmUser registerView) {
+    public RegistrationController(User user, UserDAO userC, frmRegistration registerView) {
         this.user = user;
         this.userC = userC;
         this.registerView = registerView;
@@ -63,12 +63,24 @@ public class UserController implements MouseListener, MouseMotionListener {
         
         if (e.getSource() == registerView.btnSave) {
             
-            user.setName(registerView.txtName.getText());
-            user.setDni(registerView.txtDni.getText());
-            user.setPhone(registerView.txtPhone.getText());
-            user.setEmail(registerView.txtEmail.getText());
-            MyQueue.enqueue(user);
-            goToQueueView();           
+            String name = registerView.txtName.getText();
+            String dni = registerView.txtDni.getText();
+            String phone = registerView.txtPhone.getText();
+            String email = registerView.txtEmail.getText();
+            
+            if (!name.equals("Ingrese el nombre completo") && !dni.equals("Ingrese el DNI") && 
+                    !phone.equals("Ingrese el numero telefonico") && !email.equals("Ingrese el correo electronico")) {
+                user.setName(name);
+                user.setDni(dni);
+                user.setPhone(phone);
+                user.setEmail(email);
+                
+                MyQueue.enqueue(user);
+                goToQueueView(); 
+            } else {
+                JOptionPane.showMessageDialog(null, "Complete todos los campos");
+            }            
+                      
             
             
             /*if(MyQueue.counter > MyQueue.capacity == false) {

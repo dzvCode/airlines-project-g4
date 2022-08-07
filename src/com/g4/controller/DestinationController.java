@@ -48,23 +48,25 @@ public class DestinationController implements MouseListener, MouseMotionListener
                
         if (e.getSource() == destinationView.btnContinue) {
             
-            
-            MyQueue.front.user.setDestination(destinationView.Box_destinos.getSelectedItem().toString());           
-            
-                        
+            String destination = destinationView.Box_destinos.getSelectedItem().toString();
+                                    
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-            Calendar calendar = destinationView.jDateChooser1.getCalendar();
+            Calendar calendar = destinationView.jDateChooser.getCalendar();
             
-            if (calendar != null) {
+            if (!destination.equals("Seleccionar Destino") && calendar != null) {
+                MyQueue.front.user.setDestination(destination);           
                 Date date = calendar.getTime();
                 MyQueue.front.user.setDepartureDate(sdf.format(date));
-            
-            } else {
+                
+                MyQueue.print();
+                goToTicketConfirmationView();
+            } else if (destination.equals("Seleccionar Destino")) {
+                JOptionPane.showMessageDialog(null, "Seleccione un destino");
+            } else if (calendar == null ) {
                 JOptionPane.showMessageDialog(null, "Seleccione la fecha de ida");
-            }
-          MyQueue.print();
+            }         
+            
           
-          goToTicketConfirmationView();
         }
         
         if (e.getSource() == destinationView.btnReturn) {

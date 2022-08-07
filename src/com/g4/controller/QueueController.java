@@ -6,7 +6,7 @@ import com.g4.model.repository.UserDAO;
 import com.g4.view.frmDestination;
 //import com.g4.view.frmDestination;
 import com.g4.view.frmQueue;
-import com.g4.view.frmUser;
+import com.g4.view.frmRegistration;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -36,8 +36,8 @@ public class QueueController implements MouseListener, MouseMotionListener {
         queueView.dispose();
         User user = new User();
         UserDAO userC = new UserDAO();
-        frmUser fr = new frmUser();
-        UserController uc = new UserController(user, userC, fr);
+        frmRegistration fr = new frmRegistration();
+        RegistrationController uc = new RegistrationController(user, userC, fr);
         uc.init();
         fr.setVisible(true);
     }

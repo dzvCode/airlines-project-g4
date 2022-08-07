@@ -46,8 +46,6 @@ public class LoginController implements MouseListener, MouseMotionListener {
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == loginView.btnLogin) {
             
-            goToQueueView();
-            /*
             String code = loginView.txtCode.getText();
             String password = String.valueOf(loginView.pfPassword.getPassword());
         
@@ -58,7 +56,7 @@ public class LoginController implements MouseListener, MouseMotionListener {
             } else {
                 JOptionPane.showMessageDialog(loginView, "Código o contraseña inválido", "Intente otra vez", JOptionPane.ERROR_MESSAGE);
             }
-*/
+
         
         }
         if (e.getSource() == loginView.btnExit) {

@@ -1,9 +1,9 @@
 package com.g4.view;
 
-public class frmUser extends javax.swing.JFrame {
+public class frmRegistration extends javax.swing.JFrame {
 
     int xMouse, yMouse;
-    public frmUser() {
+    public frmRegistration() {
         initComponents();
     }
 
