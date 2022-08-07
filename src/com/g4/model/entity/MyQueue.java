@@ -8,7 +8,6 @@ public class MyQueue {
     public static Node front, rear;
     
     public static class Node {
-        //String name;
         public User user;
         public Node next;
 
@@ -84,6 +83,4 @@ public class MyQueue {
             temp = temp.next;
         }
     }
-    
-    
 }

@@ -57,8 +57,6 @@ public class DestinationController implements MouseListener, MouseMotionListener
                 MyQueue.front.user.setDestination(destination);           
                 Date date = calendar.getTime();
                 MyQueue.front.user.setDepartureDate(sdf.format(date));
-                
-                MyQueue.print();
                 goToTicketConfirmationView();
             } else if (destination.equals("Seleccionar Destino")) {
                 JOptionPane.showMessageDialog(null, "Seleccione un destino");
@@ -96,8 +94,5 @@ public class DestinationController implements MouseListener, MouseMotionListener
 
     @Override
     public void mouseMoved(MouseEvent e) {
-    }
-
-    
-    
+    }    
 }

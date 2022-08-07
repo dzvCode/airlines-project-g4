@@ -2,7 +2,6 @@ package com.g4;
 
 import com.g4.controller.LoginController;
 import com.g4.model.entity.Admin;
-import com.g4.model.entity.MyQueue;
 import com.g4.model.repository.AdminDAO;
 import com.g4.view.frmLogin;
 

@@ -2,9 +2,7 @@ package com.g4.controller;
 
 import com.g4.model.entity.MyQueue;
 import com.g4.model.entity.User;
-import com.g4.model.repository.UserDAO;
 import com.g4.view.frmDestination;
-//import com.g4.view.frmDestination;
 import com.g4.view.frmQueue;
 import com.g4.view.frmRegistration;
 import java.awt.event.MouseEvent;
@@ -14,7 +12,6 @@ import javax.swing.JOptionPane;
 
 public class QueueController implements MouseListener, MouseMotionListener {
     
-    //public static MyQueue queue;
     public static frmQueue queueView;
 
     public QueueController(frmQueue queueView) {
@@ -29,15 +26,13 @@ public class QueueController implements MouseListener, MouseMotionListener {
     public void init() {
         queueView.setLocationRelativeTo(null);
         this.queueView.txtAdmin.setText(LoginController.admin.getName());
-        MyQueue.print();
     }
     
     public void goToUserView() {
         queueView.dispose();
         User user = new User();
-        UserDAO userC = new UserDAO();
         frmRegistration fr = new frmRegistration();
-        RegistrationController uc = new RegistrationController(user, userC, fr);
+        RegistrationController uc = new RegistrationController(user, fr);
         uc.init();
         fr.setVisible(true);
     }

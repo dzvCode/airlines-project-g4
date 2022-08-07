@@ -15,17 +15,16 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
     public boolean register(User user) {
         //PreparedStatement ps = null;
         //Connection conn = createConnection();
-        //String sql = "INSERT INTO users (name, dni, phone, email, destination) VALUES(?,?,?,?,?)";
-        String sql = "INSERT INTO users (name, dni, phone, email) VALUES(?,?,?,?)";
-
+        String sql = "INSERT INTO users (name, dni, phone, email, destination, departure_date) VALUES(?,?,?,?,?,?)";
         
-        try (Connection conn = createConnection(); PreparedStatement ps = conn.prepareStatement(sql) ) {
+        try (Connection conn = createConnection(); PreparedStatement ps = conn.prepareStatement(sql)) {
             //ps = conn.prepareStatement(sql);
             ps.setString(1, user.getName());
             ps.setString(2, user.getDni());
             ps.setString(3, user.getPhone());
             ps.setString(4, user.getEmail());
-           // ps.setString(5, user.getDestination());
+            ps.setString(5, user.getDestination());
+            ps.setString(6, user.getDepartureDate());
             ps.execute();
             //return true;
         } catch (SQLException e) {
@@ -41,7 +40,7 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
                 System.err.println(e);
             }
         }
-*/
+        */
     }
 
     @Override

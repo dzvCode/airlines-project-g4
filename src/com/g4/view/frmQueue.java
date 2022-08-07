@@ -1,9 +1,7 @@
 package com.g4.view;
 
 import com.g4.model.entity.MyQueue;
-import java.util.ArrayList;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableColumnModel;
 
 public class frmQueue extends javax.swing.JFrame {
     public int mouseX, mouseY;

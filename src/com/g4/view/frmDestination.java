@@ -1,7 +1,5 @@
 package com.g4.view;
   
-import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 public class frmDestination extends javax.swing.JFrame {

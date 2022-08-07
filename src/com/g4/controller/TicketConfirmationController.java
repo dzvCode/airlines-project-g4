@@ -66,7 +66,7 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
         }
         
         if (e.getSource() ==  ticketConfirmationView.btnConfirm) {
-            System.out.println(MyQueue.front.user);
+            
             if (userC.register(MyQueue.front.user)) {
                 MyQueue.dequeue();
                 JOptionPane.showMessageDialog(null, "Registro guardado");
