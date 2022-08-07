@@ -62,25 +62,36 @@ public class UserController implements MouseListener, MouseMotionListener {
         }
         
         if (e.getSource() == registerView.btnSave) {
+            
             user.setName(registerView.txtName.getText());
             user.setDni(registerView.txtDni.getText());
             user.setPhone(registerView.txtPhone.getText());
             user.setEmail(registerView.txtEmail.getText());
-            //user.setDestination(registerView.boxDestination.getSelectedItem().toString());
+            MyQueue.enqueue(user);
+            goToQueueView();           
             
             
-            if (userC.register(user)) {
-                JOptionPane.showMessageDialog(null, "Registro guardado");
-                //frmQueue.modelo.addRow(new Object[]{user.getName()});
-            
-                MyQueue.enqueue(user.getName());
-                System.out.println(MyQueue.counter);
+            /*if(MyQueue.counter > MyQueue.capacity == false) {
                 
                 goToQueueView();
+
+                if (userC.register(user)) {
+                    JOptionPane.showMessageDialog(null, "Registro guardado");
+                    //frmQueue.modelo.addRow(new Object[]{user.getName()});
+                
+                    MyQueue.enqueue(user);
+                    //System.out.println(MyQueue.counter);
+                
+                goToQueueView();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Error al guardar");
+                    //limpiar();
+                }
             } else {
-                JOptionPane.showMessageDialog(null, "Error al guardar");
-                //limpiar();
-            }
+                JOptionPane.showMessageDialog(null, "La cola esta llena");
+                goToQueueView();
+            }*/
+            
         }
         
     }

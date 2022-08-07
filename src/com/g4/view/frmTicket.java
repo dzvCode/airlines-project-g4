@@ -36,6 +36,9 @@ public class frmTicket extends javax.swing.JFrame {
         pricePanel = new javax.swing.JPanel();
         lblSolesSymbol = new javax.swing.JLabel();
         lblPriceSoles = new javax.swing.JLabel();
+        lblRouteTitle = new javax.swing.JLabel();
+        routePanel = new javax.swing.JPanel();
+        lblRouteCalculated = new javax.swing.JLabel();
         confirmPanel = new javax.swing.JPanel();
         btnConfirm = new javax.swing.JLabel();
         lblTitle = new javax.swing.JLabel();
@@ -134,6 +137,7 @@ public class frmTicket extends javax.swing.JFrame {
 
         originPanel.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblOrigin.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblOrigin.setText("Lima");
 
         javax.swing.GroupLayout originPanelLayout = new javax.swing.GroupLayout(originPanel);
@@ -155,31 +159,27 @@ public class frmTicket extends javax.swing.JFrame {
 
         destinationPanel.setBackground(new java.awt.Color(255, 255, 255));
 
+        lblDestinationSelected.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDestinationSelected.setText("Destino");
 
         javax.swing.GroupLayout destinationPanelLayout = new javax.swing.GroupLayout(destinationPanel);
         destinationPanel.setLayout(destinationPanelLayout);
         destinationPanelLayout.setHorizontalGroup(
             destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(destinationPanelLayout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(lblDestinationSelected)
-                .addContainerGap(55, Short.MAX_VALUE))
+            .addComponent(lblDestinationSelected, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
         );
         destinationPanelLayout.setVerticalGroup(
             destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(destinationPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblDestinationSelected)
-                .addContainerGap(12, Short.MAX_VALUE))
+            .addComponent(lblDestinationSelected, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pricePanel.setBackground(new java.awt.Color(255, 255, 255));
 
-        lblSolesSymbol.setFont(new java.awt.Font("Roboto Light", 0, 16)); // NOI18N
+        lblSolesSymbol.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
         lblSolesSymbol.setForeground(new java.awt.Color(70, 70, 70));
         lblSolesSymbol.setText("S/");
 
+        lblPriceSoles.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         lblPriceSoles.setText("100");
 
         javax.swing.GroupLayout pricePanelLayout = new javax.swing.GroupLayout(pricePanel);
@@ -189,15 +189,41 @@ public class frmTicket extends javax.swing.JFrame {
             .addGroup(pricePanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblSolesSymbol, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(lblPriceSoles)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(lblPriceSoles, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
+                .addContainerGap())
         );
         pricePanelLayout.setVerticalGroup(
             pricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(lblSolesSymbol, javax.swing.GroupLayout.DEFAULT_SIZE, 28, Short.MAX_VALUE)
-                .addComponent(lblPriceSoles))
+                .addComponent(lblSolesSymbol, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblPriceSoles, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        lblRouteTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
+        lblRouteTitle.setForeground(new java.awt.Color(41, 29, 124));
+        lblRouteTitle.setText("Ruta");
+
+        routePanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblRouteCalculated.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblRouteCalculated.setText("Ruta");
+
+        javax.swing.GroupLayout routePanelLayout = new javax.swing.GroupLayout(routePanel);
+        routePanel.setLayout(routePanelLayout);
+        routePanelLayout.setHorizontalGroup(
+            routePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(routePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblRouteCalculated, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        routePanelLayout.setVerticalGroup(
+            routePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, routePanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblRouteCalculated)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout infoPanelLayout = new javax.swing.GroupLayout(infoPanel);
@@ -205,40 +231,60 @@ public class frmTicket extends javax.swing.JFrame {
         infoPanelLayout.setHorizontalGroup(
             infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(infoPanelLayout.createSequentialGroup()
-                .addGap(132, 132, 132)
-                .addComponent(lblOriginTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblDestinationTitle)
-                .addGap(134, 134, 134))
-            .addGroup(infoPanelLayout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addComponent(originPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 239, Short.MAX_VALUE)
-                .addComponent(destinationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(82, 82, 82))
-            .addGroup(infoPanelLayout.createSequentialGroup()
-                .addGap(291, 291, 291)
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblPriceTitle))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(47, 47, 47)
+                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(infoPanelLayout.createSequentialGroup()
+                        .addGap(52, 52, 52)
+                        .addComponent(lblDestinationTitle))
+                    .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(destinationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(infoPanelLayout.createSequentialGroup()
+                                .addGap(52, 52, 52)
+                                .addComponent(lblOriginTitle))
+                            .addComponent(originPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(infoPanelLayout.createSequentialGroup()
+                        .addGap(63, 63, 63)
+                        .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 49, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
+                                .addComponent(lblRouteTitle)
+                                .addGap(238, 238, 238))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
+                                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(lblPriceTitle))
+                                .addGap(186, 186, 186))))))
         );
         infoPanelLayout.setVerticalGroup(
             infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
-                .addContainerGap(7, Short.MAX_VALUE)
                 .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblOriginTitle, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblDestinationTitle))
+                    .addGroup(infoPanelLayout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(lblOriginTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(originPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(infoPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(lblRouteTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDestinationTitle)
+                    .addComponent(lblPriceTitle))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(destinationPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(originPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblPriceTitle)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(22, 22, 22))
+                    .addGroup(infoPanelLayout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(78, 78, 78))
         );
 
         backgroundPanel.add(infoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 690, 150));
@@ -296,11 +342,14 @@ public class frmTicket extends javax.swing.JFrame {
     private javax.swing.JLabel lblOriginTitle;
     public javax.swing.JLabel lblPriceSoles;
     private javax.swing.JLabel lblPriceTitle;
+    public javax.swing.JLabel lblRouteCalculated;
+    private javax.swing.JLabel lblRouteTitle;
     private javax.swing.JLabel lblSolesSymbol;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JPanel originPanel;
     public javax.swing.JPanel panelTitlebar;
     private javax.swing.JPanel pricePanel;
     private javax.swing.JPanel returnPanel;
+    private javax.swing.JPanel routePanel;
     // End of variables declaration//GEN-END:variables
 }

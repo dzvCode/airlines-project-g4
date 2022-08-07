@@ -3,12 +3,14 @@ package com.g4.controller;
 import com.g4.model.entity.MyQueue;
 import com.g4.model.entity.User;
 import com.g4.model.repository.UserDAO;
+import com.g4.view.frmDestination;
 //import com.g4.view.frmDestination;
 import com.g4.view.frmQueue;
 import com.g4.view.frmUser;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
+import javax.swing.JOptionPane;
 
 public class QueueController implements MouseListener, MouseMotionListener {
     
@@ -27,6 +29,7 @@ public class QueueController implements MouseListener, MouseMotionListener {
     public void init() {
         queueView.setLocationRelativeTo(null);
         this.queueView.txtAdmin.setText(LoginController.admin.getName());
+        MyQueue.print();
     }
     
     public void goToUserView() {
@@ -40,11 +43,11 @@ public class QueueController implements MouseListener, MouseMotionListener {
     }
     
     public void goToDestinationView() {
-        //queueView.dispose();
-       // frmDestination fd = new frmDestination();
-       // DestinationController dc = new DestinationController(fd);
-        //dc.init();
-        //fd.setVisible(true);
+        queueView.dispose();
+        frmDestination fd = new frmDestination();
+        DestinationController dc = new DestinationController(fd);
+        dc.init();
+        fd.setVisible(true);
     }
 
     @Override
@@ -55,11 +58,19 @@ public class QueueController implements MouseListener, MouseMotionListener {
        }
        
        if (e.getSource() == queueView.btnAdd) {
-           goToUserView();
+           if (MyQueue.counter > MyQueue.capacity) {
+               JOptionPane.showMessageDialog(null, "La cola esta llena");
+           } else {
+               goToUserView();
+           }
        }
        
        if (e.getSource() == queueView.btnServe) {
-           goToDestinationView();
+           if (MyQueue.counter == 0) {
+               JOptionPane.showMessageDialog(null, "La cola esta vacia");
+           } else {
+               goToDestinationView();
+           }
        }
         
     }

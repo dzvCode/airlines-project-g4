@@ -28,9 +28,9 @@ public class frmDestination extends javax.swing.JFrame {
         Titulo_nombre2 = new javax.swing.JLabel();
         Box_destinos = new javax.swing.JComboBox<>();
         Boton = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        btnReturn = new javax.swing.JLabel();
         Boton1 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        btnContinue = new javax.swing.JLabel();
         Barra_superior1 = new javax.swing.JPanel();
         Boton_cerrar1 = new javax.swing.JPanel();
         X_salir1 = new javax.swing.JLabel();
@@ -141,25 +141,20 @@ public class frmDestination extends javax.swing.JFrame {
         Boton.setBackground(new java.awt.Color(0, 22, 59));
         Boton.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel3.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Regresar");
+        btnReturn.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
+        btnReturn.setForeground(new java.awt.Color(255, 255, 255));
+        btnReturn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnReturn.setText("Regresar");
 
         javax.swing.GroupLayout BotonLayout = new javax.swing.GroupLayout(Boton);
         Boton.setLayout(BotonLayout);
         BotonLayout.setHorizontalGroup(
             BotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BotonLayout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(36, 36, 36))
+            .addComponent(btnReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 146, Short.MAX_VALUE)
         );
         BotonLayout.setVerticalGroup(
             BotonLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(BotonLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addContainerGap(10, Short.MAX_VALUE))
+            .addComponent(btnReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
         jPanel1.add(Boton, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 580, -1, -1));
@@ -167,25 +162,20 @@ public class frmDestination extends javax.swing.JFrame {
         Boton1.setBackground(new java.awt.Color(0, 22, 59));
         Boton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
-        jLabel4.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Continuar");
+        btnContinue.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
+        btnContinue.setForeground(new java.awt.Color(255, 255, 255));
+        btnContinue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnContinue.setText("Continuar");
 
         javax.swing.GroupLayout Boton1Layout = new javax.swing.GroupLayout(Boton1);
         Boton1.setLayout(Boton1Layout);
         Boton1Layout.setHorizontalGroup(
             Boton1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, Boton1Layout.createSequentialGroup()
-                .addContainerGap(36, Short.MAX_VALUE)
-                .addComponent(jLabel4)
-                .addGap(36, 36, 36))
+            .addComponent(btnContinue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
         );
         Boton1Layout.setVerticalGroup(
             Boton1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(Boton1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4)
-                .addContainerGap(10, Short.MAX_VALUE))
+            .addComponent(btnContinue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
         jPanel1.add(Boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 580, -1, -1));
@@ -274,17 +264,17 @@ public class frmDestination extends javax.swing.JFrame {
     private javax.swing.JPanel Boton1;
     private javax.swing.JPanel Boton_cerrar;
     private javax.swing.JPanel Boton_cerrar1;
-    private javax.swing.JComboBox<String> Box_destinos;
+    public javax.swing.JComboBox<String> Box_destinos;
     private javax.swing.JLabel Titulo;
     private javax.swing.JLabel Titulo1;
     private javax.swing.JLabel Titulo_nombre1;
     private javax.swing.JLabel Titulo_nombre2;
     private javax.swing.JLabel X_salir;
     private javax.swing.JLabel X_salir1;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
+    public javax.swing.JLabel btnContinue;
+    public javax.swing.JLabel btnReturn;
+    public com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
