@@ -67,7 +67,7 @@ public class frmDestination extends javax.swing.JFrame {
 
         Box_destinos.setBackground(new java.awt.Color(255, 255, 255));
         Box_destinos.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        Box_destinos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Destino", "Arequipa", "Junin", "Puno", "Tacna", "Tarapoto" }));
+        Box_destinos.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Seleccionar Destino", "Tumbes", "Iquitos", "Piura", "Cajamarca", "Trujillo", "Tarapoto", "Pucallpa", "Puerto Maldonado", "Ayacucho", "Cuzco", "Arequipa", "Juliaca", "Tacna" }));
         Box_destinos.setToolTipText("");
         Box_destinos.setBorder(null);
         Box_destinos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));

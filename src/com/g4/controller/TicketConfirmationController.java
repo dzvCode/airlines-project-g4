@@ -46,7 +46,7 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
     }
     
     private float calculatePrice() {
-        return (float) (0.18) * Dijkstra.dijkstraAlgorithm(Dijkstra.mi_matriz, 0, city);
+        return (float) Dijkstra.dijkstraAlgorithm(Dijkstra.mi_matriz, 0, city);
     }
     
     private String getRoute() {

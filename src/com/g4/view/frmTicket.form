@@ -1,6 +1,44 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 
 <Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <NonVisualComponents>
+    <Container class="javax.swing.JPanel" name="originPanel1">
+      <Properties>
+        <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="56" max="32767" attributes="0"/>
+                  <Component id="lblOrigin1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="lblOrigin1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lblOrigin1">
+          <Properties>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="Lima"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </NonVisualComponents>
   <Properties>
     <Property name="defaultCloseOperation" type="int" value="3"/>
   </Properties>
@@ -65,12 +103,18 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnClose" min="-2" pref="36" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="btnClose" min="-2" pref="36" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="866" max="-2" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="btnClose" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Component id="btnClose" min="-2" pref="40" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                  </Group>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -100,26 +144,26 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="100" y="120" width="710" height="280"/>
+              <AbsoluteConstraints x="0" y="40" width="440" height="620"/>
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="51" max="32767" attributes="0"/>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
                       <Component id="lblGraph" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                      <EmptySpace pref="26" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="lblGraph" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="13" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                      <Component id="lblGraph" min="-2" pref="567" max="-2" attributes="0"/>
+                      <EmptySpace pref="28" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -128,7 +172,7 @@
             <Component class="javax.swing.JLabel" name="lblGraph">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/com/g4/view/images/graphImg.jpeg"/>
+                  <Image iconType="3" name="/com/g4/view/images/graphImg.png"/>
                 </Property>
               </Properties>
             </Component>
@@ -145,27 +189,19 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="250" y="580" width="-1" height="-1"/>
+              <AbsoluteConstraints x="500" y="570" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="btnReturn" min="-2" pref="102" max="-2" attributes="0"/>
-                      <EmptySpace pref="18" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="btnReturn" alignment="1" pref="120" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="9" max="32767" attributes="0"/>
-                      <Component id="btnReturn" min="-2" pref="30" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="btnReturn" alignment="0" pref="45" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -195,88 +231,71 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="110" y="410" width="690" height="150"/>
+              <AbsoluteConstraints x="460" y="150" width="420" height="380"/>
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                      <Component id="lblOriginTitle" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="lblDestinationTitle" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="100" max="-2" attributes="0"/>
+                  </Group>
                   <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                              <Component id="lblDestinationTitle" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" alignment="0" groupAlignment="1" attributes="0">
-                              <Component id="destinationPanel" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
-                                      <Component id="lblOriginTitle" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="routePanel" min="-2" max="-2" attributes="0"/>
+                                  <Group type="102" attributes="0">
+                                      <Component id="originPanel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                                      <Component id="destinationPanel" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <Component id="originPanel" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="lblRouteTitle" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="150" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="pricePanel" max="32767" attributes="0"/>
+                                  <Component id="lblPriceTitle" max="32767" attributes="0"/>
                               </Group>
                           </Group>
                       </Group>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                              <Component id="routePanel" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="0" pref="49" max="32767" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="1" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Component id="lblRouteTitle" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="238" max="-2" attributes="0"/>
-                                  </Group>
-                                  <Group type="102" alignment="1" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
-                                          <Component id="pricePanel" min="-2" max="-2" attributes="0"/>
-                                          <Component id="lblPriceTitle" min="-2" max="-2" attributes="0"/>
-                                      </Group>
-                                      <EmptySpace min="-2" pref="186" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
-                          </Group>
-                      </Group>
+                      <EmptySpace pref="55" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <EmptySpace max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="1" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
                               <Component id="lblOriginTitle" min="-2" pref="22" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
                               <Component id="originPanel" min="-2" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" alignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <Component id="lblDestinationTitle" min="-2" max="-2" attributes="0"/>
                               <EmptySpace max="-2" attributes="0"/>
-                              <Component id="lblRouteTitle" min="-2" pref="22" max="-2" attributes="0"/>
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="routePanel" min="-2" max="-2" attributes="0"/>
+                              <Component id="destinationPanel" min="-2" max="-2" attributes="0"/>
                           </Group>
                       </Group>
+                      <EmptySpace pref="46" max="32767" attributes="0"/>
+                      <Component id="lblRouteTitle" min="-2" pref="22" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="lblPriceTitle" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="lblDestinationTitle" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="destinationPanel" max="32767" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                              <Component id="pricePanel" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace min="-2" pref="78" max="-2" attributes="0"/>
+                      <Component id="routePanel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace pref="65" max="32767" attributes="0"/>
+                      <Component id="lblPriceTitle" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Component id="pricePanel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -301,6 +320,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="7c" green="1d" red="29" type="rgb"/>
                 </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Precio del boleto"/>
               </Properties>
             </Component>
@@ -325,10 +345,10 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace pref="56" max="32767" attributes="0"/>
-                          <Component id="lblOrigin" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="lblOrigin" pref="125" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -348,37 +368,6 @@
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="Lima"/>
                   </Properties>
-                </Component>
-              </SubComponents>
-            </Container>
-            <Container class="javax.swing.JPanel" name="destinationPanel">
-              <Properties>
-                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                </Property>
-              </Properties>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblDestinationSelected" alignment="0" pref="137" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Component id="lblDestinationSelected" alignment="1" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-              <SubComponents>
-                <Component class="javax.swing.JLabel" name="lblDestinationSelected">
-                  <Properties>
-                    <Property name="horizontalAlignment" type="int" value="0"/>
-                    <Property name="text" type="java.lang.String" value="Destino"/>
-                  </Properties>
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
-                  </AuxValues>
                 </Component>
               </SubComponents>
             </Container>
@@ -441,6 +430,7 @@
                 <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
                   <Color blue="7c" green="1d" red="29" type="rgb"/>
                 </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
                 <Property name="text" type="java.lang.String" value="Ruta"/>
               </Properties>
             </Component>
@@ -456,16 +446,16 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="lblRouteCalculated" pref="382" max="32767" attributes="0"/>
+                          <Component id="lblRouteCalculated" pref="316" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
                 <DimensionLayout dim="1">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace max="32767" attributes="0"/>
-                          <Component id="lblRouteCalculated" min="-2" max="-2" attributes="0"/>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="lblRouteCalculated" pref="38" max="32767" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -476,6 +466,45 @@
                   <Properties>
                     <Property name="horizontalAlignment" type="int" value="0"/>
                     <Property name="text" type="java.lang.String" value="Ruta"/>
+                  </Properties>
+                  <AuxValues>
+                    <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+                  </AuxValues>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="destinationPanel">
+              <Properties>
+                <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                  <Color blue="ff" green="ff" red="ff" type="rgb"/>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="lblDestinationSelected" pref="125" max="32767" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="lblDestinationSelected" max="-2" attributes="0"/>
+                          <EmptySpace max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="lblDestinationSelected">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="Destino"/>
                   </Properties>
                   <AuxValues>
                     <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -496,27 +525,19 @@
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="520" y="580" width="-1" height="-1"/>
+              <AbsoluteConstraints x="700" y="570" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
 
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                      <Component id="btnConfirm" min="-2" pref="102" max="-2" attributes="0"/>
-                      <EmptySpace pref="18" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="btnConfirm" alignment="0" pref="138" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="1" attributes="0">
-                      <EmptySpace pref="9" max="32767" attributes="0"/>
-                      <Component id="btnConfirm" min="-2" pref="30" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                  </Group>
+                  <Component id="btnConfirm" alignment="0" pref="45" max="32767" attributes="0"/>
               </Group>
             </DimensionLayout>
           </Layout>
@@ -546,11 +567,12 @@
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="7c" green="1d" red="29" type="rgb"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="R E C O R R I D O"/>
+            <Property name="horizontalAlignment" type="int" value="0"/>
+            <Property name="text" type="java.lang.String" value="TRAYECTO"/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="330" y="70" width="-1" height="-1"/>
+              <AbsoluteConstraints x="500" y="80" width="350" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

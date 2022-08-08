@@ -18,6 +18,8 @@ public class frmTicket extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        originPanel1 = new javax.swing.JPanel();
+        lblOrigin1 = new javax.swing.JLabel();
         backgroundPanel = new javax.swing.JPanel();
         panelTitlebar = new javax.swing.JPanel();
         btnClose = new javax.swing.JLabel();
@@ -31,17 +33,39 @@ public class frmTicket extends javax.swing.JFrame {
         lblDestinationTitle = new javax.swing.JLabel();
         originPanel = new javax.swing.JPanel();
         lblOrigin = new javax.swing.JLabel();
-        destinationPanel = new javax.swing.JPanel();
-        lblDestinationSelected = new javax.swing.JLabel();
         pricePanel = new javax.swing.JPanel();
         lblSolesSymbol = new javax.swing.JLabel();
         lblPriceSoles = new javax.swing.JLabel();
         lblRouteTitle = new javax.swing.JLabel();
         routePanel = new javax.swing.JPanel();
         lblRouteCalculated = new javax.swing.JLabel();
+        destinationPanel = new javax.swing.JPanel();
+        lblDestinationSelected = new javax.swing.JLabel();
         confirmPanel = new javax.swing.JPanel();
         btnConfirm = new javax.swing.JLabel();
         lblTitle = new javax.swing.JLabel();
+
+        originPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblOrigin1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblOrigin1.setText("Lima");
+
+        javax.swing.GroupLayout originPanel1Layout = new javax.swing.GroupLayout(originPanel1);
+        originPanel1.setLayout(originPanel1Layout);
+        originPanel1Layout.setHorizontalGroup(
+            originPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, originPanel1Layout.createSequentialGroup()
+                .addContainerGap(56, Short.MAX_VALUE)
+                .addComponent(lblOrigin1)
+                .addGap(53, 53, 53))
+        );
+        originPanel1Layout.setVerticalGroup(
+            originPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(originPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblOrigin1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -62,37 +86,41 @@ public class frmTicket extends javax.swing.JFrame {
         panelTitlebar.setLayout(panelTitlebarLayout);
         panelTitlebarLayout.setHorizontalGroup(
             panelTitlebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(panelTitlebarLayout.createSequentialGroup()
+                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(866, 866, 866))
         );
         panelTitlebarLayout.setVerticalGroup(
             panelTitlebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(panelTitlebarLayout.createSequentialGroup()
+                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         backgroundPanel.add(panelTitlebar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         graphPanel.setBackground(new java.awt.Color(242, 250, 250));
 
-        lblGraph.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/graphImg.jpeg"))); // NOI18N
+        lblGraph.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/graphImg.png"))); // NOI18N
 
         javax.swing.GroupLayout graphPanelLayout = new javax.swing.GroupLayout(graphPanel);
         graphPanel.setLayout(graphPanelLayout);
         graphPanelLayout.setHorizontalGroup(
             graphPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, graphPanelLayout.createSequentialGroup()
-                .addContainerGap(51, Short.MAX_VALUE)
+            .addGroup(graphPanelLayout.createSequentialGroup()
+                .addGap(14, 14, 14)
                 .addComponent(lblGraph)
-                .addGap(48, 48, 48))
+                .addContainerGap(26, Short.MAX_VALUE))
         );
         graphPanelLayout.setVerticalGroup(
             graphPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(graphPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblGraph)
-                .addContainerGap(13, Short.MAX_VALUE))
+                .addGap(25, 25, 25)
+                .addComponent(lblGraph, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(28, Short.MAX_VALUE))
         );
 
-        backgroundPanel.add(graphPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, 710, 280));
+        backgroundPanel.add(graphPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 440, 620));
 
         returnPanel.setBackground(new java.awt.Color(153, 186, 186));
         returnPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -106,20 +134,14 @@ public class frmTicket extends javax.swing.JFrame {
         returnPanel.setLayout(returnPanelLayout);
         returnPanelLayout.setHorizontalGroup(
             returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(returnPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+            .addComponent(btnReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
         );
         returnPanelLayout.setVerticalGroup(
             returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, returnPanelLayout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
-                .addComponent(btnReturn, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(btnReturn, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
         );
 
-        backgroundPanel.add(returnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 580, -1, -1));
+        backgroundPanel.add(returnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 570, -1, -1));
 
         infoPanel.setBackground(new java.awt.Color(249, 237, 243));
 
@@ -129,6 +151,7 @@ public class frmTicket extends javax.swing.JFrame {
 
         lblPriceTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         lblPriceTitle.setForeground(new java.awt.Color(41, 29, 124));
+        lblPriceTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblPriceTitle.setText("Precio del boleto");
 
         lblDestinationTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
@@ -144,10 +167,10 @@ public class frmTicket extends javax.swing.JFrame {
         originPanel.setLayout(originPanelLayout);
         originPanelLayout.setHorizontalGroup(
             originPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, originPanelLayout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
-                .addComponent(lblOrigin)
-                .addGap(53, 53, 53))
+            .addGroup(originPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblOrigin, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                .addContainerGap())
         );
         originPanelLayout.setVerticalGroup(
             originPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -155,22 +178,6 @@ public class frmTicket extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(lblOrigin)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        destinationPanel.setBackground(new java.awt.Color(255, 255, 255));
-
-        lblDestinationSelected.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblDestinationSelected.setText("Destino");
-
-        javax.swing.GroupLayout destinationPanelLayout = new javax.swing.GroupLayout(destinationPanel);
-        destinationPanel.setLayout(destinationPanelLayout);
-        destinationPanelLayout.setHorizontalGroup(
-            destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblDestinationSelected, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-        );
-        destinationPanelLayout.setVerticalGroup(
-            destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(lblDestinationSelected, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pricePanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -202,6 +209,7 @@ public class frmTicket extends javax.swing.JFrame {
 
         lblRouteTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
         lblRouteTitle.setForeground(new java.awt.Color(41, 29, 124));
+        lblRouteTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblRouteTitle.setText("Ruta");
 
         routePanel.setBackground(new java.awt.Color(255, 255, 255));
@@ -215,15 +223,37 @@ public class frmTicket extends javax.swing.JFrame {
             routePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(routePanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(lblRouteCalculated, javax.swing.GroupLayout.DEFAULT_SIZE, 382, Short.MAX_VALUE)
+                .addComponent(lblRouteCalculated, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
                 .addContainerGap())
         );
         routePanelLayout.setVerticalGroup(
             routePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, routePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(lblRouteCalculated)
+            .addGroup(routePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblRouteCalculated, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                 .addContainerGap())
+        );
+
+        destinationPanel.setBackground(new java.awt.Color(255, 255, 255));
+
+        lblDestinationSelected.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDestinationSelected.setText("Destino");
+
+        javax.swing.GroupLayout destinationPanelLayout = new javax.swing.GroupLayout(destinationPanel);
+        destinationPanel.setLayout(destinationPanelLayout);
+        destinationPanelLayout.setHorizontalGroup(
+            destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(destinationPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDestinationSelected, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        destinationPanelLayout.setVerticalGroup(
+            destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(destinationPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDestinationSelected)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout infoPanelLayout = new javax.swing.GroupLayout(infoPanel);
@@ -231,63 +261,54 @@ public class frmTicket extends javax.swing.JFrame {
         infoPanelLayout.setHorizontalGroup(
             infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(infoPanelLayout.createSequentialGroup()
-                .addGap(47, 47, 47)
+                .addGap(85, 85, 85)
+                .addComponent(lblOriginTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(lblDestinationTitle)
+                .addGap(100, 100, 100))
+            .addGroup(infoPanelLayout.createSequentialGroup()
                 .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addGap(52, 52, 52)
-                        .addComponent(lblDestinationTitle))
-                    .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(destinationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGap(37, 37, 37)
+                        .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(infoPanelLayout.createSequentialGroup()
-                                .addGap(52, 52, 52)
-                                .addComponent(lblOriginTitle))
-                            .addComponent(originPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(originPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(54, 54, 54)
+                                .addComponent(destinationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(lblRouteTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 49, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
-                                .addComponent(lblRouteTitle)
-                                .addGap(238, 238, 238))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
-                                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(lblPriceTitle))
-                                .addGap(186, 186, 186))))))
+                        .addGap(150, 150, 150)
+                        .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(pricePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(lblPriceTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         infoPanelLayout.setVerticalGroup(
             infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoPanelLayout.createSequentialGroup()
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(31, 31, 31)
+                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(lblOriginTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(originPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(lblRouteTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lblDestinationTitle)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(destinationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 46, Short.MAX_VALUE)
+                .addComponent(lblRouteTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPriceTitle)
-                    .addComponent(lblDestinationTitle))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(destinationPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(78, 78, 78))
+                .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addComponent(lblPriceTitle)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39))
         );
 
-        backgroundPanel.add(infoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 410, 690, 150));
+        backgroundPanel.add(infoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, 420, 380));
 
         confirmPanel.setBackground(new java.awt.Color(0, 153, 153));
         confirmPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -301,25 +322,20 @@ public class frmTicket extends javax.swing.JFrame {
         confirmPanel.setLayout(confirmPanelLayout);
         confirmPanelLayout.setHorizontalGroup(
             confirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(confirmPanelLayout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(btnConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(18, Short.MAX_VALUE))
+            .addComponent(btnConfirm, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
         );
         confirmPanelLayout.setVerticalGroup(
             confirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, confirmPanelLayout.createSequentialGroup()
-                .addContainerGap(9, Short.MAX_VALUE)
-                .addComponent(btnConfirm, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addComponent(btnConfirm, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
         );
 
-        backgroundPanel.add(confirmPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 580, -1, -1));
+        backgroundPanel.add(confirmPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 570, -1, -1));
 
         lblTitle.setFont(new java.awt.Font("Roboto Black", 0, 36)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(41, 29, 124));
-        lblTitle.setText("R E C O R R I D O");
-        backgroundPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 70, -1, -1));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("TRAYECTO");
+        backgroundPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 350, -1));
 
         getContentPane().add(backgroundPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 660));
 
@@ -339,6 +355,7 @@ public class frmTicket extends javax.swing.JFrame {
     private javax.swing.JLabel lblDestinationTitle;
     private javax.swing.JLabel lblGraph;
     private javax.swing.JLabel lblOrigin;
+    private javax.swing.JLabel lblOrigin1;
     private javax.swing.JLabel lblOriginTitle;
     public javax.swing.JLabel lblPriceSoles;
     private javax.swing.JLabel lblPriceTitle;
@@ -347,6 +364,7 @@ public class frmTicket extends javax.swing.JFrame {
     private javax.swing.JLabel lblSolesSymbol;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JPanel originPanel;
+    private javax.swing.JPanel originPanel1;
     public javax.swing.JPanel panelTitlebar;
     private javax.swing.JPanel pricePanel;
     private javax.swing.JPanel returnPanel;
