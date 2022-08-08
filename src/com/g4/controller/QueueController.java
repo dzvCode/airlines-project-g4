@@ -21,6 +21,7 @@ public class QueueController implements MouseListener, MouseMotionListener {
         this.queueView.titlePanel.addMouseMotionListener(this);
         this.queueView.btnAdd.addMouseListener(this);
         this.queueView.btnServe.addMouseListener(this);
+        this.queueView.btnDequeue.addMouseListener(this);
     }
         
     public void init() {
@@ -45,6 +46,14 @@ public class QueueController implements MouseListener, MouseMotionListener {
         fd.setVisible(true);
     }
 
+    public void goToQueueView() {
+        queueView.dispose();
+        frmQueue fq = new frmQueue();
+        QueueController qc = new QueueController(fq);
+        qc.init();
+        fq.setVisible(true); 
+    }
+    
     @Override
     public void mouseClicked(MouseEvent e) {
         
@@ -62,10 +71,19 @@ public class QueueController implements MouseListener, MouseMotionListener {
        
        if (e.getSource() == queueView.btnServe) {
            if (MyQueue.counter == 0) {
-               JOptionPane.showMessageDialog(null, "La cola esta vacia");
+               JOptionPane.showMessageDialog(null, "Cola vacia");
            } else {
                goToDestinationView();
            }
+       }
+       
+       if (e.getSource() == queueView.btnDequeue) {
+           if(MyQueue.front != null) {
+               MyQueue.dequeue();
+               goToQueueView();
+           } else {
+               JOptionPane.showMessageDialog(null, "Cola vacia");
+           }           
        }
         
     }

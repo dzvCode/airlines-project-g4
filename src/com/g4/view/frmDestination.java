@@ -114,7 +114,7 @@ public class frmDestination extends javax.swing.JFrame {
         );
 
         jPanel1.add(Boton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 580, -1, -1));
-        jPanel1.add(jDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 300, -1));
+        jPanel1.add(jDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 349, 300, 40));
 
         Barra_superior2.setBackground(new java.awt.Color(0, 22, 59));
 

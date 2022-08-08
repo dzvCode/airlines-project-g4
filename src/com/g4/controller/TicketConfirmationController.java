@@ -15,6 +15,7 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
     public static frmTicket ticketConfirmationView;
     private UserDAO userC;
     public int city = Dijkstra.citySelected.get(MyQueue.front.user.getDestination());
+    //public int cityOrigin = Dijkstra.citySelected.get(MyQueue.front.user.getDestination());
     public String route = "";
     
     public TicketConfirmationController(frmTicket ticketConfirmationView, UserDAO userC) {

@@ -47,7 +47,7 @@ public class frmLogin extends javax.swing.JFrame {
         handsawnombre.setFont(new java.awt.Font("Roboto Medium", 3, 24)); // NOI18N
         handsawnombre.setForeground(new java.awt.Color(255, 255, 255));
         handsawnombre.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        handsawnombre.setText("Handsaw ETS ");
+        handsawnombre.setText("Handsaw ETS Airlines");
 
         javax.swing.GroupLayout lblTitleLayout = new javax.swing.GroupLayout(lblTitle);
         lblTitle.setLayout(lblTitleLayout);

@@ -8,17 +8,6 @@ import java.util.List;
 public class Dijkstra {
     
     public static final HashMap<String, Integer> citySelected;
-    /*
-    static {
-    citySelected = new HashMap<>();
-    citySelected.put("Lima", 1);
-    citySelected.put("Tacna", 2);
-    citySelected.put("Arequipa", 3);
-    citySelected.put("Tarapoto", 4);
-    citySelected.put("Puno", 5);
-    citySelected.put("Junin", 6);
-    }
-    */
     static {
     citySelected = new HashMap<>();
     citySelected.put("Lima", 1);
@@ -36,35 +25,27 @@ public class Dijkstra {
     citySelected.put("Juliaca", 13);
     citySelected.put("Tacna", 14);
     }
-    /*
-    public static final int[][] mi_matriz = {
-        {0, 500, 400, 0, 0, 0},
-        {500, 0, 0, 800, 0, 500},
-        {400, 0, 0, 700, 600, 0},
-        {0, 800, 700, 0, 100, 200},
-        {0, 0, 600, 100, 0, 300},
-        {0, 500, 0, 200, 300, 0}
-    };
-    */
-    
+        
     public static final int[][] mi_matriz = { 
-      /*    Lima          */    {0, 0, 0, 0, 0, 488, 0, 485, 0, 331, 0, 766, 0, 0},
-      /*    Tumbes        */    {0, 0, 0, 180, 451, 0, 0, 0, 0, 0, 0, 0, 0, 0},
-      /*    Iquitos       */    {0, 0, 0, 0, 694, 0, 458, 535, 0, 0, 0, 0, 0, 0},
-      /*    Piura         */    {0, 180, 0, 0, 0, 370, 0, 0, 0, 0, 0, 0, 0, 0},
-      /*    Cajamarca     */    {0, 451, 694, 0, 0, 120, 0, 0, 0, 0, 0, 0, 0, 0},
-      /*    Trujillo      */    {488, 0, 0, 0, 0, 0, 346, 0, 0, 0, 0, 0, 0, 0},
-      /*    Tarapoto      */    {0, 0, 458, 0, 0, 346, 0, 289, 0, 0, 0, 0, 0, 0},
-      /*    Pucallpa      */    {0, 0, 535, 0, 0, 0, 289, 0, 749, 0, 0, 0, 0, 0},
-      /*    P. Maldonado  */    {0, 0, 0, 0, 0, 0, 0, 749, 0, 0, 317, 0, 0, 0},
-      /*    Ayacucho      */    {331, 0, 0, 0, 0, 0, 0, 0, 0, 0, 248, 0, 512, 685},
-      /*    Cuzco         */    {0, 0, 0, 0, 0, 0, 0, 0, 317, 248, 0, 0, 0, 0},
-      /*    Arequipa      */    {766, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 184, 225},
-      /*    Juliaca       */    {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 512, 184, 0, 0},
-      /*    Tacna         */    {0, 0, 0, 0, 0, 0, 0, 0, 0, 685, 0, 225, 0, 0}
+                                // 1  2  3  4  5  6    7   8   9  10  11  12  13  14
+      /*    1 Lima          */    {0, 0, 0, 0, 0, 488, 0, 485, 0, 331, 0, 766, 0, 0},
+      /*    2 Tumbes        */    {0, 0, 0, 180, 451, 0, 0, 0, 0, 0, 0, 0, 0, 0},
+      /*    3 Iquitos       */    {0, 0, 0, 0, 694, 0, 458, 535, 0, 0, 0, 0, 0, 0},
+      /*    4 Piura         */    {0, 180, 0, 0, 0, 370, 0, 0, 0, 0, 0, 0, 0, 0},
+      /*    5 Cajamarca     */    {0, 451, 694, 0, 0, 120, 0, 0, 0, 0, 0, 0, 0, 0},
+      /*    6 Trujillo      */    {488, 0, 0, 370, 120, 0, 346, 0, 0, 0, 0, 0, 0, 0},
+      /*    7 Tarapoto      */    {0, 0, 458, 0, 0, 346, 0, 289, 0, 0, 0, 0, 0, 0},
+      /*    8 Pucallpa      */    {485, 0, 535, 0, 0, 0, 289, 0, 749, 0, 0, 0, 0, 0},
+      /*    9 P. Maldonado  */    {0, 0, 0, 0, 0, 0, 0, 749, 0, 0, 317, 0, 0, 0},
+      /*    10 Ayacucho     */    {331, 0, 0, 0, 0, 0, 0, 0, 0, 0, 248, 0, 512, 685},
+      /*    11 Cuzco        */    {0, 0, 0, 0, 0, 0, 0, 0, 317, 248, 0, 0, 0, 0},
+      /*    12 Arequipa     */    {766, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 184, 225},
+      /*    13 Juliaca      */    {0, 0, 0, 0, 0, 0, 0, 0, 0, 512, 0, 184, 0, 0},
+      /*    14 Tacna        */    {0, 0, 0, 0, 0, 0, 0, 0, 0, 685, 0, 225, 0, 0}
     };
     
     public static float dijkstraAlgorithm(int[][] weightMatrix, int start, int end){
+        //start -= 1;
         end -= 1;
         int n = weightMatrix.length;
         List<List<String>> caminos = new ArrayList<>();
@@ -117,6 +98,7 @@ public class Dijkstra {
     }
     
     public static List<String> dijkstraAlgorithmPaths(int[][] weightMatrix, int start, int end){
+        //start -= 1;
         end -= 1;
         int n = weightMatrix.length;
         List<List<String>> caminos = new ArrayList<>();

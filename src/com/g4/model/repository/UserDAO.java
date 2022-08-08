@@ -62,6 +62,7 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
                 user.setPhone(rs.getString("phone"));
                 user.setEmail(rs.getString("email"));
                 user.setDestination(rs.getString("destination"));
+                user.setDepartureDate(rs.getString("departure_date"));
                 return true;
             }
 
@@ -82,7 +83,7 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
     public boolean update(User user) {
         PreparedStatement ps = null;
         Connection conn = createConnection();
-        String sql = "UPDATE users SET name=?, phone=?, email=?, destination=? WHERE dni=?";
+        String sql = "UPDATE users SET name=?, phone=?, email=?, destination=?, departure_date=? WHERE dni=?";
 
         try {
             ps = conn.prepareStatement(sql);
@@ -91,6 +92,7 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
             ps.setString(3, user.getEmail());
             ps.setString(4, user.getDestination());
             ps.setString(5, user.getDni());
+            ps.setString(6, user.getDepartureDate());
             ps.execute();
             return true;
         } catch (SQLException e) {

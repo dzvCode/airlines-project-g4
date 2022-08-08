@@ -70,6 +70,8 @@ public class frmQueue extends javax.swing.JFrame {
         servePanel = new javax.swing.JPanel();
         btnServe = new javax.swing.JLabel();
         img = new javax.swing.JLabel();
+        dequeuePanel = new javax.swing.JPanel();
+        btnDequeue = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -181,17 +183,40 @@ public class frmQueue extends javax.swing.JFrame {
         servePanel.setLayout(servePanelLayout);
         servePanelLayout.setHorizontalGroup(
             servePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnServe, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+            .addComponent(btnServe, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
         );
         servePanelLayout.setVerticalGroup(
             servePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnServe, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, servePanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnServe, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        bgPanel.add(servePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 520, -1, -1));
+        bgPanel.add(servePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, -1, -1));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/queueImg.png"))); // NOI18N
         bgPanel.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(624, 28, -1, 650));
+
+        dequeuePanel.setBackground(new java.awt.Color(128, 10, 36));
+        dequeuePanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        btnDequeue.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
+        btnDequeue.setForeground(new java.awt.Color(255, 255, 255));
+        btnDequeue.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnDequeue.setText("X");
+
+        javax.swing.GroupLayout dequeuePanelLayout = new javax.swing.GroupLayout(dequeuePanel);
+        dequeuePanel.setLayout(dequeuePanelLayout);
+        dequeuePanelLayout.setHorizontalGroup(
+            dequeuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnDequeue, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        );
+        dequeuePanelLayout.setVerticalGroup(
+            dequeuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnDequeue, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)
+        );
+
+        bgPanel.add(dequeuePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 30, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -211,8 +236,10 @@ public class frmQueue extends javax.swing.JFrame {
     private javax.swing.JPanel addPanel;
     private javax.swing.JPanel bgPanel;
     public javax.swing.JLabel btnAdd;
+    public javax.swing.JLabel btnDequeue;
     public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnServe;
+    private javax.swing.JPanel dequeuePanel;
     private javax.swing.JLabel img;
     private javax.swing.JLabel lblAdmin;
     private javax.swing.JLabel queueLabel;
