@@ -72,6 +72,7 @@ public class frmQueue extends javax.swing.JFrame {
         img = new javax.swing.JLabel();
         dequeuePanel = new javax.swing.JPanel();
         btnDequeue = new javax.swing.JLabel();
+        btnReturn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -218,6 +219,9 @@ public class frmQueue extends javax.swing.JFrame {
 
         bgPanel.add(dequeuePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 30, 30));
 
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/return.png"))); // NOI18N
+        bgPanel.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, -1, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -238,6 +242,7 @@ public class frmQueue extends javax.swing.JFrame {
     public javax.swing.JLabel btnAdd;
     public javax.swing.JLabel btnDequeue;
     public javax.swing.JLabel btnExit;
+    public javax.swing.JLabel btnReturn;
     public javax.swing.JLabel btnServe;
     private javax.swing.JPanel dequeuePanel;
     private javax.swing.JLabel img;

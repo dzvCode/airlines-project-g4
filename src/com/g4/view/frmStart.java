@@ -27,8 +27,8 @@ public class frmStart extends javax.swing.JFrame {
         adminPanel = new javax.swing.JPanel();
         txtAdmin = new javax.swing.JLabel();
         lblAdmin = new javax.swing.JLabel();
-        goToRegisteredUsersPanel = new javax.swing.JPanel();
-        btnGoToRegisteredUsers = new javax.swing.JLabel();
+        goToClientsPanel = new javax.swing.JPanel();
+        btnGoToClients = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -105,23 +105,23 @@ public class frmStart extends javax.swing.JFrame {
         lblAdmin.setForeground(new java.awt.Color(41, 29, 124));
         lblAdmin.setText("Administrador");
 
-        goToRegisteredUsersPanel.setBackground(new java.awt.Color(102, 0, 102));
-        goToRegisteredUsersPanel.setForeground(new java.awt.Color(255, 153, 255));
+        goToClientsPanel.setBackground(new java.awt.Color(102, 0, 102));
+        goToClientsPanel.setForeground(new java.awt.Color(255, 153, 255));
 
-        btnGoToRegisteredUsers.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
-        btnGoToRegisteredUsers.setForeground(new java.awt.Color(255, 204, 255));
-        btnGoToRegisteredUsers.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnGoToRegisteredUsers.setText("T I C K E T S");
+        btnGoToClients.setFont(new java.awt.Font("Roboto Medium", 0, 18)); // NOI18N
+        btnGoToClients.setForeground(new java.awt.Color(255, 204, 255));
+        btnGoToClients.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnGoToClients.setText("T I C K E T S");
 
-        javax.swing.GroupLayout goToRegisteredUsersPanelLayout = new javax.swing.GroupLayout(goToRegisteredUsersPanel);
-        goToRegisteredUsersPanel.setLayout(goToRegisteredUsersPanelLayout);
-        goToRegisteredUsersPanelLayout.setHorizontalGroup(
-            goToRegisteredUsersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnGoToRegisteredUsers, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
+        javax.swing.GroupLayout goToClientsPanelLayout = new javax.swing.GroupLayout(goToClientsPanel);
+        goToClientsPanel.setLayout(goToClientsPanelLayout);
+        goToClientsPanelLayout.setHorizontalGroup(
+            goToClientsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnGoToClients, javax.swing.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
         );
-        goToRegisteredUsersPanelLayout.setVerticalGroup(
-            goToRegisteredUsersPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnGoToRegisteredUsers, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
+        goToClientsPanelLayout.setVerticalGroup(
+            goToClientsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnGoToClients, javax.swing.GroupLayout.DEFAULT_SIZE, 59, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout startPanelLayout = new javax.swing.GroupLayout(startPanel);
@@ -137,7 +137,7 @@ public class frmStart extends javax.swing.JFrame {
                         .addGap(77, 77, 77)
                         .addGroup(startPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(goToQueuePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(goToRegisteredUsersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(goToClientsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(38, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, startPanelLayout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -154,7 +154,7 @@ public class frmStart extends javax.swing.JFrame {
                 .addGap(44, 44, 44)
                 .addComponent(goToQueuePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(30, 30, 30)
-                .addComponent(goToRegisteredUsersPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(goToClientsPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(77, Short.MAX_VALUE))
         );
 
@@ -169,10 +169,10 @@ public class frmStart extends javax.swing.JFrame {
     private javax.swing.JPanel adminPanel;
     private javax.swing.JPanel bgPanel;
     public javax.swing.JLabel btnExit;
+    public javax.swing.JLabel btnGoToClients;
     public javax.swing.JLabel btnGoToQueue;
-    public javax.swing.JLabel btnGoToRegisteredUsers;
+    private javax.swing.JPanel goToClientsPanel;
     private javax.swing.JPanel goToQueuePanel;
-    private javax.swing.JPanel goToRegisteredUsersPanel;
     private javax.swing.JLabel lblAdmin;
     private javax.swing.JPanel startPanel;
     public javax.swing.JPanel titlePanel;

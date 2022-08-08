@@ -48,12 +48,15 @@ public class DestinationController implements MouseListener, MouseMotionListener
                
         if (e.getSource() == destinationView.btnContinue) {
             
-            String destination = destinationView.Box_destinos.getSelectedItem().toString();
+            String origin = destinationView.boxOrigin.getSelectedItem().toString();
+            String destination = destinationView.boxDestination.getSelectedItem().toString();
                                     
             SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
             Calendar calendar = destinationView.jDateChooser.getCalendar();
             
-            if (!destination.equals("Seleccionar Destino") && calendar != null) {
+            if (!origin.equals("Seleccionar Origen") && !destination.equals("Seleccionar Destino") 
+                    && !origin.equals(destination) && calendar != null) {
+                MyQueue.front.user.setOrigin(origin);
                 MyQueue.front.user.setDestination(destination);           
                 Date date = calendar.getTime();
                 MyQueue.front.user.setDepartureDate(sdf.format(date));
@@ -62,13 +65,19 @@ public class DestinationController implements MouseListener, MouseMotionListener
                 JOptionPane.showMessageDialog(null, "Seleccione un destino");
             } else if (calendar == null ) {
                 JOptionPane.showMessageDialog(null, "Seleccione la fecha de ida");
-            }         
+            } else if (origin.equals(destination)) {
+                JOptionPane.showMessageDialog(null, "Destino invalido");            
+            } 
             
           
         }
         
         if (e.getSource() == destinationView.btnReturn) {
             goToQueueView();
+        }
+        
+        if (e.getSource() == destinationView.btnExit) {
+            System.exit(0);
         }
     }
 

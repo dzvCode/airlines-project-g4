@@ -62,7 +62,7 @@ public class frmLogin extends javax.swing.JFrame {
 
         bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 600, -1, -1));
 
-        lblMap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/mapImg.png"))); // NOI18N
+        lblMap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/map.png"))); // NOI18N
         bgPanel.add(lblMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
 
         lblLogin.setFont(new java.awt.Font("Roboto Black", 0, 36)); // NOI18N

@@ -5,6 +5,7 @@ import com.g4.model.entity.MyQueue;
 import com.g4.model.repository.UserDAO;
 import com.g4.view.frmQueue;
 import com.g4.view.frmTicket;
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -14,9 +15,10 @@ import javax.swing.JOptionPane;
 public class TicketConfirmationController implements MouseListener, MouseMotionListener {
     public static frmTicket ticketConfirmationView;
     private UserDAO userC;
-    public int city = Dijkstra.citySelected.get(MyQueue.front.user.getDestination());
-    //public int cityOrigin = Dijkstra.citySelected.get(MyQueue.front.user.getDestination());
+    public int origin = Dijkstra.citySelected.get(MyQueue.front.user.getOrigin());
+    public int destination = Dijkstra.citySelected.get(MyQueue.front.user.getDestination());
     public String route = "";
+    private static final double PRICE_PER_KM = 0.258;
     
     public TicketConfirmationController(frmTicket ticketConfirmationView, UserDAO userC) {
         this.ticketConfirmationView = ticketConfirmationView;
@@ -24,12 +26,18 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
         this.ticketConfirmationView.btnReturn.addMouseListener(this);
         this.userC = userC;
     }  
-    
+
     public void init() {
         ticketConfirmationView.setLocationRelativeTo(null);
-        this.ticketConfirmationView.lblDestinationSelected.setText(MyQueue.front.user.getDestination());
-        this.ticketConfirmationView.lblPriceSoles.setText(String.valueOf(calculatePrice()));
-        this.ticketConfirmationView.lblRouteCalculated.setText(getRoute());
+        this.ticketConfirmationView.txtOriginSelected.setText(MyQueue.front.user.getOrigin());
+        this.ticketConfirmationView.txtDestinationSelected.setText(MyQueue.front.user.getDestination());
+        this.ticketConfirmationView.txtDistance.setText(String.valueOf(calculateMinDistance()));
+        this.ticketConfirmationView.txtPriceSoles.setText(String.valueOf(calculatePrice()));
+        this.ticketConfirmationView.txtRouteCalculated.setText(getRoute());
+        String pricePerKm = this.ticketConfirmationView.lblPricePerKmInfo.getText();
+        pricePerKm += " " + String.valueOf(PRICE_PER_KM);
+        this.ticketConfirmationView.lblPricePerKmInfo.setText(pricePerKm);
+        this.ticketConfirmationView.lblPricePerKmInfo.setForeground(Color.gray);
     }
     
     public void goToDestinationView() {
@@ -46,12 +54,16 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
         fq.setVisible(true); 
     }
     
-    private float calculatePrice() {
-        return (float) Dijkstra.dijkstraAlgorithm(Dijkstra.mi_matriz, 0, city);
+    private int calculateMinDistance() {
+        return (int) (Dijkstra.dijkstraAlgorithm(Dijkstra.adjacencyMatrix, origin, destination));
+    }
+    
+    private int calculatePrice() {
+        return (int) (Math.round(PRICE_PER_KM * calculateMinDistance()));
     }
     
     private String getRoute() {
-        List<String> routeList = Dijkstra.dijkstraAlgorithmPaths(Dijkstra.mi_matriz, 0, city);
+        List<String> routeList = Dijkstra.dijkstraAlgorithmPaths(Dijkstra.adjacencyMatrix, origin, destination);
         for (int i = 0; i < routeList.size() - 1; i++) {
              route += routeList.get(i) + " → ";
         }

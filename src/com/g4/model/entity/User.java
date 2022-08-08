@@ -10,6 +10,7 @@ public class User {
     private String dni;
     private String phone;
     private String email;
+    private String origin;
     private String destination;
     private String departureDate;
 }

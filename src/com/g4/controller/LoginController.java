@@ -3,7 +3,7 @@ package com.g4.controller;
 import com.g4.model.entity.Admin;
 import com.g4.model.repository.AdminDAO;
 import com.g4.view.frmLogin;
-import com.g4.view.frmQueue;
+import com.g4.view.frmStart;
 
 import java.awt.Color;
 import java.awt.event.MouseEvent;
@@ -32,13 +32,13 @@ public class LoginController implements MouseListener, MouseMotionListener {
     public void init() {
         loginView.setLocationRelativeTo(null);
     }
-         
-    public void goToQueueView() {
+            
+    public void goToStartView() {
         loginView.dispose();
-        frmQueue fq = new frmQueue();
-        QueueController qc = new QueueController(fq);
-        qc.init();
-        fq.setVisible(true);   
+        frmStart fs = new frmStart();
+        StartController sc = new StartController(fs);
+        sc.init();
+        fs.setVisible(true); 
     }
      
     @Override
@@ -51,7 +51,7 @@ public class LoginController implements MouseListener, MouseMotionListener {
             boolean isValidAdmin = getAuthenticatedAdmin(code, password);
         
             if (isValidAdmin) {
-                goToQueueView();
+                goToStartView();
             } else {
                 JOptionPane.showMessageDialog(loginView, "Código o contraseña inválido", "Intente otra vez", JOptionPane.ERROR_MESSAGE);
             }

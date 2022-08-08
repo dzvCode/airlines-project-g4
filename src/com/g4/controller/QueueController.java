@@ -5,6 +5,7 @@ import com.g4.model.entity.User;
 import com.g4.view.frmDestination;
 import com.g4.view.frmQueue;
 import com.g4.view.frmRegistration;
+import com.g4.view.frmStart;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -22,6 +23,7 @@ public class QueueController implements MouseListener, MouseMotionListener {
         this.queueView.btnAdd.addMouseListener(this);
         this.queueView.btnServe.addMouseListener(this);
         this.queueView.btnDequeue.addMouseListener(this);
+        this.queueView.btnReturn.addMouseListener(this);
     }
         
     public void init() {
@@ -54,6 +56,14 @@ public class QueueController implements MouseListener, MouseMotionListener {
         fq.setVisible(true); 
     }
     
+    public void goToStartView() {
+        queueView.dispose();
+        frmStart fs = new frmStart();
+        StartController sc = new StartController(fs);
+        sc.init();
+        fs.setVisible(true); 
+    }
+    
     @Override
     public void mouseClicked(MouseEvent e) {
         
@@ -84,6 +94,10 @@ public class QueueController implements MouseListener, MouseMotionListener {
            } else {
                JOptionPane.showMessageDialog(null, "Cola vacia");
            }           
+       }
+       
+       if (e.getSource() == queueView.btnReturn) {
+           goToStartView();
        }
         
     }
