@@ -1,7 +1,8 @@
 package com.g4.view;
 
 public class frmTicket extends javax.swing.JFrame {
-
+    
+    public int mouseX, mouseY;
     /**
      * Creates new form frmTicket
      */

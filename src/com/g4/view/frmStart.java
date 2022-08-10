@@ -1,7 +1,7 @@
 package com.g4.view;
 
 public class frmStart extends javax.swing.JFrame {
-
+    public int mouseX, mouseY;
     /**
      * Creates new form frmStart
      */
@@ -62,7 +62,7 @@ public class frmStart extends javax.swing.JFrame {
 
         bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 440, -1));
 
-        startPanel.setBackground(new java.awt.Color(229, 213, 229));
+        startPanel.setBackground(new java.awt.Color(242, 250, 250));
 
         goToQueuePanel.setBackground(new java.awt.Color(0, 22, 59));
         goToQueuePanel.setForeground(new java.awt.Color(0, 153, 153));

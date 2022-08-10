@@ -44,6 +44,10 @@ public class ClientsController implements MouseListener, MouseMotionListener  {
 
     @Override
     public void mousePressed(MouseEvent e) {
+        if (e.getSource() == clientsView.titlePanel) {
+            clientsView.mouseX = e.getX();
+            clientsView.mouseY = e.getY();
+        }
     }
 
     @Override
@@ -60,6 +64,11 @@ public class ClientsController implements MouseListener, MouseMotionListener  {
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        if (e.getSource() == clientsView.titlePanel) {
+            int x = e.getXOnScreen();
+            int y = e.getYOnScreen();
+            clientsView.setLocation(x - clientsView.mouseX, y - clientsView.mouseY);
+        }
     }
 
     @Override

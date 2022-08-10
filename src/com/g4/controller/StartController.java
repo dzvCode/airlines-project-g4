@@ -58,6 +58,10 @@ public class StartController implements MouseListener, MouseMotionListener {
 
     @Override
     public void mousePressed(MouseEvent e) {
+        if (e.getSource() == startView.titlePanel) {
+            startView.mouseX = e.getX();
+            startView.mouseY = e.getY();
+        }
     }
 
     @Override
@@ -74,6 +78,11 @@ public class StartController implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        if (e.getSource() == startView.titlePanel) {
+            int x = e.getXOnScreen();
+            int y = e.getYOnScreen();
+            startView.setLocation(x - startView.mouseX, y - startView.mouseY);
+        }
     }
 
     @Override

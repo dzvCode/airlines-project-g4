@@ -2,7 +2,7 @@ package com.g4.view;
 
 public class frmRegistration extends javax.swing.JFrame {
 
-    int xMouse, yMouse;
+    public int mouseX, mouseY;
     public frmRegistration() {
         initComponents();
     }

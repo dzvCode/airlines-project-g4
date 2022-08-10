@@ -20,6 +20,8 @@ public class DestinationController implements MouseListener, MouseMotionListener
         this.destinationView = destinationView;
         this.destinationView.btnContinue.addMouseListener(this);
         this.destinationView.btnReturn.addMouseListener(this);
+        this.destinationView.titlePanel.addMouseListener(this);
+        this.destinationView.titlePanel.addMouseMotionListener(this);
     }    
     
     public void init() {
@@ -83,6 +85,10 @@ public class DestinationController implements MouseListener, MouseMotionListener
 
     @Override
     public void mousePressed(MouseEvent e) {
+        if (e.getSource() == destinationView.titlePanel) {
+            destinationView.mouseX = e.getX();
+            destinationView.mouseY = e.getY();
+        }
     }
 
     @Override
@@ -99,6 +105,11 @@ public class DestinationController implements MouseListener, MouseMotionListener
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        if (e.getSource() == destinationView.titlePanel) {
+            int x = e.getXOnScreen();
+            int y = e.getYOnScreen();
+            destinationView.setLocation(x - destinationView.mouseX, y - destinationView.mouseY);
+        }
     }
 
     @Override

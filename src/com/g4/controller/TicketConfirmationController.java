@@ -24,6 +24,8 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
         this.ticketConfirmationView = ticketConfirmationView;
         this.ticketConfirmationView.btnConfirm.addMouseListener(this);
         this.ticketConfirmationView.btnReturn.addMouseListener(this);
+        this.ticketConfirmationView.titlePanel.addMouseListener(this);
+        this.ticketConfirmationView.titlePanel.addMouseMotionListener(this);
         this.userC = userC;
     }  
 
@@ -93,6 +95,10 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
 
     @Override
     public void mousePressed(MouseEvent e) {
+        if (e.getSource() == ticketConfirmationView.titlePanel) {
+            ticketConfirmationView.mouseX = e.getX();
+            ticketConfirmationView.mouseY = e.getY();
+        }
     }
 
     @Override
@@ -109,6 +115,12 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        if (e.getSource() == ticketConfirmationView.titlePanel) {
+            int x = e.getXOnScreen();
+            int y = e.getYOnScreen();
+            ticketConfirmationView.setLocation(x - ticketConfirmationView.mouseX,
+                    y - ticketConfirmationView.mouseY);
+        }
     }
 
     @Override

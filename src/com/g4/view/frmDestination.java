@@ -4,6 +4,7 @@ import java.util.Date;
 
 public class frmDestination extends javax.swing.JFrame {
 
+    public int mouseX, mouseY;
     public frmDestination() {
         initComponents();
         Date currentDate = new Date();

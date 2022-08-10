@@ -5,6 +5,7 @@ import javax.swing.table.DefaultTableModel;
 
 public class frmClients extends javax.swing.JFrame {
 
+    public int mouseX, mouseY;
     public static DefaultTableModel model;
     private UserDAO userC = new UserDAO();
     /**

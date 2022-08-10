@@ -25,6 +25,8 @@ public class RegistrationController implements MouseListener, MouseMotionListene
         this.registerView.btnReturn.addMouseListener(this);
         this.registerView.btnSave.addMouseListener(this);
         this.registerView.btnExit.addMouseListener(this);
+        this.registerView.titlePanel.addMouseListener(this);
+        this.registerView.titlePanel.addMouseMotionListener(this);
     }
 
     public void init() {
@@ -84,6 +86,12 @@ public class RegistrationController implements MouseListener, MouseMotionListene
 
     @Override
     public void mousePressed(MouseEvent e) {
+        
+        if (e.getSource() == registerView.titlePanel) {
+            registerView.mouseX = e.getX();
+            registerView.mouseY = e.getY();
+        }
+        
         if (e.getSource() == registerView.txtName) {
             if (registerView.txtName.getText().equals("Ingrese el nombre completo")) {
                 registerView.txtName.setText("");
@@ -184,6 +192,11 @@ public class RegistrationController implements MouseListener, MouseMotionListene
 
     @Override
     public void mouseDragged(MouseEvent e) {
+        if (e.getSource() == registerView.titlePanel) {
+            int x = e.getXOnScreen();
+            int y = e.getYOnScreen();
+            registerView.setLocation(x - registerView.mouseX, y - registerView.mouseY);
+        }
     }
 
     @Override
