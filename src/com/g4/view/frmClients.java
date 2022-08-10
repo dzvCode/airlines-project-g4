@@ -66,6 +66,7 @@ public class frmClients extends javax.swing.JFrame {
         btnReturn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -82,9 +83,9 @@ public class frmClients extends javax.swing.JFrame {
         titlePanel.setLayout(titlePanelLayout);
         titlePanelLayout.setHorizontalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanelLayout.createSequentialGroup()
-                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addGap(0, 882, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         titlePanelLayout.setVerticalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -95,8 +96,8 @@ public class frmClients extends javax.swing.JFrame {
 
         lblTitle.setFont(new java.awt.Font("Roboto Medium", 0, 36)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 0));
-        lblTitle.setText("Tickets Generados");
-        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, -1));
+        lblTitle.setText("Pasajeros Registrados");
+        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
 
         lblAdmin.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         lblAdmin.setForeground(new java.awt.Color(0, 0, 0));
@@ -141,6 +142,7 @@ public class frmClients extends javax.swing.JFrame {
         jPanel1.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 850, 290));
 
         btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/return.png"))); // NOI18N
+        btnReturn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jPanel1.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, -1, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());

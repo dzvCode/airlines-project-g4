@@ -63,10 +63,10 @@ public class frmLogin extends javax.swing.JFrame {
         bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 600, -1, -1));
 
         lblMap.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/map.png"))); // NOI18N
-        bgPanel.add(lblMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 0, -1, -1));
+        bgPanel.add(lblMap, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 40, -1, 560));
 
         lblLogin.setFont(new java.awt.Font("Roboto Black", 0, 36)); // NOI18N
-        lblLogin.setForeground(new java.awt.Color(102, 0, 153));
+        lblLogin.setForeground(new java.awt.Color(0, 22, 59));
         lblLogin.setText("INICIAR SESION");
         bgPanel.add(lblLogin, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, -1, -1));
 
@@ -104,7 +104,7 @@ public class frmLogin extends javax.swing.JFrame {
         pfPassword.setBorder(null);
         bgPanel.add(pfPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 490, 220, -1));
 
-        loginPanel.setBackground(new java.awt.Color(204, 204, 0));
+        loginPanel.setBackground(new java.awt.Color(0, 22, 59));
         loginPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnLogin.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -116,20 +116,20 @@ public class frmLogin extends javax.swing.JFrame {
         loginPanel.setLayout(loginPanelLayout);
         loginPanelLayout.setHorizontalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 130, Short.MAX_VALUE)
+            .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 150, Short.MAX_VALUE)
         );
         loginPanelLayout.setVerticalGroup(
             loginPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btnLogin, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        bgPanel.add(loginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 560, -1, -1));
+        bgPanel.add(loginPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 560, 150, -1));
 
-        titlePanel.setBackground(new java.awt.Color(204, 0, 102));
+        titlePanel.setBackground(new java.awt.Color(0, 22, 59));
 
-        exitPanel.setBackground(new java.awt.Color(204, 0, 102));
+        exitPanel.setBackground(new java.awt.Color(0, 22, 59));
 
-        btnExit.setBackground(new java.awt.Color(204, 0, 102));
+        btnExit.setBackground(new java.awt.Color(0, 22, 59));
         btnExit.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
         btnExit.setForeground(new java.awt.Color(255, 255, 255));
         btnExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -140,7 +140,9 @@ public class frmLogin extends javax.swing.JFrame {
         exitPanel.setLayout(exitPanelLayout);
         exitPanelLayout.setHorizontalGroup(
             exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         exitPanelLayout.setVerticalGroup(
             exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -153,15 +155,15 @@ public class frmLogin extends javax.swing.JFrame {
         titlePanel.setLayout(titlePanelLayout);
         titlePanelLayout.setHorizontalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanelLayout.createSequentialGroup()
-                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 860, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addGap(0, 860, Short.MAX_VALUE)
+                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         titlePanelLayout.setVerticalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanelLayout.createSequentialGroup()
-                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));

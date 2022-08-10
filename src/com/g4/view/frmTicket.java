@@ -18,8 +18,6 @@ public class frmTicket extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        originPanel1 = new javax.swing.JPanel();
-        lblOrigin1 = new javax.swing.JLabel();
         bgPanel = new javax.swing.JPanel();
         titlePanel = new javax.swing.JPanel();
         btnClose = new javax.swing.JLabel();
@@ -50,36 +48,15 @@ public class frmTicket extends javax.swing.JFrame {
         btnConfirm = new javax.swing.JLabel();
         lblTitle = new javax.swing.JLabel();
 
-        originPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        lblOrigin1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblOrigin1.setText("Lima");
-
-        javax.swing.GroupLayout originPanel1Layout = new javax.swing.GroupLayout(originPanel1);
-        originPanel1.setLayout(originPanel1Layout);
-        originPanel1Layout.setHorizontalGroup(
-            originPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, originPanel1Layout.createSequentialGroup()
-                .addContainerGap(56, Short.MAX_VALUE)
-                .addComponent(lblOrigin1)
-                .addGap(53, 53, 53))
-        );
-        originPanel1Layout.setVerticalGroup(
-            originPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(originPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblOrigin1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         bgPanel.setBackground(new java.awt.Color(255, 255, 255));
         bgPanel.setPreferredSize(new java.awt.Dimension(902, 658));
         bgPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        titlePanel.setBackground(new java.awt.Color(0, 0, 102));
+        titlePanel.setBackground(new java.awt.Color(0, 22, 59));
         titlePanel.setPreferredSize(new java.awt.Dimension(902, 40));
 
         btnClose.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
@@ -91,9 +68,9 @@ public class frmTicket extends javax.swing.JFrame {
         titlePanel.setLayout(titlePanelLayout);
         titlePanelLayout.setHorizontalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanelLayout.createSequentialGroup()
-                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(866, 866, 866))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addGap(0, 866, Short.MAX_VALUE)
+                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         titlePanelLayout.setVerticalGroup(
             titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -363,7 +340,7 @@ public class frmTicket extends javax.swing.JFrame {
 
         bgPanel.add(infoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, 420, 380));
 
-        confirmPanel.setBackground(new java.awt.Color(0, 153, 153));
+        confirmPanel.setBackground(new java.awt.Color(0, 22, 59));
         confirmPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnConfirm.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -409,7 +386,6 @@ public class frmTicket extends javax.swing.JFrame {
     private javax.swing.JLabel lblDistanceTitle;
     private javax.swing.JLabel lblGraph;
     private javax.swing.JLabel lblKm;
-    private javax.swing.JLabel lblOrigin1;
     private javax.swing.JLabel lblOriginTitle;
     public javax.swing.JLabel lblPricePerKmInfo;
     private javax.swing.JLabel lblPriceTitle;
@@ -417,7 +393,6 @@ public class frmTicket extends javax.swing.JFrame {
     private javax.swing.JLabel lblSolesSymbol;
     private javax.swing.JLabel lblTitle;
     private javax.swing.JPanel originPanel;
-    private javax.swing.JPanel originPanel1;
     private javax.swing.JPanel pricePanel;
     private javax.swing.JPanel returnPanel;
     private javax.swing.JPanel routePanel;
