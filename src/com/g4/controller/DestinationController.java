@@ -5,6 +5,7 @@ import com.g4.model.repository.UserDAO;
 import com.g4.view.frmDestination;
 import com.g4.view.frmQueue;
 import com.g4.view.frmTicket;
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -20,6 +21,7 @@ public class DestinationController implements MouseListener, MouseMotionListener
         this.destinationView = destinationView;
         this.destinationView.btnContinue.addMouseListener(this);
         this.destinationView.btnReturn.addMouseListener(this);
+        this.destinationView.btnExit.addMouseListener(this);
         this.destinationView.titlePanel.addMouseListener(this);
         this.destinationView.titlePanel.addMouseMotionListener(this);
     }    
@@ -97,10 +99,16 @@ public class DestinationController implements MouseListener, MouseMotionListener
 
     @Override
     public void mouseEntered(MouseEvent e) {
+        if (e.getSource() == destinationView.btnExit) {
+            destinationView.exitPanel.setBackground(Color.RED);
+        }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
+         if (e.getSource() == destinationView.btnExit) {
+            destinationView.exitPanel.setBackground(new Color(0, 22, 59));
+        }
     }
 
     @Override

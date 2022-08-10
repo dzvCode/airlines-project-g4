@@ -51,6 +51,7 @@ public class LoginController implements MouseListener, MouseMotionListener {
             boolean isValidAdmin = getAuthenticatedAdmin(code, password);
         
             if (isValidAdmin) {
+                JOptionPane.showMessageDialog(null, "Sesión iniciada\nAdministrador: " + admin.getName());
                 goToStartView();
             } else {
                 JOptionPane.showMessageDialog(loginView, "Código o contraseña inválido", "Intente otra vez", JOptionPane.ERROR_MESSAGE);
@@ -105,14 +106,14 @@ public class LoginController implements MouseListener, MouseMotionListener {
     @Override
     public void mouseEntered(MouseEvent e) {
         if (e.getSource() == loginView.btnExit) {
-            loginView.exitPanel.setBackground(Color.BLACK);
+            loginView.exitPanel.setBackground(Color.RED);
         }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
         if (e.getSource() == loginView.btnExit) {
-            loginView.exitPanel.setBackground(new Color(204,0,102));
+            loginView.exitPanel.setBackground(new Color(0, 22, 59));
         }
     }
 

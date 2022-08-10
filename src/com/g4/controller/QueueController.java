@@ -6,6 +6,7 @@ import com.g4.view.frmDestination;
 import com.g4.view.frmQueue;
 import com.g4.view.frmRegistration;
 import com.g4.view.frmStart;
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -116,10 +117,16 @@ public class QueueController implements MouseListener, MouseMotionListener {
 
     @Override
     public void mouseEntered(MouseEvent e) {
+        if (e.getSource() == queueView.btnExit) {
+            queueView.exitPanel.setBackground(Color.RED);
+        }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
+        if (e.getSource() == queueView.btnExit) {
+            queueView.exitPanel.setBackground(new Color(0, 22, 59));
+        }
     }
 
     @Override

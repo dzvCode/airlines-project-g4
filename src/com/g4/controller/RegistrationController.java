@@ -75,6 +75,7 @@ public class RegistrationController implements MouseListener, MouseMotionListene
                 user.setEmail(email);
                 
                 MyQueue.enqueue(user);
+                JOptionPane.showMessageDialog(null, "Cliente añadido a la cola");
                 goToQueueView(); 
             } else {
                 JOptionPane.showMessageDialog(null, "Complete todos los campos");
@@ -177,16 +178,14 @@ public class RegistrationController implements MouseListener, MouseMotionListene
     @Override
     public void mouseEntered(MouseEvent e) {
         if (e.getSource() == registerView.btnExit) {
-            registerView.exitPanel.setBackground(Color.red);
-            //registerView.btnExit.setForeground(Color.);
+            registerView.exitPanel.setBackground(Color.RED);
         }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
         if (e.getSource() == registerView.btnExit) {
-            registerView.exitPanel.setBackground(new Color(63,31,46));
-            //registerView.btnExit.setForeground(Color.white);
+            registerView.exitPanel.setBackground(new Color(0, 22, 59));
         }
     }
 

@@ -3,6 +3,7 @@ package com.g4.controller;
 import com.g4.view.frmClients;
 import com.g4.view.frmQueue;
 import com.g4.view.frmStart;
+import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
@@ -56,10 +57,16 @@ public class ClientsController implements MouseListener, MouseMotionListener  {
 
     @Override
     public void mouseEntered(MouseEvent e) {
+        if (e.getSource() == clientsView.btnExit) {
+            clientsView.exitPanel.setBackground(Color.RED);
+        }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
+        if (e.getSource() == clientsView.btnExit) {
+            clientsView.exitPanel.setBackground(new Color(0, 22, 59));
+        }
     }
 
     @Override

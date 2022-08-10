@@ -24,6 +24,7 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
         this.ticketConfirmationView = ticketConfirmationView;
         this.ticketConfirmationView.btnConfirm.addMouseListener(this);
         this.ticketConfirmationView.btnReturn.addMouseListener(this);
+        this.ticketConfirmationView.btnExit.addMouseListener(this);
         this.ticketConfirmationView.titlePanel.addMouseListener(this);
         this.ticketConfirmationView.titlePanel.addMouseMotionListener(this);
         this.userC = userC;
@@ -76,6 +77,10 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
     @Override
     public void mouseClicked(MouseEvent e) {
         
+        if (e.getSource() == ticketConfirmationView.btnExit) {
+            System.exit(0);
+        }
+        
         if (e.getSource() == ticketConfirmationView.btnReturn) {
             goToDestinationView();
         }
@@ -107,10 +112,16 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
 
     @Override
     public void mouseEntered(MouseEvent e) {
+        if (e.getSource() == ticketConfirmationView.btnExit) {
+            ticketConfirmationView.exitPanel.setBackground(Color.RED);
+        }
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
+        if (e.getSource() == ticketConfirmationView.btnExit) {
+            ticketConfirmationView.exitPanel.setBackground(new Color(0, 22, 59));
+        }
     }
 
     @Override

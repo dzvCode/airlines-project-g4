@@ -20,8 +20,6 @@ public class frmTicket extends javax.swing.JFrame {
     private void initComponents() {
 
         bgPanel = new javax.swing.JPanel();
-        titlePanel = new javax.swing.JPanel();
-        btnClose = new javax.swing.JLabel();
         graphPanel = new javax.swing.JPanel();
         lblGraph = new javax.swing.JLabel();
         returnPanel = new javax.swing.JPanel();
@@ -48,6 +46,9 @@ public class frmTicket extends javax.swing.JFrame {
         confirmPanel = new javax.swing.JPanel();
         btnConfirm = new javax.swing.JLabel();
         lblTitle = new javax.swing.JLabel();
+        titlePanel = new javax.swing.JPanel();
+        exitPanel = new javax.swing.JPanel();
+        btnExit = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -56,31 +57,6 @@ public class frmTicket extends javax.swing.JFrame {
         bgPanel.setBackground(new java.awt.Color(255, 255, 255));
         bgPanel.setPreferredSize(new java.awt.Dimension(902, 658));
         bgPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        titlePanel.setBackground(new java.awt.Color(0, 22, 59));
-        titlePanel.setPreferredSize(new java.awt.Dimension(902, 40));
-
-        btnClose.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        btnClose.setForeground(new java.awt.Color(255, 255, 255));
-        btnClose.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnClose.setText("X");
-
-        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
-        titlePanel.setLayout(titlePanelLayout);
-        titlePanelLayout.setHorizontalGroup(
-            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
-                .addGap(0, 866, Short.MAX_VALUE)
-                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        titlePanelLayout.setVerticalGroup(
-            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(titlePanelLayout.createSequentialGroup()
-                .addComponent(btnClose, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         graphPanel.setBackground(new java.awt.Color(242, 250, 250));
 
@@ -105,7 +81,7 @@ public class frmTicket extends javax.swing.JFrame {
 
         bgPanel.add(graphPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 440, 620));
 
-        returnPanel.setBackground(new java.awt.Color(153, 186, 186));
+        returnPanel.setBackground(new java.awt.Color(0, 22, 59));
         returnPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         btnReturn.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
@@ -368,19 +344,63 @@ public class frmTicket extends javax.swing.JFrame {
         lblTitle.setText("TRAYECTO");
         bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 350, -1));
 
-        getContentPane().add(bgPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 660));
+        titlePanel.setBackground(new java.awt.Color(0, 22, 59));
+
+        exitPanel.setBackground(new java.awt.Color(0, 22, 59));
+
+        btnExit.setBackground(new java.awt.Color(0, 22, 59));
+        btnExit.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(255, 255, 255));
+        btnExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnExit.setText("X");
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout exitPanelLayout = new javax.swing.GroupLayout(exitPanel);
+        exitPanel.setLayout(exitPanelLayout);
+        exitPanelLayout.setHorizontalGroup(
+            exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        exitPanelLayout.setVerticalGroup(
+            exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
+        titlePanel.setLayout(titlePanelLayout);
+        titlePanelLayout.setHorizontalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addGap(0, 860, Short.MAX_VALUE)
+                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        titlePanelLayout.setVerticalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        getContentPane().add(bgPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel bgPanel;
-    public javax.swing.JLabel btnClose;
     public javax.swing.JLabel btnConfirm;
+    public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnReturn;
     private javax.swing.JPanel confirmPanel;
     private javax.swing.JPanel destinationPanel;
     private javax.swing.JPanel distancePanel;
+    public javax.swing.JPanel exitPanel;
     private javax.swing.JPanel graphPanel;
     private javax.swing.JPanel infoPanel;
     private javax.swing.JLabel lblDestinationTitle;

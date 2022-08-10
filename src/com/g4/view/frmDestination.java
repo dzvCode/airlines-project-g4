@@ -33,11 +33,12 @@ public class frmDestination extends javax.swing.JFrame {
         continuePanel = new javax.swing.JPanel();
         btnContinue = new javax.swing.JLabel();
         jDateChooser = new com.toedter.calendar.JDateChooser();
-        titlePanel = new javax.swing.JPanel();
-        btnExit = new javax.swing.JLabel();
         lblDestination = new javax.swing.JLabel();
         boxDestination = new javax.swing.JComboBox<>();
         jSeparator3 = new javax.swing.JSeparator();
+        titlePanel = new javax.swing.JPanel();
+        exitPanel = new javax.swing.JPanel();
+        btnExit = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -50,11 +51,12 @@ public class frmDestination extends javax.swing.JFrame {
         lblTitle.setBackground(new java.awt.Color(0, 0, 0));
         lblTitle.setFont(new java.awt.Font("Roboto Medium", 0, 36)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 0));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("DESTINOS NACIONALES");
-        bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
+        bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 510, -1));
 
         lblCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/destinationImg.jpg"))); // NOI18N
-        bgPanel.add(lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 30, 350, 630));
+        bgPanel.add(lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 350, 620));
         bgPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 470, 10));
 
         lblOrigin.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
@@ -119,32 +121,6 @@ public class frmDestination extends javax.swing.JFrame {
         bgPanel.add(continuePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 580, -1, -1));
         bgPanel.add(jDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 300, 40));
 
-        titlePanel.setBackground(new java.awt.Color(0, 22, 59));
-
-        btnExit.setBackground(new java.awt.Color(255, 255, 255));
-        btnExit.setFont(new java.awt.Font("Roboto", 1, 18)); // NOI18N
-        btnExit.setForeground(new java.awt.Color(255, 255, 255));
-        btnExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnExit.setText("X");
-        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
-        titlePanel.setLayout(titlePanelLayout);
-        titlePanelLayout.setHorizontalGroup(
-            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
-                .addGap(0, 875, Short.MAX_VALUE)
-                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        titlePanelLayout.setVerticalGroup(
-            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 30));
-
         lblDestination.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         lblDestination.setForeground(new java.awt.Color(0, 0, 0));
         lblDestination.setText("Seleccionar Destino:");
@@ -159,11 +135,54 @@ public class frmDestination extends javax.swing.JFrame {
         bgPanel.add(boxDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 300, 40));
         bgPanel.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 470, 10));
 
+        titlePanel.setBackground(new java.awt.Color(0, 22, 59));
+
+        exitPanel.setBackground(new java.awt.Color(0, 22, 59));
+
+        btnExit.setBackground(new java.awt.Color(0, 22, 59));
+        btnExit.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
+        btnExit.setForeground(new java.awt.Color(255, 255, 255));
+        btnExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnExit.setText("X");
+        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+
+        javax.swing.GroupLayout exitPanelLayout = new javax.swing.GroupLayout(exitPanel);
+        exitPanel.setLayout(exitPanelLayout);
+        exitPanelLayout.setHorizontalGroup(
+            exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        exitPanelLayout.setVerticalGroup(
+            exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
+        titlePanel.setLayout(titlePanelLayout);
+        titlePanelLayout.setHorizontalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addGap(0, 860, Short.MAX_VALUE)
+                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+        titlePanelLayout.setVerticalGroup(
+            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(bgPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(bgPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -181,6 +200,7 @@ public class frmDestination extends javax.swing.JFrame {
     public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnReturn;
     private javax.swing.JPanel continuePanel;
+    public javax.swing.JPanel exitPanel;
     public com.toedter.calendar.JDateChooser jDateChooser;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
