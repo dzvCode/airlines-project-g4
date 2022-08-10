@@ -20,7 +20,7 @@ public class frmQueue extends javax.swing.JFrame {
             }
         };
 
-        modelo.addColumn("Nombre");
+        modelo.addColumn("Cliente");
         
         this.tblClients.setModel(modelo);
        
@@ -121,18 +121,18 @@ public class frmQueue extends javax.swing.JFrame {
 
         tblClients.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+                {null},
+                {null},
+                {null},
+                {null},
+                {null}
             },
             new String [] {
-                "Ticket", "Cliente"
+                "Cliente"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false
+                false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -144,9 +144,7 @@ public class frmQueue extends javax.swing.JFrame {
         scrollClients.setViewportView(tblClients);
         if (tblClients.getColumnModel().getColumnCount() > 0) {
             tblClients.getColumnModel().getColumn(0).setResizable(false);
-            tblClients.getColumnModel().getColumn(0).setPreferredWidth(5);
-            tblClients.getColumnModel().getColumn(1).setResizable(false);
-            tblClients.getColumnModel().getColumn(1).setPreferredWidth(250);
+            tblClients.getColumnModel().getColumn(0).setPreferredWidth(250);
         }
 
         bgPanel.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 470, 230));

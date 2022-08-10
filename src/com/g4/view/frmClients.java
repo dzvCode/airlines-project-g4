@@ -1,10 +1,12 @@
 package com.g4.view;
 
+import com.g4.model.repository.UserDAO;
 import javax.swing.table.DefaultTableModel;
 
 public class frmClients extends javax.swing.JFrame {
 
-    public static DefaultTableModel modelo;
+    public static DefaultTableModel model;
+    private UserDAO userC = new UserDAO();
     /**
      * Creates new form frmClients
      */
@@ -13,23 +15,16 @@ public class frmClients extends javax.swing.JFrame {
         
         this.setResizable(false);
         
-        modelo = new DefaultTableModel() {
+        model = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
                 return false;
             }
         };
         
-        modelo.addColumn("ID");
-        modelo.addColumn("Nombre");
-        modelo.addColumn("DNI");
-        modelo.addColumn("Telefono");
-        modelo.addColumn("Email");
-        modelo.addColumn("Origen");
-        modelo.addColumn("Destino");
-        modelo.addColumn("Fecha de vuelo");
-        
-        this.tblClients.setModel(modelo);
+        userC.read(model);
+               
+        this.tblClients.setModel(model);
         
         //Método para que no se pueda editar la tabla
         tblClients.getTableHeader().setReorderingAllowed(false);
@@ -111,8 +106,9 @@ public class frmClients extends javax.swing.JFrame {
         txtAdmin.setBackground(new java.awt.Color(204, 255, 204));
         txtAdmin.setFont(new java.awt.Font("Roboto Light", 3, 18)); // NOI18N
         txtAdmin.setForeground(new java.awt.Color(0, 0, 0));
-        txtAdmin.setText("Jeremy Smith Machare Ramirez");
+        txtAdmin.setText("Admin");
         txtAdmin.setToolTipText("");
+        txtAdmin.setRequestFocusEnabled(false);
         jPanel1.add(txtAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 420, -1));
 
         tblClients.setModel(new javax.swing.table.DefaultTableModel(
