@@ -26,26 +26,15 @@ public class frmClients extends javax.swing.JFrame {
         userC.read(model);
                
         this.tblClients.setModel(model);
-        
-        //Método para que no se pueda editar la tabla
+ 
         tblClients.getTableHeader().setReorderingAllowed(false);
-
-        //Método para establecer un alto a cada casilla
         tblClients.setRowHeight(30);
-        
         tblClients.setRowSelectionAllowed(false);
         tblClients.setCellSelectionEnabled(false);
 
         //Método que ingresa la tabla al scrollPanel
         scrollClients.setViewportView(tblClients);
-        
-            
-    }
-    
-    public void update() {
-        
-    }
-    
+    }   
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -93,21 +82,14 @@ public class frmClients extends javax.swing.JFrame {
 
         tblClients.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null},
-                {null, null, null, null, null, null, null, null}
+
             },
             new String [] {
                 "ID", "Nombre", "DNI", "Telefono", "Email", "Origen", "Destino", "Fecha de Vuelo"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, true
+                false, false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -117,6 +99,16 @@ public class frmClients extends javax.swing.JFrame {
         tblClients.setPreferredSize(new java.awt.Dimension(200, 250));
         tblClients.setRowHeight(30);
         scrollClients.setViewportView(tblClients);
+        if (tblClients.getColumnModel().getColumnCount() > 0) {
+            tblClients.getColumnModel().getColumn(0).setResizable(false);
+            tblClients.getColumnModel().getColumn(1).setResizable(false);
+            tblClients.getColumnModel().getColumn(2).setResizable(false);
+            tblClients.getColumnModel().getColumn(3).setResizable(false);
+            tblClients.getColumnModel().getColumn(4).setResizable(false);
+            tblClients.getColumnModel().getColumn(5).setResizable(false);
+            tblClients.getColumnModel().getColumn(6).setResizable(false);
+            tblClients.getColumnModel().getColumn(7).setResizable(false);
+        }
 
         jPanel1.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 850, 290));
 

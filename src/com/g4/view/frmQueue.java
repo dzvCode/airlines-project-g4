@@ -23,17 +23,9 @@ public class frmQueue extends javax.swing.JFrame {
         modelo.addColumn("Cliente");
         
         this.tblClients.setModel(modelo);
-       
-        //Método para que no se pueda editar la tabla
-        tblClients.getTableHeader().setReorderingAllowed(false);
 
-        //Método para establecer un alto a cada casilla
+        tblClients.getTableHeader().setReorderingAllowed(false);
         tblClients.setRowHeight(30);
-        /*
-        TableColumnModel columnModel = tblClients.getColumnModel();
-        columnModel.getColumn(0).setPreferredWidth(10);
-        columnModel.getColumn(1).setPreferredWidth(50);
-        */
         CargaDeDatos();
         tblClients.setRowSelectionAllowed(false);
         tblClients.setCellSelectionEnabled(false);
@@ -90,11 +82,7 @@ public class frmQueue extends javax.swing.JFrame {
 
         tblClients.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null},
-                {null},
-                {null},
-                {null},
-                {null}
+
             },
             new String [] {
                 "Cliente"

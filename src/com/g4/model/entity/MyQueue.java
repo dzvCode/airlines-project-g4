@@ -69,18 +69,4 @@ public class MyQueue {
         }
         return data;
     }
-    
-    // Metodo para imprimir los usuarios de la cola en consola
-    public static void print() {
-        if (front == null) {
-            System.out.println("Vacio");
-            return;
-        }
-
-        Node temp = front;
-        while (temp != null) {
-            System.out.println(temp.user);
-            temp = temp.next;
-        }
-    }
 }

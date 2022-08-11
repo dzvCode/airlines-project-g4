@@ -17,6 +17,7 @@ public class LoginController implements MouseListener, MouseMotionListener {
     private AdminDAO adminC;
     private frmLogin loginView;
 
+    // Constructor
     public LoginController(Admin admin, AdminDAO adminC, frmLogin loginView) {
         this.admin = admin;
         this.adminC = adminC;
@@ -29,10 +30,12 @@ public class LoginController implements MouseListener, MouseMotionListener {
         this.loginView.titlePanel.addMouseMotionListener(this);
     }
     
+    // Metodo que ubica la ventana en el centro
     public void init() {
         loginView.setLocationRelativeTo(null);
     }
             
+    // Metodo que lleva a la vista "Start"
     public void goToStartView() {
         loginView.dispose();
         frmStart fs = new frmStart();
@@ -41,6 +44,12 @@ public class LoginController implements MouseListener, MouseMotionListener {
         fs.setVisible(true); 
     }
      
+    private boolean getAuthenticatedAdmin(String code, String password) {
+        admin.setCode(code);
+        admin.setPassword(password);
+        return adminC.read(admin);
+    }
+    
     @Override
     public void mouseClicked(MouseEvent e) {
         if (e.getSource() == loginView.btnLogin) {
@@ -56,9 +65,8 @@ public class LoginController implements MouseListener, MouseMotionListener {
             } else {
                 JOptionPane.showMessageDialog(loginView, "Código o contraseña inválido", "Intente otra vez", JOptionPane.ERROR_MESSAGE);
             }
-
-        
         }
+        
         if (e.getSource() == loginView.btnExit) {
             System.exit(0);
         }
@@ -115,12 +123,6 @@ public class LoginController implements MouseListener, MouseMotionListener {
         if (e.getSource() == loginView.btnExit) {
             loginView.exitPanel.setBackground(new Color(0, 22, 59));
         }
-    }
-
-    private boolean getAuthenticatedAdmin(String code, String password) {
-        admin.setCode(code);
-        admin.setPassword(password);
-        return adminC.read(admin);
     }
 
     @Override
