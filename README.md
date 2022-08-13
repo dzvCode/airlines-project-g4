@@ -28,7 +28,7 @@ Se creará una solución para la venta de boletos de avión de una pequeña aero
 | Zavala, Diego    | 20200097 |
 
 ## Librerías
-- [MySqlConnector](https://dev.mysql.com/downloads/connector/j/)
+- [MySqlConnector](https://dev.mysql.com/doc/connector-j/8.0/en/)
 - [JCalendar](https://toedter.com/jcalendar/)
 - [Lombok](https://projectlombok.org/)
 > Las librerías ya vienen incluidas en la carpeta [`.lib`](./lib/) del repositorio
