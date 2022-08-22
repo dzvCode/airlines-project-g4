@@ -1,41 +1,28 @@
 package com.g4.view;
 
+import com.g4.model.entity.MyDoublyLinkedList;
 import com.g4.model.repository.UserDAO;
 import javax.swing.table.DefaultTableModel;
 
 public class frmClients extends javax.swing.JFrame {
 
     public int mouseX, mouseY;
-    public static DefaultTableModel model;
     private UserDAO userC = new UserDAO();
-    /**
-     * Creates new form frmClients
-     */
+  
     public frmClients() {
         initComponents();
-        
-        this.setResizable(false);
-        
-        model = new DefaultTableModel() {
-            @Override
-            public boolean isCellEditable(int row, int column) {
-                return false;
-            }
-        };
-        
-        userC.read(model);
-               
-        this.tblClients.setModel(model);
- 
-        tblClients.getTableHeader().setReorderingAllowed(false);
-        tblClients.setRowHeight(30);
-        tblClients.setRowSelectionAllowed(false);
-        tblClients.setCellSelectionEnabled(false);
+        upload();
+    }     
 
-        //Método que ingresa la tabla al scrollPanel
-        scrollClients.setViewportView(tblClients);
-    }   
-
+    public void upload() {
+        userC.read();
+        DefaultTableModel model = (DefaultTableModel) tblClients.getModel();
+             
+        for (Object[] object : MyDoublyLinkedList.upload()) {
+            model.addRow(object);
+        }
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,12 +36,14 @@ public class frmClients extends javax.swing.JFrame {
         lblTitle = new javax.swing.JLabel();
         lblAdmin = new javax.swing.JLabel();
         txtAdmin = new javax.swing.JLabel();
-        scrollClients = new javax.swing.JScrollPane();
-        tblClients = new javax.swing.JTable();
         btnReturn = new javax.swing.JLabel();
         titlePanel = new javax.swing.JPanel();
         exitPanel = new javax.swing.JPanel();
         btnExit = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        scrollClients = new javax.swing.JScrollPane();
+        tblClients = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -79,38 +68,6 @@ public class frmClients extends javax.swing.JFrame {
         txtAdmin.setToolTipText("");
         txtAdmin.setRequestFocusEnabled(false);
         jPanel1.add(txtAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 420, -1));
-
-        tblClients.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Nombre", "DNI", "Telefono", "Email", "Origen", "Destino", "Fecha de Vuelo"
-            }
-        ) {
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false, false, false
-            };
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        tblClients.setPreferredSize(new java.awt.Dimension(200, 250));
-        tblClients.setRowHeight(30);
-        scrollClients.setViewportView(tblClients);
-        if (tblClients.getColumnModel().getColumnCount() > 0) {
-            tblClients.getColumnModel().getColumn(0).setResizable(false);
-            tblClients.getColumnModel().getColumn(1).setResizable(false);
-            tblClients.getColumnModel().getColumn(2).setResizable(false);
-            tblClients.getColumnModel().getColumn(3).setResizable(false);
-            tblClients.getColumnModel().getColumn(4).setResizable(false);
-            tblClients.getColumnModel().getColumn(5).setResizable(false);
-            tblClients.getColumnModel().getColumn(6).setResizable(false);
-            tblClients.getColumnModel().getColumn(7).setResizable(false);
-        }
-
-        jPanel1.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 850, 290));
 
         btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/return.png"))); // NOI18N
         btnReturn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -159,6 +116,55 @@ public class frmClients extends javax.swing.JFrame {
 
         jPanel1.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, -1));
 
+        jLabel1.setText("Ordenar por:");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 160, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Nombre", "Precio de boleto", "Fecha de ida" }));
+        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 190, 100, -1));
+
+        scrollClients.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
+        scrollClients.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
+        scrollClients.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        scrollClients.setFocusTraversalPolicyProvider(true);
+        scrollClients.setRequestFocusEnabled(false);
+        scrollClients.setViewportView(null);
+
+        tblClients.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "ID", "Nombre", "DNI", "Telefono", "Email", "Origen", "Destino", "Fecha de Ida", "Precio de boleto"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, true, true, true, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        tblClients.setRowHeight(30);
+        tblClients.getTableHeader().setReorderingAllowed(false);
+        scrollClients.setViewportView(tblClients);
+        if (tblClients.getColumnModel().getColumnCount() > 0) {
+            tblClients.getColumnModel().getColumn(0).setResizable(false);
+            tblClients.getColumnModel().getColumn(0).setPreferredWidth(30);
+            tblClients.getColumnModel().getColumn(1).setResizable(false);
+            tblClients.getColumnModel().getColumn(2).setResizable(false);
+            tblClients.getColumnModel().getColumn(2).setPreferredWidth(60);
+            tblClients.getColumnModel().getColumn(3).setResizable(false);
+            tblClients.getColumnModel().getColumn(3).setPreferredWidth(70);
+            tblClients.getColumnModel().getColumn(4).setResizable(false);
+            tblClients.getColumnModel().getColumn(5).setResizable(false);
+            tblClients.getColumnModel().getColumn(6).setResizable(false);
+            tblClients.getColumnModel().getColumn(7).setResizable(false);
+            tblClients.getColumnModel().getColumn(8).setResizable(false);
+        }
+
+        jPanel1.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 710, 300));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -177,6 +183,8 @@ public class frmClients extends javax.swing.JFrame {
     public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnReturn;
     public javax.swing.JPanel exitPanel;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblAdmin;
     private javax.swing.JLabel lblTitle;

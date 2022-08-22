@@ -22,7 +22,6 @@ public class frmDestination extends javax.swing.JFrame {
 
         bgPanel = new javax.swing.JPanel();
         lblTitle = new javax.swing.JLabel();
-        lblCityImg = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         lblOrigin = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
@@ -36,9 +35,12 @@ public class frmDestination extends javax.swing.JFrame {
         lblDestination = new javax.swing.JLabel();
         boxDestination = new javax.swing.JComboBox<>();
         jSeparator3 = new javax.swing.JSeparator();
+        btnNext = new javax.swing.JLabel();
         titlePanel = new javax.swing.JPanel();
         exitPanel = new javax.swing.JPanel();
         btnExit = new javax.swing.JLabel();
+        btnPrev = new javax.swing.JLabel();
+        lblCityImg = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -53,22 +55,19 @@ public class frmDestination extends javax.swing.JFrame {
         lblTitle.setForeground(new java.awt.Color(0, 0, 0));
         lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblTitle.setText("DESTINOS NACIONALES");
-        bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 510, -1));
-
-        lblCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/destinationImg.jpg"))); // NOI18N
-        bgPanel.add(lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 350, 620));
-        bgPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, 470, 10));
+        bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 80, 530, -1));
+        bgPanel.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, 460, 10));
 
         lblOrigin.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         lblOrigin.setForeground(new java.awt.Color(0, 0, 0));
         lblOrigin.setText("Seleccionar Origen:");
-        bgPanel.add(lblOrigin, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, -1, -1));
-        bgPanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, 470, 10));
+        bgPanel.add(lblOrigin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+        bgPanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 460, 10));
 
         lblDepartureDate.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         lblDepartureDate.setForeground(new java.awt.Color(0, 0, 0));
         lblDepartureDate.setText("Fecha Ida:");
-        bgPanel.add(lblDepartureDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 440, -1, -1));
+        bgPanel.add(lblDepartureDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 440, -1, -1));
 
         boxOrigin.setBackground(new java.awt.Color(255, 255, 255));
         boxOrigin.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
@@ -76,7 +75,7 @@ public class frmDestination extends javax.swing.JFrame {
         boxOrigin.setToolTipText("");
         boxOrigin.setBorder(null);
         boxOrigin.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bgPanel.add(boxOrigin, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 300, 40));
+        bgPanel.add(boxOrigin, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 170, 280, 40));
 
         returnPanel.setBackground(new java.awt.Color(0, 22, 59));
         returnPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -97,7 +96,7 @@ public class frmDestination extends javax.swing.JFrame {
             .addComponent(btnReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        bgPanel.add(returnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 580, -1, -1));
+        bgPanel.add(returnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 560, -1, -1));
 
         continuePanel.setBackground(new java.awt.Color(0, 22, 59));
         continuePanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -118,13 +117,13 @@ public class frmDestination extends javax.swing.JFrame {
             .addComponent(btnContinue, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
         );
 
-        bgPanel.add(continuePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 580, -1, -1));
-        bgPanel.add(jDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 430, 300, 40));
+        bgPanel.add(continuePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 560, -1, -1));
+        bgPanel.add(jDateChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 430, 280, 40));
 
         lblDestination.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         lblDestination.setForeground(new java.awt.Color(0, 0, 0));
         lblDestination.setText("Seleccionar Destino:");
-        bgPanel.add(lblDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, -1));
+        bgPanel.add(lblDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, -1, -1));
 
         boxDestination.setBackground(new java.awt.Color(255, 255, 255));
         boxDestination.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
@@ -132,8 +131,12 @@ public class frmDestination extends javax.swing.JFrame {
         boxDestination.setToolTipText("");
         boxDestination.setBorder(null);
         boxDestination.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        bgPanel.add(boxDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 300, 300, 40));
-        bgPanel.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 470, 10));
+        bgPanel.add(boxDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 300, 280, 40));
+        bgPanel.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 490, 460, 10));
+
+        btnNext.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/next.png"))); // NOI18N
+        btnNext.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bgPanel.add(btnNext, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 400, 30, 40));
 
         titlePanel.setBackground(new java.awt.Color(0, 22, 59));
 
@@ -178,6 +181,11 @@ public class frmDestination extends javax.swing.JFrame {
 
         bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        btnPrev.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/prev.png"))); // NOI18N
+        btnPrev.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bgPanel.add(btnPrev, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 30, 40));
+        bgPanel.add(lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, -1, 620));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -193,11 +201,13 @@ public class frmDestination extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel bgPanel;
+    public javax.swing.JPanel bgPanel;
     public javax.swing.JComboBox<String> boxDestination;
     public javax.swing.JComboBox<String> boxOrigin;
     public javax.swing.JLabel btnContinue;
     public javax.swing.JLabel btnExit;
+    public javax.swing.JLabel btnNext;
+    public javax.swing.JLabel btnPrev;
     public javax.swing.JLabel btnReturn;
     private javax.swing.JPanel continuePanel;
     public javax.swing.JPanel exitPanel;
@@ -205,7 +215,7 @@ public class frmDestination extends javax.swing.JFrame {
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JLabel lblCityImg;
+    public javax.swing.JLabel lblCityImg;
     private javax.swing.JLabel lblDepartureDate;
     private javax.swing.JLabel lblDestination;
     private javax.swing.JLabel lblOrigin;

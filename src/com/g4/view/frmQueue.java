@@ -80,6 +80,8 @@ public class frmQueue extends javax.swing.JFrame {
         queueLabel.setText("COLA DE CLIENTES");
         bgPanel.add(queueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 540, -1));
 
+        scrollClients.setPreferredSize(null);
+
         tblClients.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -104,7 +106,7 @@ public class frmQueue extends javax.swing.JFrame {
             tblClients.getColumnModel().getColumn(0).setPreferredWidth(250);
         }
 
-        bgPanel.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 470, 230));
+        bgPanel.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 220, 470, 250));
 
         addPanel.setBackground(new java.awt.Color(0, 22, 59));
         addPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -112,7 +114,9 @@ public class frmQueue extends javax.swing.JFrame {
         btnAdd.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
         btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/agregar.png"))); // NOI18N
         btnAdd.setText("Añadir");
+        btnAdd.setToolTipText("");
 
         javax.swing.GroupLayout addPanelLayout = new javax.swing.GroupLayout(addPanel);
         addPanel.setLayout(addPanelLayout);

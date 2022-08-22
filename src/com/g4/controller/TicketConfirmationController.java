@@ -36,6 +36,7 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
         this.ticketConfirmationView.txtDestinationSelected.setText(MyQueue.front.user.getDestination());
         this.ticketConfirmationView.txtDistance.setText(String.valueOf(calculateMinDistance()));
         this.ticketConfirmationView.txtPriceSoles.setText(String.valueOf(calculatePrice()));
+        MyQueue.front.user.setTicketPrice(calculatePrice());
         this.ticketConfirmationView.txtRouteCalculated.setText(getRoute());
         String pricePerKm = this.ticketConfirmationView.lblPricePerKmInfo.getText();
         pricePerKm += " " + String.valueOf(PRICE_PER_KM);

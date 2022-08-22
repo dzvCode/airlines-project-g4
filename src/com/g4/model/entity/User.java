@@ -13,4 +13,5 @@ public class User {
     private String origin;
     private String destination;
     private String departureDate;
+    private int ticketPrice;
 }

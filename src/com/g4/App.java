@@ -12,6 +12,6 @@ public class App {
         frmLogin fl = new frmLogin();
         LoginController mc = new LoginController(admin, adminDAO, fl);
         mc.init();
-        fl.setVisible(true);     
+        fl.setVisible(true);
     }
 }

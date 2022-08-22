@@ -1,5 +1,6 @@
 package com.g4.controller;
 
+import com.g4.model.entity.MyCircularDoublyLinkedList;
 import com.g4.model.entity.MyQueue;
 import com.g4.model.repository.UserDAO;
 import com.g4.view.frmDestination;
@@ -16,7 +17,7 @@ import javax.swing.JOptionPane;
 
 public class DestinationController implements MouseListener, MouseMotionListener {
    public static frmDestination destinationView;
-
+   
     public DestinationController(frmDestination destinationView) {
         this.destinationView = destinationView;
         this.destinationView.btnContinue.addMouseListener(this);
@@ -24,9 +25,27 @@ public class DestinationController implements MouseListener, MouseMotionListener
         this.destinationView.btnExit.addMouseListener(this);
         this.destinationView.titlePanel.addMouseListener(this);
         this.destinationView.titlePanel.addMouseMotionListener(this);
+        this.destinationView.btnPrev.addMouseListener(this);
+        this.destinationView.btnNext.addMouseListener(this);
     }    
     
     public void init() {
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/arequipa.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/ayacucho.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/cajamarca.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/cuzco.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/iquitos.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/juliaca.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/lima.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/piura.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/pucallpa.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/puertoMaldonado.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tacna.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tarapoto.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/trujillo.png");
+        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tumbes.png");
+        destinationView.lblCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource(MyCircularDoublyLinkedList.current.destination)));
+        destinationView.bgPanel.add(destinationView.lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 350, 620));
         destinationView.setLocationRelativeTo(null);
     }
     
@@ -82,6 +101,16 @@ public class DestinationController implements MouseListener, MouseMotionListener
         
         if (e.getSource() == destinationView.btnExit) {
             System.exit(0);
+        }
+        
+        if (e.getSource() == destinationView.btnPrev) {
+            destinationView.lblCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource(MyCircularDoublyLinkedList.prevDestination())));
+            destinationView.bgPanel.add(destinationView.lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 350, 620));
+        }
+        
+        if (e.getSource() == destinationView.btnNext) {
+            destinationView.lblCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource(MyCircularDoublyLinkedList.nextDestination())));
+            destinationView.bgPanel.add(destinationView.lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 350, 620));
         }
     }
 
