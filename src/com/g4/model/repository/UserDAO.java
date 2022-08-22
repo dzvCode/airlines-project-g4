@@ -50,17 +50,14 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
     public boolean update(User user) {
         PreparedStatement ps = null;
         Connection conn = createConnection();
-        String sql = "UPDATE users SET name=?, phone=?, email=?, destination=?, departure_date=?, ticket_price=? WHERE dni=?";
+        String sql = "UPDATE users SET phone=?, email=?, departure_date=? WHERE dni=?";
 
         try {
             ps = conn.prepareStatement(sql);
-            ps.setString(1, user.getName());
-            ps.setString(2, user.getPhone());
-            ps.setString(3, user.getEmail());
-            ps.setString(4, user.getDestination());
-            ps.setString(5, user.getDni());
-            ps.setString(6, user.getDepartureDate());
-            ps.setInt(7, user.getTicketPrice());
+            ps.setString(1, user.getPhone());
+            ps.setString(2, user.getEmail());
+            ps.setString(3, user.getDepartureDate());
+            ps.setString(4, user.getDni());
             ps.execute();
             return true;
         } catch (SQLException e) {

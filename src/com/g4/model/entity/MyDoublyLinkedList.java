@@ -1,6 +1,5 @@
 package com.g4.model.entity;
 
-import static com.g4.model.entity.MyQueue.front;
 import java.util.ArrayList;
 
 public class MyDoublyLinkedList {
@@ -40,10 +39,12 @@ public class MyDoublyLinkedList {
        newNode.prev = temp;
    }
    
-   public static void insertionSortByName() {
+   public static void insertionSortById() {
        Node aux1;
        Node aux2;
        User userAux;
+       boolean comparison;
+       
        int m;
        for (int i = 2; i <= numbersNodes; i++) {
            aux1 = head;
@@ -55,7 +56,88 @@ public class MyDoublyLinkedList {
            userAux = aux1.user;
            int j = i - 1;
            aux2 = aux1.prev;
+           
+           boolean priceComparison = aux2.user.getTicketPrice() > userAux.getTicketPrice();
+           boolean nameComparison = aux2.user.getName().compareTo(userAux.getName()) > 0;
+           boolean idComparison = aux2.user.getId() > userAux.getId();
+           
+          /* switch (opc) {
+               case 1:
+                   comparison = idComparison;
+                   break;
+               case 2:
+                   comparison = nameComparison;
+                   break;
+               default:
+                   comparison = priceComparison;
+                   break;
+           }*/
+           
+           while(j >= 1 && aux2.user.getId() > userAux.getId()){
+                aux2.next.user = aux2.user;
+                j--;
+                aux2 = aux2.prev;
+           }
+           aux2 = head;
+           m = 1;
+           while (m < j + 1){
+               aux2 = aux2.next;
+               m++;
+           }
+           aux2.user = userAux;
+       }   
+   }
+   
+   public static void insertionSortByName() {
+       Node aux1;
+       Node aux2;
+       User userAux;
+       
+       int m;
+       for (int i = 2; i <= numbersNodes; i++) {
+           aux1 = head;
+           m = 1;
+           while (m < i) {
+               aux1 = aux1.next;
+               m++;
+           }
+           userAux = aux1.user;
+           int j = i - 1;
+           aux2 = aux1.prev;
+           
            while(j >= 1 && aux2.user.getName().compareTo(userAux.getName()) > 0){
+                aux2.next.user = aux2.user;
+                j--;
+                aux2 = aux2.prev;
+           }
+           aux2 = head;
+           m = 1;
+           while (m < j + 1){
+               aux2 = aux2.next;
+               m++;
+           }
+           aux2.user = userAux;
+       }   
+   }
+   
+   public static void insertionSortByTicketPrice() {
+       Node aux1;
+       Node aux2;
+       User userAux;
+       
+       int m;
+       for (int i = 2; i <= numbersNodes; i++) {
+           aux1 = head;
+           m = 1;
+           while (m < i) {
+               aux1 = aux1.next;
+               m++;
+           }
+           userAux = aux1.user;
+           int j = i - 1;
+           aux2 = aux1.prev;
+              
+           while(j >= 1 && aux2.user.getTicketPrice() > userAux.getTicketPrice()){
                 aux2.next.user = aux2.user;
                 j--;
                 aux2 = aux2.prev;
@@ -103,5 +185,5 @@ public class MyDoublyLinkedList {
             temp = temp.next;
         }
         return data;
-    }
+    }    
 }

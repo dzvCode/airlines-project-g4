@@ -7,6 +7,7 @@ import javax.swing.table.DefaultTableModel;
 public class frmClients extends javax.swing.JFrame {
 
     public int mouseX, mouseY;
+    public static DefaultTableModel model;
     private UserDAO userC = new UserDAO();
   
     public frmClients() {
@@ -15,8 +16,10 @@ public class frmClients extends javax.swing.JFrame {
     }     
 
     public void upload() {
+        MyDoublyLinkedList.head = null;
+        MyDoublyLinkedList.numbersNodes = 0;
         userC.read();
-        DefaultTableModel model = (DefaultTableModel) tblClients.getModel();
+        model = (DefaultTableModel) tblClients.getModel();
              
         for (Object[] object : MyDoublyLinkedList.upload()) {
             model.addRow(object);
@@ -41,9 +44,11 @@ public class frmClients extends javax.swing.JFrame {
         exitPanel = new javax.swing.JPanel();
         btnExit = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        cbSorting = new javax.swing.JComboBox<>();
         scrollClients = new javax.swing.JScrollPane();
         tblClients = new javax.swing.JTable();
+        btnUpdate = new javax.swing.JLabel();
+        btnDelete = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -119,8 +124,8 @@ public class frmClients extends javax.swing.JFrame {
         jLabel1.setText("Ordenar por:");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 160, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Nombre", "Precio de boleto", "Fecha de ida" }));
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 190, 100, -1));
+        cbSorting.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Nombre", "Precio de boleto", "Fecha de ida" }));
+        jPanel1.add(cbSorting, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 190, 100, -1));
 
         scrollClients.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollClients.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
@@ -165,6 +170,16 @@ public class frmClients extends javax.swing.JFrame {
 
         jPanel1.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 710, 300));
 
+        btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/modificar.png"))); // NOI18N
+        btnUpdate.setText("Modificar");
+        btnUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, -1, -1));
+
+        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/eliminar.png"))); // NOI18N
+        btnDelete.setText("Eliminar");
+        btnDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 320, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -180,10 +195,12 @@ public class frmClients extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JLabel btnDelete;
     public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnReturn;
+    public javax.swing.JLabel btnUpdate;
+    public javax.swing.JComboBox<String> cbSorting;
     public javax.swing.JPanel exitPanel;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblAdmin;

@@ -9,7 +9,6 @@ import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 
 public class StartController implements MouseListener, MouseMotionListener {
-
     public static frmStart startView;
     
       public StartController (frmStart startView) {
