@@ -131,4 +131,38 @@ public class UserDAO extends DBConnection implements CrudRepository<User> {
             }
         }
     }
+
+    @Override
+    public void findById(User user) {
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        Connection conn = createConnection();
+        String sql = "SELECT * FROM users WHERE dni=?";
+        
+        try {
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, user.getDni());
+            rs = ps.executeQuery();   
+            
+            while (rs.next()) {
+                user.setId(rs.getInt("id"));
+                user.setName(rs.getString("name"));
+                user.setDni(rs.getString("dni"));
+                user.setPhone(rs.getString("phone"));
+                user.setEmail(rs.getString("email"));
+                user.setOrigin(rs.getString("origin"));
+                user.setDestination(rs.getString("destination"));
+                user.setDepartureDate(rs.getString("departure_date"));
+                user.setTicketPrice(rs.getInt("ticket_price")); 
+            } 
+        } catch (SQLException e) {
+            System.err.println(e);
+        } finally {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                System.err.println(e);
+            }
+        }
+    }
 }

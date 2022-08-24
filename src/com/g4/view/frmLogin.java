@@ -23,7 +23,7 @@ public class frmLogin extends javax.swing.JFrame {
         lblLogin = new javax.swing.JLabel();
         lblUser = new javax.swing.JLabel();
         lblPassword = new javax.swing.JLabel();
-        lblCode = new javax.swing.JLabel();
+        lblAdminUser = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
         txtCode = new javax.swing.JTextField();
         jSeparator3 = new javax.swing.JSeparator();
@@ -79,11 +79,11 @@ public class frmLogin extends javax.swing.JFrame {
         lblPassword.setText("C O N T R A S E Ñ A");
         bgPanel.add(lblPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 460, 220, -1));
 
-        lblCode.setFont(new java.awt.Font("Roboto Medium", 1, 18)); // NOI18N
-        lblCode.setForeground(new java.awt.Color(51, 51, 51));
-        lblCode.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblCode.setText("C O D I G O ");
-        bgPanel.add(lblCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 220, -1));
+        lblAdminUser.setFont(new java.awt.Font("Roboto Medium", 1, 18)); // NOI18N
+        lblAdminUser.setForeground(new java.awt.Color(51, 51, 51));
+        lblAdminUser.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblAdminUser.setText("U S U A R I O");
+        bgPanel.add(lblAdminUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 360, 220, -1));
 
         jSeparator2.setForeground(new java.awt.Color(102, 102, 102));
         bgPanel.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 510, 220, 20));
@@ -91,7 +91,7 @@ public class frmLogin extends javax.swing.JFrame {
         txtCode.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
         txtCode.setForeground(new java.awt.Color(102, 102, 102));
         txtCode.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        txtCode.setText("Ingrese su codigo");
+        txtCode.setText("Ingrese su nombre de usuario");
         txtCode.setBorder(null);
         bgPanel.add(txtCode, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 390, 220, 20));
 
@@ -190,7 +190,7 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JLabel handsawnombre;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
-    private javax.swing.JLabel lblCode;
+    private javax.swing.JLabel lblAdminUser;
     private javax.swing.JLabel lblLogin;
     private javax.swing.JLabel lblMap;
     private javax.swing.JLabel lblPassword;

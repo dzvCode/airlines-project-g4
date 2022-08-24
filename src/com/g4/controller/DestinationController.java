@@ -5,7 +5,7 @@ import com.g4.model.entity.MyQueue;
 import com.g4.model.repository.UserDAO;
 import com.g4.view.frmDestination;
 import com.g4.view.frmQueue;
-import com.g4.view.frmTicket;
+import com.g4.view.frmTicketConfirmation;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
@@ -50,7 +50,7 @@ public class DestinationController implements MouseListener, MouseMotionListener
     }
     
     private void goToTicketConfirmationView() {
-        frmTicket ft = new frmTicket();
+        frmTicketConfirmation ft = new frmTicketConfirmation();
         UserDAO userC = new UserDAO();
         TicketConfirmationController tcc = new TicketConfirmationController(ft, userC);
         tcc.init();
@@ -100,7 +100,7 @@ public class DestinationController implements MouseListener, MouseMotionListener
         }
         
         if (e.getSource() == destinationView.btnExit) {
-            System.exit(0);
+            goToQueueView();
         }
         
         if (e.getSource() == destinationView.btnPrev) {

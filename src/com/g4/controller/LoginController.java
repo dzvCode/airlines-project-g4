@@ -80,7 +80,7 @@ public class LoginController implements MouseListener, MouseMotionListener {
         }
         
         if (e.getSource() == loginView.txtCode) {
-            if (loginView.txtCode.getText().equals("Ingrese su codigo")) {
+            if (loginView.txtCode.getText().equals("Ingrese su nombre de usuario")) {
                 loginView.txtCode.setText("");
                 //loginView.txtCode.setForeground(Color.black);
             } else {
@@ -101,7 +101,7 @@ public class LoginController implements MouseListener, MouseMotionListener {
             }
             
             if (loginView.txtCode.getText().isEmpty()) {
-                loginView.txtCode.setText("Ingrese su codigo");
+                loginView.txtCode.setText("Ingrese su nombre de usuario");
                 loginView.pfPassword.setForeground(new Color(153,153,153));
             }
         }

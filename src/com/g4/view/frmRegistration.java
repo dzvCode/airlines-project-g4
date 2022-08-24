@@ -31,13 +31,12 @@ public class frmRegistration extends javax.swing.JFrame {
         lblEmail = new javax.swing.JLabel();
         txtEmail = new javax.swing.JTextField();
         jSeparator4 = new javax.swing.JSeparator();
-        returnPanel = new javax.swing.JPanel();
-        btnReturn = new javax.swing.JLabel();
         savePanel = new javax.swing.JPanel();
         btnSave = new javax.swing.JLabel();
         titlePanel = new javax.swing.JPanel();
         exitPanel = new javax.swing.JPanel();
         btnExit = new javax.swing.JLabel();
+        btnReturn = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -100,27 +99,6 @@ public class frmRegistration extends javax.swing.JFrame {
         bgPanel.add(txtEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 418, 420, 40));
         bgPanel.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 458, 420, 10));
 
-        returnPanel.setBackground(new java.awt.Color(0, 22, 59));
-        returnPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        btnReturn.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
-        btnReturn.setForeground(new java.awt.Color(255, 255, 255));
-        btnReturn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnReturn.setText("Regresar");
-
-        javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
-        returnPanel.setLayout(returnPanelLayout);
-        returnPanelLayout.setHorizontalGroup(
-            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnReturn, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
-        );
-        returnPanelLayout.setVerticalGroup(
-            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnReturn, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-        );
-
-        bgPanel.add(returnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, -1, -1));
-
         savePanel.setBackground(new java.awt.Color(0, 22, 59));
         savePanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         savePanel.setPreferredSize(new java.awt.Dimension(143, 50));
@@ -141,7 +119,7 @@ public class frmRegistration extends javax.swing.JFrame {
             .addComponent(btnSave, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        bgPanel.add(savePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 540, -1, 50));
+        bgPanel.add(savePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 520, -1, 50));
 
         titlePanel.setBackground(new java.awt.Color(0, 22, 59));
 
@@ -186,6 +164,10 @@ public class frmRegistration extends javax.swing.JFrame {
 
         bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
+        btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/return.png"))); // NOI18N
+        btnReturn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        bgPanel.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 600, -1, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -216,7 +198,6 @@ public class frmRegistration extends javax.swing.JFrame {
     private javax.swing.JLabel lblName;
     private javax.swing.JLabel lblPhone;
     private javax.swing.JLabel lblTitle;
-    private javax.swing.JPanel returnPanel;
     private javax.swing.JPanel savePanel;
     public javax.swing.JPanel titlePanel;
     public javax.swing.JTextField txtDni;

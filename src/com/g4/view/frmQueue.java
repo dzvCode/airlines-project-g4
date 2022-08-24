@@ -66,6 +66,7 @@ public class frmQueue extends javax.swing.JFrame {
         btnExit = new javax.swing.JLabel();
         txtAdmin = new javax.swing.JLabel();
         lblAdmin = new javax.swing.JLabel();
+        cont = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -79,8 +80,6 @@ public class frmQueue extends javax.swing.JFrame {
         queueLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         queueLabel.setText("COLA DE CLIENTES");
         bgPanel.add(queueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 540, -1));
-
-        scrollClients.setPreferredSize(null);
 
         tblClients.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -114,7 +113,6 @@ public class frmQueue extends javax.swing.JFrame {
         btnAdd.setFont(new java.awt.Font("Roboto Slab ExtraBold", 0, 18)); // NOI18N
         btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/agregar.png"))); // NOI18N
         btnAdd.setText("Añadir");
         btnAdd.setToolTipText("");
 
@@ -129,7 +127,7 @@ public class frmQueue extends javax.swing.JFrame {
             .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, 54, Short.MAX_VALUE)
         );
 
-        bgPanel.add(addPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 510, -1, -1));
+        bgPanel.add(addPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 520, -1, -1));
 
         servePanel.setBackground(new java.awt.Color(0, 22, 59));
         servePanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -152,7 +150,7 @@ public class frmQueue extends javax.swing.JFrame {
                 .addComponent(btnServe, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        bgPanel.add(servePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 510, -1, -1));
+        bgPanel.add(servePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 520, -1, -1));
 
         img.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/queueImg.png"))); // NOI18N
         bgPanel.add(img, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, 280, 630));
@@ -242,6 +240,9 @@ public class frmQueue extends javax.swing.JFrame {
         lblAdmin.setText("Administrador:");
         bgPanel.add(lblAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 130, -1));
 
+        cont.setText("Cont. :");
+        bgPanel.add(cont, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 480, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -264,6 +265,7 @@ public class frmQueue extends javax.swing.JFrame {
     public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnReturn;
     public javax.swing.JLabel btnServe;
+    public javax.swing.JLabel cont;
     private javax.swing.JPanel dequeuePanel;
     public javax.swing.JPanel exitPanel;
     private javax.swing.JLabel img;

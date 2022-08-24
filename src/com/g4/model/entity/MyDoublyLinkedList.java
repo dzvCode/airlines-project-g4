@@ -43,7 +43,6 @@ public class MyDoublyLinkedList {
        Node aux1;
        Node aux2;
        User userAux;
-       boolean comparison;
        
        int m;
        for (int i = 2; i <= numbersNodes; i++) {
@@ -56,23 +55,7 @@ public class MyDoublyLinkedList {
            userAux = aux1.user;
            int j = i - 1;
            aux2 = aux1.prev;
-           
-           boolean priceComparison = aux2.user.getTicketPrice() > userAux.getTicketPrice();
-           boolean nameComparison = aux2.user.getName().compareTo(userAux.getName()) > 0;
-           boolean idComparison = aux2.user.getId() > userAux.getId();
-           
-          /* switch (opc) {
-               case 1:
-                   comparison = idComparison;
-                   break;
-               case 2:
-                   comparison = nameComparison;
-                   break;
-               default:
-                   comparison = priceComparison;
-                   break;
-           }*/
-           
+                      
            while(j >= 1 && aux2.user.getId() > userAux.getId()){
                 aux2.next.user = aux2.user;
                 j--;
@@ -151,7 +134,7 @@ public class MyDoublyLinkedList {
            aux2.user = userAux;
        }   
    }
-   
+      
    //print
     public static void printDLL(){
        Node aux = head;

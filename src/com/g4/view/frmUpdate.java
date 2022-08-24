@@ -82,7 +82,7 @@ public class frmUpdate extends javax.swing.JFrame {
 
         lblDepartureDate.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
         lblDepartureDate.setForeground(new java.awt.Color(0, 0, 0));
-        lblDepartureDate.setText("Fecha de Ida:");
+        lblDepartureDate.setText("Fecha de Ida");
 
         lblPhone.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
         lblPhone.setForeground(new java.awt.Color(0, 0, 0));
@@ -90,7 +90,7 @@ public class frmUpdate extends javax.swing.JFrame {
 
         lblEmail.setFont(new java.awt.Font("Roboto Light", 0, 14)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(0, 0, 0));
-        lblEmail.setText("Email:");
+        lblEmail.setText("Email");
 
         btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/modificar.png"))); // NOI18N
         btnUpdate.setText("Modificar");

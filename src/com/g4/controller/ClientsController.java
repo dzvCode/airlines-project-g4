@@ -1,13 +1,11 @@
 package com.g4.controller;
 
-import static com.g4.controller.QueueController.queueView;
-import static com.g4.controller.StartController.startView;
 import com.g4.model.entity.MyDoublyLinkedList;
 import com.g4.model.entity.User;
 import com.g4.model.repository.UserDAO;
 import com.g4.view.frmClients;
 import static com.g4.view.frmClients.model;
-import com.g4.view.frmQueue;
+import com.g4.view.frmFindClient;
 import com.g4.view.frmStart;
 import com.g4.view.frmUpdate;
 import java.awt.Color;
@@ -16,13 +14,11 @@ import java.awt.event.ItemListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
-import java.util.HashSet;
-import java.util.Set;
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
-import javax.swing.table.TableModel;
-import javax.swing.table.TableRowSorter;
 
 public class ClientsController implements MouseListener, MouseMotionListener, ItemListener  {
     public static frmClients clientsView;
@@ -37,6 +33,7 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
         this.clientsView.cbSorting.addItemListener(this);
         this.clientsView.btnDelete.addMouseListener(this);
         this.clientsView.btnUpdate.addMouseListener(this);
+        this.clientsView.btnTicket.addMouseListener(this);
     }
 
     public void init() {
@@ -46,6 +43,7 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
     
     public void goToStartView() {
         clientsView.dispose();
+        FindClientController.findClientView.dispose();
         frmStart fs = new frmStart();
         StartController sc = new StartController(fs);
         sc.init();
@@ -66,6 +64,14 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
         uc.init();
         fu.setVisible(true);
     }
+    
+    public void goToFindClientView() {
+        frmFindClient ffc = new frmFindClient();
+        FindClientController fcc = new FindClientController(ffc);
+        fcc.init();
+        ffc.setVisible(true);
+    }
+    
  
     @Override
     public void mouseClicked(MouseEvent e) {
@@ -74,15 +80,19 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
         }
         
         if (e.getSource() == clientsView.btnExit) {
-            System.exit(0);
+            goToStartView();
         }
         
         if (e.getSource() == clientsView.btnDelete) {
-         eliminar();
+            eliminar();
         }
         
         if (e.getSource() == clientsView.btnUpdate) {
             actualizar();
+        }
+        
+        if (e.getSource() == clientsView.btnTicket) {
+            goToFindClientView();
         }
     }
 
@@ -128,14 +138,18 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
     @Override
     public void itemStateChanged(ItemEvent e) {
         if (e.getSource() == clientsView.cbSorting) {
-            sort();
+            try {
+                sort();
+            } catch (ParseException ex) {
+                Logger.getLogger(ClientsController.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
     
-    public void sort() {
+    public void sort() throws ParseException {
         String seleccionado = clientsView.cbSorting.getSelectedItem().toString();
       
-        if (!" ".equals(seleccionado)) {
+        if (!"ID".equals(seleccionado)) {
             if (seleccionado.equals("Nombre")) {
                 model.getDataVector().removeAllElements();
                 MyDoublyLinkedList.insertionSortByName();
@@ -147,10 +161,11 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
                 upload();
             }
             
-            /*if (seleccionado.equals("Fecha de Ida")) {
+            /*if (seleccionado.equals("Fecha de ida")) {
+                System.out.println("Ordenando por fecha");
                 model.getDataVector().removeAllElements();
-                
-                
+                MyDoublyLinkedList.insertionSortByDate();
+                upload(); 
             }*/
             
         } else {

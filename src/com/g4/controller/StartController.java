@@ -17,7 +17,7 @@ public class StartController implements MouseListener, MouseMotionListener {
         this.startView.titlePanel.addMouseListener(this);
         this.startView.titlePanel.addMouseMotionListener(this);
         this.startView.btnGoToQueue.addMouseListener(this);
-        this.startView.btnGoToClients.addMouseListener(this);
+        this.startView.btnGoToDatabase.addMouseListener(this);
     }
       
     public void init() {
@@ -47,7 +47,7 @@ public class StartController implements MouseListener, MouseMotionListener {
             goToQueueView();
         }
         
-        if (e.getSource() == startView.btnGoToClients) {
+        if (e.getSource() == startView.btnGoToDatabase) {
             goToClients();
         }
         

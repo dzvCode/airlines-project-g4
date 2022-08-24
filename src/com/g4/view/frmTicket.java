@@ -1,11 +1,9 @@
+
 package com.g4.view;
 
 public class frmTicket extends javax.swing.JFrame {
-    
-    public int mouseX, mouseY;
-    /**
-     * Creates new form frmTicket
-     */
+
+  
     public frmTicket() {
         initComponents();
     }
@@ -19,409 +17,169 @@ public class frmTicket extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        bgPanel = new javax.swing.JPanel();
-        graphPanel = new javax.swing.JPanel();
-        lblGraph = new javax.swing.JLabel();
-        returnPanel = new javax.swing.JPanel();
-        btnReturn = new javax.swing.JLabel();
-        infoPanel = new javax.swing.JPanel();
-        lblOriginTitle = new javax.swing.JLabel();
-        lblPriceTitle = new javax.swing.JLabel();
-        lblDestinationTitle = new javax.swing.JLabel();
-        originPanel = new javax.swing.JPanel();
-        txtOriginSelected = new javax.swing.JLabel();
-        pricePanel = new javax.swing.JPanel();
-        lblSolesSymbol = new javax.swing.JLabel();
-        txtPriceSoles = new javax.swing.JLabel();
-        lblRouteTitle = new javax.swing.JLabel();
-        routePanel = new javax.swing.JPanel();
-        txtRouteCalculated = new javax.swing.JLabel();
-        destinationPanel = new javax.swing.JPanel();
-        txtDestinationSelected = new javax.swing.JLabel();
-        lblDistanceTitle = new javax.swing.JLabel();
-        distancePanel = new javax.swing.JPanel();
-        lblKm = new javax.swing.JLabel();
-        txtDistance = new javax.swing.JLabel();
-        lblPricePerKmInfo = new javax.swing.JLabel();
-        confirmPanel = new javax.swing.JPanel();
-        btnConfirm = new javax.swing.JLabel();
-        lblTitle = new javax.swing.JLabel();
-        titlePanel = new javax.swing.JPanel();
-        exitPanel = new javax.swing.JPanel();
-        btnExit = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        logo = new javax.swing.JLabel();
+        txtName = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        txtId = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        txtOrigin = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        txtDestination = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        txtDepartureDate = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setUndecorated(true);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        bgPanel.setBackground(new java.awt.Color(255, 255, 255));
-        bgPanel.setPreferredSize(new java.awt.Dimension(902, 658));
-        bgPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        graphPanel.setBackground(new java.awt.Color(242, 250, 250));
+        jPanel2.setBackground(new java.awt.Color(0, 22, 59));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lblGraph.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/graph.png"))); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Roboto Medium", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Handsaw ETS Airlines");
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
-        javax.swing.GroupLayout graphPanelLayout = new javax.swing.GroupLayout(graphPanel);
-        graphPanel.setLayout(graphPanelLayout);
-        graphPanelLayout.setHorizontalGroup(
-            graphPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(graphPanelLayout.createSequentialGroup()
-                .addGap(14, 14, 14)
-                .addComponent(lblGraph)
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-        graphPanelLayout.setVerticalGroup(
-            graphPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(graphPanelLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(lblGraph, javax.swing.GroupLayout.PREFERRED_SIZE, 567, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(28, Short.MAX_VALUE))
-        );
+        jLabel19.setFont(new java.awt.Font("Roboto Medium", 3, 18)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("Tarjeta de embargue");
+        jPanel2.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(694, 6, -1, -1));
 
-        bgPanel.add(graphPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 440, 620));
+        logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/logo.png"))); // NOI18N
+        jPanel2.add(logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, -1, -1));
 
-        returnPanel.setBackground(new java.awt.Color(0, 22, 59));
-        returnPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 886, 70));
 
-        btnReturn.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnReturn.setForeground(new java.awt.Color(255, 255, 255));
-        btnReturn.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnReturn.setText("REGRESAR");
+        txtName.setFont(new java.awt.Font("Roboto Light", 3, 18)); // NOI18N
+        txtName.setForeground(new java.awt.Color(0, 0, 0));
+        txtName.setText("Nombre");
+        jPanel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 116, -1, -1));
 
-        javax.swing.GroupLayout returnPanelLayout = new javax.swing.GroupLayout(returnPanel);
-        returnPanel.setLayout(returnPanelLayout);
-        returnPanelLayout.setHorizontalGroup(
-            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnReturn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
-        );
-        returnPanelLayout.setVerticalGroup(
-            returnPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnReturn, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-        );
+        jLabel3.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel3.setText("Nombre del pasajero:");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 93, -1, -1));
 
-        bgPanel.add(returnPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 570, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel4.setText("Pasajero frecuente");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 144, -1, -1));
 
-        infoPanel.setBackground(new java.awt.Color(249, 237, 243));
+        jLabel5.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel5.setText("Número de Ticket:");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 167, -1, -1));
 
-        lblOriginTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        lblOriginTitle.setForeground(new java.awt.Color(41, 29, 124));
-        lblOriginTitle.setText("Origen");
+        txtId.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        txtId.setForeground(new java.awt.Color(0, 0, 0));
+        txtId.setText("ID");
+        jPanel1.add(txtId, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 167, -1, -1));
 
-        lblPriceTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        lblPriceTitle.setForeground(new java.awt.Color(41, 29, 124));
-        lblPriceTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblPriceTitle.setText("Precio del boleto");
+        jLabel7.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel7.setText("Desde:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, -1, -1));
 
-        lblDestinationTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        lblDestinationTitle.setForeground(new java.awt.Color(41, 29, 124));
-        lblDestinationTitle.setText("Destino");
+        txtOrigin.setFont(new java.awt.Font("Roboto Light", 3, 18)); // NOI18N
+        txtOrigin.setForeground(new java.awt.Color(0, 0, 0));
+        txtOrigin.setText("Origen");
+        jPanel1.add(txtOrigin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 230, -1, -1));
 
-        originPanel.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel9.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel9.setText("Hacia:");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, -1, -1));
 
-        txtOriginSelected.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtOriginSelected.setText("Lima");
+        txtDestination.setFont(new java.awt.Font("Roboto Light", 3, 18)); // NOI18N
+        txtDestination.setForeground(new java.awt.Color(0, 0, 0));
+        txtDestination.setText("Destino");
+        jPanel1.add(txtDestination, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 230, -1, -1));
 
-        javax.swing.GroupLayout originPanelLayout = new javax.swing.GroupLayout(originPanel);
-        originPanel.setLayout(originPanelLayout);
-        originPanelLayout.setHorizontalGroup(
-            originPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(originPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtOriginSelected, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        originPanelLayout.setVerticalGroup(
-            originPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(originPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtOriginSelected)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jLabel11.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel11.setText("Vuelo operado por:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 295, -1, -1));
 
-        pricePanel.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel12.setFont(new java.awt.Font("Roboto Light", 3, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel12.setText("Handsaw ETS Airlines ");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 295, -1, -1));
 
-        lblSolesSymbol.setBackground(new java.awt.Color(0, 0, 0));
-        lblSolesSymbol.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        lblSolesSymbol.setForeground(new java.awt.Color(70, 70, 70));
-        lblSolesSymbol.setText("S/");
+        jLabel13.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel13.setText("Fecha");
+        jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 210, -1, -1));
 
-        txtPriceSoles.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtPriceSoles.setText("100");
+        txtDepartureDate.setFont(new java.awt.Font("Roboto Light", 3, 18)); // NOI18N
+        txtDepartureDate.setForeground(new java.awt.Color(0, 0, 0));
+        txtDepartureDate.setText("Fecha");
+        jPanel1.add(txtDepartureDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 230, -1, -1));
 
-        javax.swing.GroupLayout pricePanelLayout = new javax.swing.GroupLayout(pricePanel);
-        pricePanel.setLayout(pricePanelLayout);
-        pricePanelLayout.setHorizontalGroup(
-            pricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pricePanelLayout.createSequentialGroup()
-                .addContainerGap(35, Short.MAX_VALUE)
-                .addComponent(lblSolesSymbol, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(txtPriceSoles, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33))
-        );
-        pricePanelLayout.setVerticalGroup(
-            pricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pricePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(lblSolesSymbol, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addComponent(txtPriceSoles, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
+        jLabel15.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel15.setText("Clase:");
+        jPanel1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, -1, 20));
 
-        lblRouteTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        lblRouteTitle.setForeground(new java.awt.Color(41, 29, 124));
-        lblRouteTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblRouteTitle.setText("Ruta");
+        jLabel16.setFont(new java.awt.Font("Roboto Light", 3, 18)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel16.setText("Económica");
+        jPanel1.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 116, -1, -1));
 
-        routePanel.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/avion.png"))); // NOI18N
+        jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, -1, -1));
 
-        txtRouteCalculated.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtRouteCalculated.setText("Ruta");
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/fondo de los datos abajo.png"))); // NOI18N
+        jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, 190));
 
-        javax.swing.GroupLayout routePanelLayout = new javax.swing.GroupLayout(routePanel);
-        routePanel.setLayout(routePanelLayout);
-        routePanelLayout.setHorizontalGroup(
-            routePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(routePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtRouteCalculated, javax.swing.GroupLayout.DEFAULT_SIZE, 316, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        routePanelLayout.setVerticalGroup(
-            routePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(routePanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtRouteCalculated, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        jLabel18.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel18.setText("Número de Ticket:");
+        jPanel1.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 167, -1, -1));
 
-        destinationPanel.setBackground(new java.awt.Color(255, 255, 255));
-
-        txtDestinationSelected.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        txtDestinationSelected.setText("Destino");
-
-        javax.swing.GroupLayout destinationPanelLayout = new javax.swing.GroupLayout(destinationPanel);
-        destinationPanel.setLayout(destinationPanelLayout);
-        destinationPanelLayout.setHorizontalGroup(
-            destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(destinationPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtDestinationSelected, javax.swing.GroupLayout.DEFAULT_SIZE, 125, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        destinationPanelLayout.setVerticalGroup(
-            destinationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(destinationPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(txtDestinationSelected)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        lblDistanceTitle.setFont(new java.awt.Font("Roboto Medium", 0, 14)); // NOI18N
-        lblDistanceTitle.setForeground(new java.awt.Color(41, 29, 124));
-        lblDistanceTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblDistanceTitle.setText("Recorrido minimo");
-
-        distancePanel.setBackground(new java.awt.Color(255, 255, 255));
-
-        lblKm.setBackground(new java.awt.Color(0, 0, 0));
-        lblKm.setFont(new java.awt.Font("Roboto Light", 0, 12)); // NOI18N
-        lblKm.setForeground(new java.awt.Color(70, 70, 70));
-        lblKm.setText("Km");
-
-        txtDistance.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        txtDistance.setText("100");
-
-        javax.swing.GroupLayout distancePanelLayout = new javax.swing.GroupLayout(distancePanel);
-        distancePanel.setLayout(distancePanelLayout);
-        distancePanelLayout.setHorizontalGroup(
-            distancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(distancePanelLayout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(txtDistance, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblKm, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        distancePanelLayout.setVerticalGroup(
-            distancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(distancePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                .addComponent(lblKm, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(txtDistance, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        lblPricePerKmInfo.setText("* precio/km:  ");
-
-        javax.swing.GroupLayout infoPanelLayout = new javax.swing.GroupLayout(infoPanel);
-        infoPanel.setLayout(infoPanelLayout);
-        infoPanelLayout.setHorizontalGroup(
-            infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(infoPanelLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addGap(48, 48, 48)
-                        .addComponent(lblOriginTitle)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(lblDestinationTitle)
-                        .addGap(94, 94, 94))
-                    .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(infoPanelLayout.createSequentialGroup()
-                                .addComponent(originPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(54, 54, 54)
-                                .addComponent(destinationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(lblRouteTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 328, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(49, 49, 49))
-                    .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(lblDistanceTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(distancePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(lblPricePerKmInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 124, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(pricePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(lblPriceTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(57, 57, 57))))
-        );
-        infoPanelLayout.setVerticalGroup(
-            infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(infoPanelLayout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addComponent(lblOriginTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(originPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(infoPanelLayout.createSequentialGroup()
-                        .addComponent(lblDestinationTitle)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(destinationPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
-                .addComponent(lblRouteTitle, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(routePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPriceTitle, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(lblDistanceTitle, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(infoPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(pricePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(distancePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(49, 49, 49)
-                .addComponent(lblPricePerKmInfo, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
-        );
-
-        bgPanel.add(infoPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 150, 420, 380));
-
-        confirmPanel.setBackground(new java.awt.Color(0, 22, 59));
-        confirmPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        btnConfirm.setFont(new java.awt.Font("Roboto Black", 0, 14)); // NOI18N
-        btnConfirm.setForeground(new java.awt.Color(255, 255, 255));
-        btnConfirm.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnConfirm.setText("CONFIRMAR");
-
-        javax.swing.GroupLayout confirmPanelLayout = new javax.swing.GroupLayout(confirmPanel);
-        confirmPanel.setLayout(confirmPanelLayout);
-        confirmPanelLayout.setHorizontalGroup(
-            confirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnConfirm, javax.swing.GroupLayout.DEFAULT_SIZE, 138, Short.MAX_VALUE)
-        );
-        confirmPanelLayout.setVerticalGroup(
-            confirmPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(btnConfirm, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
-        );
-
-        bgPanel.add(confirmPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 570, -1, -1));
-
-        lblTitle.setFont(new java.awt.Font("Roboto Black", 0, 36)); // NOI18N
-        lblTitle.setForeground(new java.awt.Color(41, 29, 124));
-        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lblTitle.setText("TRAYECTO");
-        bgPanel.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 80, 350, -1));
-
-        titlePanel.setBackground(new java.awt.Color(0, 22, 59));
-
-        exitPanel.setBackground(new java.awt.Color(0, 22, 59));
-
-        btnExit.setBackground(new java.awt.Color(0, 22, 59));
-        btnExit.setFont(new java.awt.Font("Roboto Black", 0, 18)); // NOI18N
-        btnExit.setForeground(new java.awt.Color(255, 255, 255));
-        btnExit.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        btnExit.setText("X");
-        btnExit.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout exitPanelLayout = new javax.swing.GroupLayout(exitPanel);
-        exitPanel.setLayout(exitPanelLayout);
-        exitPanelLayout.setHorizontalGroup(
-            exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        exitPanelLayout.setVerticalGroup(
-            exitPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, exitPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnExit, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        javax.swing.GroupLayout titlePanelLayout = new javax.swing.GroupLayout(titlePanel);
-        titlePanel.setLayout(titlePanelLayout);
-        titlePanelLayout.setHorizontalGroup(
-            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
-                .addGap(0, 860, Short.MAX_VALUE)
-                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        titlePanelLayout.setVerticalGroup(
-            titlePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, titlePanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(exitPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-
-        bgPanel.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-
-        getContentPane().add(bgPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 900, 660));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 320));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel bgPanel;
-    public javax.swing.JLabel btnConfirm;
-    public javax.swing.JLabel btnExit;
-    public javax.swing.JLabel btnReturn;
-    private javax.swing.JPanel confirmPanel;
-    private javax.swing.JPanel destinationPanel;
-    private javax.swing.JPanel distancePanel;
-    public javax.swing.JPanel exitPanel;
-    private javax.swing.JPanel graphPanel;
-    private javax.swing.JPanel infoPanel;
-    private javax.swing.JLabel lblDestinationTitle;
-    private javax.swing.JLabel lblDistanceTitle;
-    private javax.swing.JLabel lblGraph;
-    private javax.swing.JLabel lblKm;
-    private javax.swing.JLabel lblOriginTitle;
-    public javax.swing.JLabel lblPricePerKmInfo;
-    private javax.swing.JLabel lblPriceTitle;
-    private javax.swing.JLabel lblRouteTitle;
-    private javax.swing.JLabel lblSolesSymbol;
-    private javax.swing.JLabel lblTitle;
-    private javax.swing.JPanel originPanel;
-    private javax.swing.JPanel pricePanel;
-    private javax.swing.JPanel returnPanel;
-    private javax.swing.JPanel routePanel;
-    public javax.swing.JPanel titlePanel;
-    public javax.swing.JLabel txtDestinationSelected;
-    public javax.swing.JLabel txtDistance;
-    public javax.swing.JLabel txtOriginSelected;
-    public javax.swing.JLabel txtPriceSoles;
-    public javax.swing.JLabel txtRouteCalculated;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel logo;
+    public javax.swing.JLabel txtDepartureDate;
+    public javax.swing.JLabel txtDestination;
+    public javax.swing.JLabel txtId;
+    public javax.swing.JLabel txtName;
+    public javax.swing.JLabel txtOrigin;
     // End of variables declaration//GEN-END:variables
 }

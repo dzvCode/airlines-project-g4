@@ -49,6 +49,7 @@ public class frmClients extends javax.swing.JFrame {
         tblClients = new javax.swing.JTable();
         btnUpdate = new javax.swing.JLabel();
         btnDelete = new javax.swing.JLabel();
+        btnTicket = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -58,8 +59,9 @@ public class frmClients extends javax.swing.JFrame {
 
         lblTitle.setFont(new java.awt.Font("Roboto Medium", 0, 36)); // NOI18N
         lblTitle.setForeground(new java.awt.Color(0, 0, 0));
-        lblTitle.setText("Pasajeros Registrados");
-        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 70, -1, -1));
+        lblTitle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblTitle.setText("Clientes Registrados");
+        jPanel1.add(lblTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(38, 70, 830, -1));
 
         lblAdmin.setFont(new java.awt.Font("Roboto Light", 0, 18)); // NOI18N
         lblAdmin.setForeground(new java.awt.Color(0, 0, 0));
@@ -76,7 +78,7 @@ public class frmClients extends javax.swing.JFrame {
 
         btnReturn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/return.png"))); // NOI18N
         btnReturn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 530, -1, 30));
+        jPanel1.add(btnReturn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 540, -1, 30));
 
         titlePanel.setBackground(new java.awt.Color(0, 22, 59));
 
@@ -122,12 +124,11 @@ public class frmClients extends javax.swing.JFrame {
         jPanel1.add(titlePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 910, -1));
 
         jLabel1.setText("Ordenar por:");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 160, -1, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 150, -1, -1));
 
-        cbSorting.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " ", "Nombre", "Precio de boleto", "Fecha de ida" }));
-        jPanel1.add(cbSorting, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 190, 100, -1));
+        cbSorting.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "ID", "Nombre", "Precio de boleto" }));
+        jPanel1.add(cbSorting, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 150, 100, -1));
 
-        scrollClients.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_ALWAYS);
         scrollClients.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_ALWAYS);
         scrollClients.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         scrollClients.setFocusTraversalPolicyProvider(true);
@@ -156,29 +157,32 @@ public class frmClients extends javax.swing.JFrame {
         if (tblClients.getColumnModel().getColumnCount() > 0) {
             tblClients.getColumnModel().getColumn(0).setResizable(false);
             tblClients.getColumnModel().getColumn(0).setPreferredWidth(30);
-            tblClients.getColumnModel().getColumn(1).setResizable(false);
             tblClients.getColumnModel().getColumn(2).setResizable(false);
             tblClients.getColumnModel().getColumn(2).setPreferredWidth(60);
             tblClients.getColumnModel().getColumn(3).setResizable(false);
             tblClients.getColumnModel().getColumn(3).setPreferredWidth(70);
-            tblClients.getColumnModel().getColumn(4).setResizable(false);
             tblClients.getColumnModel().getColumn(5).setResizable(false);
             tblClients.getColumnModel().getColumn(6).setResizable(false);
             tblClients.getColumnModel().getColumn(7).setResizable(false);
             tblClients.getColumnModel().getColumn(8).setResizable(false);
         }
 
-        jPanel1.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 710, 300));
+        jPanel1.add(scrollClients, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 840, 330));
 
         btnUpdate.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/modificar.png"))); // NOI18N
         btnUpdate.setText("Modificar");
         btnUpdate.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 260, -1, -1));
+        jPanel1.add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 540, -1, -1));
 
         btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/eliminar.png"))); // NOI18N
         btnDelete.setText("Eliminar");
         btnDelete.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 320, -1, -1));
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 540, -1, -1));
+
+        btnTicket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/buscar.png"))); // NOI18N
+        btnTicket.setText("Mostrar boleto");
+        btnTicket.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnTicket, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 540, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -198,6 +202,7 @@ public class frmClients extends javax.swing.JFrame {
     public javax.swing.JLabel btnDelete;
     public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnReturn;
+    public javax.swing.JLabel btnTicket;
     public javax.swing.JLabel btnUpdate;
     public javax.swing.JComboBox<String> cbSorting;
     public javax.swing.JPanel exitPanel;

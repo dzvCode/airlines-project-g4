@@ -25,6 +25,7 @@ public class QueueController implements MouseListener, MouseMotionListener {
         this.queueView.btnServe.addMouseListener(this);
         this.queueView.btnDequeue.addMouseListener(this);
         this.queueView.btnReturn.addMouseListener(this);
+        this.queueView.cont.setText("Cola: " + String.valueOf(MyQueue.counter));
     }
         
     public void init() {
@@ -69,7 +70,7 @@ public class QueueController implements MouseListener, MouseMotionListener {
     public void mouseClicked(MouseEvent e) {
         
        if (e.getSource() == queueView.btnExit) {
-           System.exit(0);
+           goToStartView();
        }
        
        if (e.getSource() == queueView.btnAdd) {

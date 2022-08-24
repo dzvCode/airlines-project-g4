@@ -4,23 +4,24 @@ import com.g4.model.entity.Dijkstra;
 import com.g4.model.entity.MyQueue;
 import com.g4.model.repository.UserDAO;
 import com.g4.view.frmQueue;
-import com.g4.view.frmTicket;
+import com.g4.view.frmTicketConfirmation;
 import java.awt.Color;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.List;
+import javax.security.auth.callback.ConfirmationCallback;
 import javax.swing.JOptionPane;
 
 public class TicketConfirmationController implements MouseListener, MouseMotionListener {
-    public static frmTicket ticketConfirmationView;
+    public static frmTicketConfirmation ticketConfirmationView;
     private UserDAO userC;
     public int origin = Dijkstra.citySelected.get(MyQueue.front.user.getOrigin());
     public int destination = Dijkstra.citySelected.get(MyQueue.front.user.getDestination());
     public String route = "";
     private static final double PRICE_PER_KM = 0.258;
     
-    public TicketConfirmationController(frmTicket ticketConfirmationView, UserDAO userC) {
+    public TicketConfirmationController(frmTicketConfirmation ticketConfirmationView, UserDAO userC) {
         this.ticketConfirmationView = ticketConfirmationView;
         this.ticketConfirmationView.btnConfirm.addMouseListener(this);
         this.ticketConfirmationView.btnReturn.addMouseListener(this);
@@ -79,7 +80,7 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
     public void mouseClicked(MouseEvent e) {
         
         if (e.getSource() == ticketConfirmationView.btnExit) {
-            System.exit(0);
+            goToDestinationView();
         }
         
         if (e.getSource() == ticketConfirmationView.btnReturn) {
@@ -91,6 +92,8 @@ public class TicketConfirmationController implements MouseListener, MouseMotionL
             if (userC.register(MyQueue.front.user)) {
                 MyQueue.dequeue();
                 JOptionPane.showMessageDialog(null, "Registro guardado");
+                DestinationController.destinationView.dispose();
+                ticketConfirmationView.dispose();
                 goToQueueView();
             } else {
                     JOptionPane.showMessageDialog(null, "Error al guardar");

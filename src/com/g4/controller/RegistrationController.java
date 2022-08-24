@@ -53,13 +53,13 @@ public class RegistrationController implements MouseListener, MouseMotionListene
     public void mouseClicked(MouseEvent e) {
                 
         if (e.getSource() == registerView.btnExit) {
-            System.exit(0);
+            goToQueueView();
         }
         
         if (e.getSource() == registerView.btnReturn) {
              goToQueueView();
         }
-        
+               
         if (e.getSource() == registerView.btnSave) {
             
             String name = registerView.txtName.getText();
