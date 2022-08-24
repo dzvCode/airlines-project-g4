@@ -3,7 +3,6 @@ package com.g4.view;
 
 public class frmTicket extends javax.swing.JFrame {
 
-  
     public frmTicket() {
         initComponents();
     }
@@ -144,7 +143,7 @@ public class frmTicket extends javax.swing.JFrame {
         jLabel20.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/avion.png"))); // NOI18N
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 80, -1, -1));
 
-        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/fondo de los datos abajo.png"))); // NOI18N
+        jLabel17.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/g4/view/images/contenedor.png"))); // NOI18N
         jPanel1.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, -1, 190));
 
         jLabel18.setFont(new java.awt.Font("Roboto Light", 2, 14)); // NOI18N

@@ -67,6 +67,7 @@ public class frmQueue extends javax.swing.JFrame {
         txtAdmin = new javax.swing.JLabel();
         lblAdmin = new javax.swing.JLabel();
         cont = new javax.swing.JLabel();
+        capacity = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocationByPlatform(true);
@@ -240,8 +241,11 @@ public class frmQueue extends javax.swing.JFrame {
         lblAdmin.setText("Administrador:");
         bgPanel.add(lblAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 130, -1));
 
-        cont.setText("Cont. :");
-        bgPanel.add(cont, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 480, -1, -1));
+        cont.setText("Cont:");
+        bgPanel.add(cont, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 480, -1, -1));
+
+        capacity.setText("Capacidad:");
+        bgPanel.add(capacity, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 480, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -265,6 +269,7 @@ public class frmQueue extends javax.swing.JFrame {
     public javax.swing.JLabel btnExit;
     public javax.swing.JLabel btnReturn;
     public javax.swing.JLabel btnServe;
+    public javax.swing.JLabel capacity;
     public javax.swing.JLabel cont;
     private javax.swing.JPanel dequeuePanel;
     public javax.swing.JPanel exitPanel;

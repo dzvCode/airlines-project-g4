@@ -50,9 +50,11 @@ public class DestinationController implements MouseListener, MouseMotionListener
             MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tarapoto.png");
             MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/trujillo.png");
             MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tumbes.png");
-            destinationView.lblCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource(MyCircularDoublyLinkedList.current.destination)));
-            destinationView.bgPanel.add(destinationView.lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 350, 620));
+        } else {
+            MyCircularDoublyLinkedList.current = MyCircularDoublyLinkedList.head;
         }
+        destinationView.lblCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource(MyCircularDoublyLinkedList.current.destination)));
+        destinationView.bgPanel.add(destinationView.lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 350, 620));
     }
     
     private void goToTicketConfirmationView() {
@@ -96,9 +98,7 @@ public class DestinationController implements MouseListener, MouseMotionListener
                 JOptionPane.showMessageDialog(null, "Seleccione la fecha de ida");
             } else if (origin.equals(destination)) {
                 JOptionPane.showMessageDialog(null, "Destino invalido");            
-            } 
-            
-          
+            }
         }
         
         if (e.getSource() == destinationView.btnReturn) {

@@ -2,9 +2,7 @@ package com.g4.view;
 
 public class frmStart extends javax.swing.JFrame {
     public int mouseX, mouseY;
-    /**
-     * Creates new form frmStart
-     */
+   
     public frmStart() {
         initComponents();
     }

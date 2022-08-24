@@ -16,8 +16,7 @@ public class LoginController implements MouseListener, MouseMotionListener {
     public static Admin admin;
     private AdminDAO adminC;
     private frmLogin loginView;
-
-    // Constructor
+    
     public LoginController(Admin admin, AdminDAO adminC, frmLogin loginView) {
         this.admin = admin;
         this.adminC = adminC;
@@ -30,12 +29,10 @@ public class LoginController implements MouseListener, MouseMotionListener {
         this.loginView.titlePanel.addMouseMotionListener(this);
     }
     
-    // Metodo que ubica la ventana en el centro
     public void init() {
         loginView.setLocationRelativeTo(null);
     }
-            
-    // Metodo que lleva a la vista "Start"
+    
     public void goToStartView() {
         loginView.dispose();
         frmStart fs = new frmStart();

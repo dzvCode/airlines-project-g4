@@ -1,6 +1,5 @@
 package com.g4.controller;
 
-import static com.g4.controller.DestinationController.destinationView;
 import com.g4.model.entity.User;
 import com.g4.model.repository.UserDAO;
 import com.g4.view.frmClients;

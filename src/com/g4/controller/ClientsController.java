@@ -46,6 +46,9 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
         if(FindClientController.findClientView != null) {
             FindClientController.findClientView.dispose();
         }
+        if (FindClientController.ticketView != null) {
+            FindClientController.ticketView.dispose();
+        }
         frmStart fs = new frmStart();
         StartController sc = new StartController(fs);
         sc.init();
@@ -163,13 +166,6 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
                 upload();
             }
             
-            /*if (seleccionado.equals("Fecha de ida")) {
-                System.out.println("Ordenando por fecha");
-                model.getDataVector().removeAllElements();
-                MyDoublyLinkedList.insertionSortByDate();
-                upload(); 
-            }*/
-            
         } else {
             model.getDataVector().removeAllElements();
             MyDoublyLinkedList.insertionSortById();
@@ -197,7 +193,6 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
                 user.setName(model.getValueAt(fila,1).toString());
                 user.setDni(model.getValueAt(fila,2).toString());
                 ud.delete(user);
-                //model.removeRow(fila);
                 JOptionPane.showMessageDialog(null, "" + user.getName() + " eliminado de la base de datos");
                 goToClientsView();
 

@@ -13,6 +13,7 @@ import javax.swing.JOptionPane;
 
 public class FindClientController implements MouseListener, MouseMotionListener {
     public static frmFindClient findClientView;
+    public static frmTicket ticketView;
     
     public FindClientController(frmFindClient findClientView) {
         this.findClientView = findClientView;
@@ -29,14 +30,14 @@ public class FindClientController implements MouseListener, MouseMotionListener 
     }
     
     public void goToTicket(User user) {
-        frmTicket ft = new frmTicket();
-        ft.setVisible(true);
-        ft.setLocationRelativeTo(null);
-        ft.txtId.setText(String.valueOf(user.getId()));
-        ft.txtName.setText(user.getName());
-        ft.txtOrigin.setText(user.getOrigin());
-        ft.txtDestination.setText(user.getDestination());
-        ft.txtDepartureDate.setText(user.getDepartureDate());
+        ticketView = new frmTicket();
+        ticketView.setVisible(true);
+        ticketView.setLocationRelativeTo(null);
+        ticketView.txtId.setText(String.valueOf(user.getId()));
+        ticketView.txtName.setText(user.getName());
+        ticketView.txtOrigin.setText(user.getOrigin());
+        ticketView.txtDestination.setText(user.getDestination());
+        ticketView.txtDepartureDate.setText(user.getDepartureDate());
     }
     
     public void findById() {

@@ -25,7 +25,8 @@ public class QueueController implements MouseListener, MouseMotionListener {
         this.queueView.btnServe.addMouseListener(this);
         this.queueView.btnDequeue.addMouseListener(this);
         this.queueView.btnReturn.addMouseListener(this);
-        this.queueView.cont.setText("Cola: " + String.valueOf(MyQueue.counter));
+        this.queueView.cont.setText("En cola: " + String.valueOf(MyQueue.counter));
+        this.queueView.capacity.setText("Capacidad: " + String.valueOf(MyQueue.capacity + 1));
     }
         
     public void init() {

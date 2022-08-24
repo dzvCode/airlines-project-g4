@@ -409,14 +409,27 @@
         </Component>
         <Component class="javax.swing.JLabel" name="cont">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Cont. :"/>
+            <Property name="text" type="java.lang.String" value="Cont:"/>
           </Properties>
           <AuxValues>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="470" y="480" width="-1" height="-1"/>
+              <AbsoluteConstraints x="460" y="480" width="-1" height="-1"/>
+            </Constraint>
+          </Constraints>
+        </Component>
+        <Component class="javax.swing.JLabel" name="capacity">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Capacidad:"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
+          </AuxValues>
+          <Constraints>
+            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
+              <AbsoluteConstraints x="80" y="480" width="-1" height="-1"/>
             </Constraint>
           </Constraints>
         </Component>

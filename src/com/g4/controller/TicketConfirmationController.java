@@ -10,7 +10,6 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.event.MouseMotionListener;
 import java.util.List;
-import javax.security.auth.callback.ConfirmationCallback;
 import javax.swing.JOptionPane;
 
 public class TicketConfirmationController implements MouseListener, MouseMotionListener {

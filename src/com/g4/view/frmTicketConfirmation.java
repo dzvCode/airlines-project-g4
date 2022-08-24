@@ -3,9 +3,7 @@ package com.g4.view;
 public class frmTicketConfirmation extends javax.swing.JFrame {
     
     public int mouseX, mouseY;
-    /**
-     * Creates new form frmTicket
-     */
+    
     public frmTicketConfirmation() {
         initComponents();
     }

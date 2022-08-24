@@ -3,6 +3,7 @@ package com.g4.view;
 public class frmRegistration extends javax.swing.JFrame {
 
     public int mouseX, mouseY;
+    
     public frmRegistration() {
         initComponents();
     }
@@ -119,7 +120,7 @@ public class frmRegistration extends javax.swing.JFrame {
             .addComponent(btnSave, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
         );
 
-        bgPanel.add(savePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 520, -1, 50));
+        bgPanel.add(savePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(205, 520, -1, 50));
 
         titlePanel.setBackground(new java.awt.Color(0, 22, 59));
 
