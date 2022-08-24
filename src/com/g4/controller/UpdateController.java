@@ -45,7 +45,7 @@ public class UpdateController implements MouseListener, MouseMotionListener {
         UserDAO ud = new UserDAO();
         User user = new User();
         
-        user.setName(updateView.txtClient.getText());
+        //user.setName(updateView.txtClient.getText());
         user.setDni(updateView.txtDni.getText());
         user.setPhone(updateView.txtPhone.getText());
         user.setEmail(updateView.txtEmail.getText());
@@ -60,13 +60,42 @@ public class UpdateController implements MouseListener, MouseMotionListener {
         } else {
             Date date = calendar.getTime();
             user.setDepartureDate(sdf.format(date));
-            ud.update(user);
-            JOptionPane.showMessageDialog(null, "Se actualizo el cliente " + user.getName() + " en la base de datos");
-            updateView.dispose();
-            ClientsController.clientsView.dispose();
-            goToClientsView();
+            
+                           
+            if (!isPhoneValid(user.getPhone())) {
+                JOptionPane.showMessageDialog(null, "Telefono invalido");
+            } else {
+                int YesOrNo = JOptionPane.showConfirmDialog(null,"¿Está seguro de actualizar el registro?", "Actualizar registro", JOptionPane.YES_NO_OPTION);
+                
+                if(YesOrNo == 0) {
+                    ud.update(user);
+                    JOptionPane.showMessageDialog(null, "Se actualizo el cliente " + user.getName() + " en la base de datos");
+                    updateView.dispose();
+                    ClientsController.clientsView.dispose();
+                    goToClientsView();
+                }
+            }
         }
-    } 
+    }
+    
+    public boolean isPhoneValid(String phone) {
+       int i, j = 0;
+       String number = "";
+       String myPhone = "";
+       String[] unoNueve = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+       
+        for (i = 0; i < phone.length(); i++) {
+            number = phone.substring(i, i + 1);
+            
+            for (j =0; j < unoNueve.length; j++) {
+                if (number.equals(unoNueve[j])) {
+                    myPhone += unoNueve[j];
+                }
+            }
+      
+        }        
+        return myPhone.length() >= 9 && myPhone.length() <= 15;
+    }
     
     @Override
     public void mouseClicked(MouseEvent e) {
