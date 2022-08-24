@@ -192,9 +192,14 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
                                
                 user.setName(model.getValueAt(fila,1).toString());
                 user.setDni(model.getValueAt(fila,2).toString());
-                ud.delete(user);
-                JOptionPane.showMessageDialog(null, "" + user.getName() + " eliminado de la base de datos");
-                goToClientsView();
+                
+                int YesOrNo = JOptionPane.showConfirmDialog(null,"¿Está seguro de eliminar el registro?", "Eliminar registro", JOptionPane.YES_NO_OPTION);
+                
+                if(YesOrNo == 0) {
+                    ud.delete(user);
+                    JOptionPane.showMessageDialog(null, "" + user.getName() + " eliminado de la base de datos");
+                    goToClientsView();
+                }                
 
             } else {
                 JOptionPane.showMessageDialog(clientsView, "Seleccione un registro", 
