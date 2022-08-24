@@ -45,7 +45,7 @@ public class UpdateController implements MouseListener, MouseMotionListener {
         UserDAO ud = new UserDAO();
         User user = new User();
         
-        //user.setName(updateView.txtClient.getText());
+        user.setName(updateView.txtClient.getText());
         user.setDni(updateView.txtDni.getText());
         user.setPhone(updateView.txtPhone.getText());
         user.setEmail(updateView.txtEmail.getText());
