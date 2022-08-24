@@ -30,23 +30,29 @@ public class DestinationController implements MouseListener, MouseMotionListener
     }    
     
     public void init() {
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/arequipa.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/ayacucho.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/cajamarca.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/cuzco.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/iquitos.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/juliaca.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/lima.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/piura.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/pucallpa.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/puertoMaldonado.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tacna.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tarapoto.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/trujillo.png");
-        MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tumbes.png");
-        destinationView.lblCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource(MyCircularDoublyLinkedList.current.destination)));
-        destinationView.bgPanel.add(destinationView.lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 350, 620));
+        uploadImages();
         destinationView.setLocationRelativeTo(null);
+    }
+    
+    public void uploadImages() {
+        if (MyCircularDoublyLinkedList.head == null) {
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/arequipa.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/ayacucho.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/cajamarca.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/cuzco.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/iquitos.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/juliaca.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/lima.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/piura.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/pucallpa.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/puertoMaldonado.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tacna.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tarapoto.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/trujillo.png");
+            MyCircularDoublyLinkedList.insertAtTail("/com/g4/view/images/cities/tumbes.png");
+            destinationView.lblCityImg.setIcon(new javax.swing.ImageIcon(getClass().getResource(MyCircularDoublyLinkedList.current.destination)));
+            destinationView.bgPanel.add(destinationView.lblCityImg, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 40, 350, 620));
+        }
     }
     
     private void goToTicketConfirmationView() {

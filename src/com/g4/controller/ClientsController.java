@@ -43,7 +43,9 @@ public class ClientsController implements MouseListener, MouseMotionListener, It
     
     public void goToStartView() {
         clientsView.dispose();
-        FindClientController.findClientView.dispose();
+        if(FindClientController.findClientView != null) {
+            FindClientController.findClientView.dispose();
+        }
         frmStart fs = new frmStart();
         StartController sc = new StartController(fs);
         sc.init();

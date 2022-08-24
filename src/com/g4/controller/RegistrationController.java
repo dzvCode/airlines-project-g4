@@ -30,7 +30,7 @@ public class RegistrationController implements MouseListener, MouseMotionListene
     }
 
     public void init() {
-        registerView.setLocationRelativeTo(null);
+       registerView.setLocationRelativeTo(null);
     }
     
     public void goToQueueView() {
@@ -41,12 +41,42 @@ public class RegistrationController implements MouseListener, MouseMotionListene
         fq.setVisible(true); 
     }
 
-    public void limpiar() {
-        /*registerView.txtName.setText(null);
-        registerView.txtDNI.setText(null);
-        registerView.txtPhone.setText(null);
-        registerView.txtEmail.setText(null);
-        registerView.txtDestiny.setText(null);*/
+    public boolean isDniValid(String dni) {
+       int i, j = 0;
+       String number = "";
+       String myDni = "";
+       String[] oneNine = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+       
+        for (i = 0; i < dni.length(); i++) {
+            number = dni.substring(i, i + 1);
+            
+            for (j =0; j < oneNine.length; j++) {
+                if (number.equals(oneNine[j])) {
+                    myDni += oneNine[j];
+                }
+            }
+        
+        }        
+        return myDni.length() == 8;
+    }
+    
+    public boolean isPhoneValid(String phone) {
+       int i, j = 0;
+       String number = "";
+       String myPhone = "";
+       String[] unoNueve = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+       
+        for (i = 0; i < phone.length(); i++) {
+            number = phone.substring(i, i + 1);
+            
+            for (j =0; j < unoNueve.length; j++) {
+                if (number.equals(unoNueve[j])) {
+                    myPhone += unoNueve[j];
+                }
+            }
+      
+        }        
+        return myPhone.length() >= 9 && myPhone.length() <= 15;
     }
 
     @Override
@@ -69,14 +99,26 @@ public class RegistrationController implements MouseListener, MouseMotionListene
             
             if (!name.equals("Ingrese el nombre completo") && !dni.equals("Ingrese el DNI") && 
                     !phone.equals("Ingrese el numero telefonico") && !email.equals("Ingrese el correo electronico")) {
-                user.setName(name);
-                user.setDni(dni);
-                user.setPhone(phone);
-                user.setEmail(email);
                 
-                MyQueue.enqueue(user);
-                JOptionPane.showMessageDialog(null, "Cliente añadido a la cola");
-                goToQueueView(); 
+                if (isDniValid(dni)) {
+                    user.setDni(dni); 
+                } else {
+                    JOptionPane.showMessageDialog(null, "DNI invalido");
+                }
+                
+                if (isPhoneValid(phone)) {
+                    user.setPhone(phone);
+                } else {
+                    JOptionPane.showMessageDialog(null, "Telefono invalido");
+                }
+                
+                if (isDniValid(dni) && isPhoneValid(phone)) {
+                    user.setName(name);
+                    user.setEmail(email);
+                    MyQueue.enqueue(user);
+                    JOptionPane.showMessageDialog(null, "Cliente añadido a la cola");
+                    goToQueueView();
+                }                
             } else {
                 JOptionPane.showMessageDialog(null, "Complete todos los campos");
             }            
