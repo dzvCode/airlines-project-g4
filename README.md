@@ -9,12 +9,12 @@
 - `Profesor:` Arredondo, Gustavo
 - `Grupo:` 4
 - `Sección:` 2
-- `IDE:` Apache NetBeans 13
+- `IDE:` Apache NetBeans IDE 14
 - `Java:` JDK 17
  <!-- - MySql:-->
 
 ## Resumen
-Se creará una solución para la venta de boletos de avión de una pequeña aerolínea utilizando estructura de datos
+Venta de boletos de avión de una pequeña aerolínea utilizando estructura de datos y bases de datos
 <!-- Agregar más info -->
 
 ## Colaboradores
@@ -33,12 +33,17 @@ Se creará una solución para la venta de boletos de avión de una pequeña aero
 - [Lombok](https://projectlombok.org/)
 > Las librerías ya vienen incluidas en la carpeta [`.lib`](./lib/) del repositorio
 
-## Estructura de datos implementadas
+## Estructuras de datos implementadas
 - Colas
+- Listas Doblemente Enlazadas
+- Listas Circulares Doblemente Enlazadas
 - Grafos
-- Listas enlazadas dobles
 
-## Base de datos
+## Algoritmos implementados
+- Ordenamiento por Inserción
+- Dijkstra
+
+## Gestor de Base de Datos Relacional
 - MySql 
 
 <!--## Funcionamiento-->
